@@ -7,3 +7,4 @@ LeetCode Problems' Solutions
 - [013-罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)
 - [014-最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)*（TODO：字典树）
 - [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
+- [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
