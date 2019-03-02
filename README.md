@@ -8,3 +8,4 @@ LeetCode Problems' Solutions
 - [014-最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)*（TODO：字典树）
 - [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 - [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+- [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
