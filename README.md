@@ -12,3 +12,4 @@ LeetCode Problems' Solutions
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
 - [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
+- [038-报数](https://leetcode-cn.com/problems/count-and-say/)
