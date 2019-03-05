@@ -13,3 +13,4 @@ LeetCode Problems' Solutions
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
 - [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
+- [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
