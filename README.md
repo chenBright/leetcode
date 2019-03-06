@@ -15,3 +15,4 @@ LeetCode Problems' Solutions
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [058-最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+- [066-加一](https://leetcode-cn.com/problems/plus-one/)
