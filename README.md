@@ -16,3 +16,4 @@ LeetCode Problems' Solutions
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [058-最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
 - [066-加一](https://leetcode-cn.com/problems/plus-one/)
+- [67-二进制求和](https://leetcode-cn.com/problems/add-binary/)*
