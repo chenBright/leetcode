@@ -17,3 +17,4 @@ LeetCode Problems' Solutions
 - [058-最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
 - [066-加一](https://leetcode-cn.com/problems/plus-one/)
 - [67-二进制求和](https://leetcode-cn.com/problems/add-binary/)*
+- [069-x的平方根](https://leetcode-cn.com/problems/sqrtx/)*（牛顿迭代法）
