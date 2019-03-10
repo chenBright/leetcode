@@ -19,3 +19,4 @@ LeetCode Problems' Solutions
 - [067-二进制求和](https://leetcode-cn.com/problems/add-binary/)*
 - [069-x的平方根](https://leetcode-cn.com/problems/sqrtx/)*（牛顿迭代法）
 - [070-爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)*
+- [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
