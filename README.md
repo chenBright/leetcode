@@ -23,3 +23,4 @@ LeetCode Problems' Solutions
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)*（迭代）
+- [104-二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
