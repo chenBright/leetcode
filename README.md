@@ -28,3 +28,4 @@ LeetCode Problems' Solutions
 - [104-二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 - [107-二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/submissions/)
 - [108-将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)
+- [110-平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
