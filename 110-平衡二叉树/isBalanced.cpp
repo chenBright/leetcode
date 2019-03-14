@@ -27,7 +27,7 @@ private:
         if (isBalanced(root->left, &leftTreeDepth) && isBalanced(root->right, &rightTreeDepth)) {
             int diff = abs(leftTreeDepth - rightTreeDepth);
             if (diff <= 1) {
-                *treeDepth = max(leftTreeDepth, rightTreeDepth);
+                *treeDepth = max(leftTreeDepth, rightTreeDepth) + 1;
                 return true;
             }
         }
