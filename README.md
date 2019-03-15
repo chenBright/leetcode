@@ -30,3 +30,4 @@ LeetCode Problems' Solutions
 - [108-将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)
 - [110-平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
 - [111-二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
+- [118-杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
