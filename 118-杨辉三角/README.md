@@ -20,7 +20,6 @@ public:
         res.push_back(vector<int>(1, 1));
         vector<int> temp(2, 1);
         vector<int>::iterator it;
-        vector<int>::reverse_iterator tempIt;
         for (int i = 1; i < numRows; ++i) {
             for (it = res[i - 1].begin(); it != res[i - 1].end() && it + 1 != res[i - 1].end(); ++it) {
                 temp.insert(temp.end() - 1, *it + *(it + 1));
