@@ -33,3 +33,4 @@ LeetCode Problems' Solutions
 - [118-杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
 - [119-杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/)
 - [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)*（动态规划）
+- [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)*（贪心算法）
