@@ -36,4 +36,5 @@ LeetCode Problems' Solutions
 - [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)*（贪心算法）
 - [123- 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)*
 - [125-验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
+- [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
 - [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)*
