@@ -42,4 +42,5 @@ LeetCode Problems' Solutions
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
 - [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 - [168-Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)*
+- [169-求众数](https://leetcode-cn.com/problems/majority-element/)*
 - [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)*
