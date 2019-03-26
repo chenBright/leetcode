@@ -47,3 +47,4 @@ LeetCode Problems' Solutions
 - [172-阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/)*
 - [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)*
 - [189-旋转数组](https://leetcode-cn.com/problems/rotate-array/)*
+- [190-颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)*
