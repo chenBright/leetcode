@@ -51,3 +51,4 @@ LeetCode Problems' Solutions
 - [191-位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)*
 - [198-打家劫舍](https://leetcode-cn.com/problems/house-robber/)***
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
+- [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)*
