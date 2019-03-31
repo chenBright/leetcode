@@ -23,7 +23,9 @@ private:
             k = n - k;
         }
         for (int i = n, x = 1; i > n - k; --i, ++x) {
-            /** 由于用到了阶乘，极容易导致数据溢出，应用中应采用边乘边除的方法。
+            /** 
+             * 参考 http://kuangqi.me/programming/combination-calculation/
+             * 由于用到了阶乘，极容易导致数据溢出，应用中应采用边乘边除的方法。
              * 除法一般需要用到浮点数，但通过数论中的定理，可以通过整数运算实现。
              */
             res *= i;
