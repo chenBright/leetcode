@@ -25,6 +25,7 @@ LeetCode Problems' Solutions
 - [070-爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)*
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
+- [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)*
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)*（迭代）
 - [102-二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
