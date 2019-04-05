@@ -27,6 +27,7 @@ LeetCode Problems' Solutions
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
 - [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)*
 - [095- 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)*
+- [096-不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)*
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)*（迭代）
 - [102-二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
