@@ -39,6 +39,7 @@ LeetCode Problems' Solutions
 - [111-二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
 - [118-杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
 - [119-杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/)
+- [120-三角形最小路径和](https://leetcode-cn.com/problems/triangle/)*
 - [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)*（动态规划）
 - [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)*（贪心算法）
 - [123- 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)*
