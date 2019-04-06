@@ -10,7 +10,7 @@ leetcode：[096-不同的二叉搜索树](https://leetcode-cn.com/problems/uniqu
 
 根据该思路，有两种实现方式：***记忆化搜索***和***动态规划***。
 
-## 记忆化搜索
+### 记忆化搜索
 
 ```c++
 class Solution {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-## 动态规划
+### 动态规划
 
 ```c++
 class Solution {
