@@ -45,6 +45,7 @@ LeetCode Problems' Solutions
 - [123- 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)*
 - [125-验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
 - [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
+- [139-单词拆分](https://leetcode-cn.com/problems/word-break/)*
 - [141-环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 - [155-最小栈](https://leetcode-cn.com/problems/min-stack/)
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
