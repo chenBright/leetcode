@@ -11,6 +11,7 @@ LeetCode Problems' Solutions
 - [014-最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)*（TODO：字典树）
 - [015-三数之和](https://leetcode-cn.com/problems/3sum/)*
 - [016-最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)
+- [018-四数之和](https://leetcode-cn.com/problems/4sum/)*
 - [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 - [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 - [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
