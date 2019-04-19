@@ -21,6 +21,7 @@ LeetCode Problems' Solutions
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [058-最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+- [061-旋转链表](https://leetcode-cn.com/problems/two-sum/)
 - [062-不同路径](https://leetcode-cn.com/problems/unique-paths/)*
 - [063-不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)*
 - [064-最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)*（最短路径算法）
