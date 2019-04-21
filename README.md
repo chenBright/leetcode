@@ -30,6 +30,7 @@ LeetCode Problems' Solutions
 - [069-x的平方根](https://leetcode-cn.com/problems/sqrtx/)*（牛顿迭代法）
 - [070-爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)*
 - [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)*
+- [080-删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/)
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
 - [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)*
