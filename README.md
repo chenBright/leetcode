@@ -58,6 +58,7 @@ LeetCode Problems' Solutions
 - [139-单词拆分](https://leetcode-cn.com/problems/word-break/)*
 - [141-环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 - [144-二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
+- [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)*
 - [152-乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/)*
 - [155-最小栈](https://leetcode-cn.com/problems/min-stack/)
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
