@@ -74,6 +74,7 @@ LeetCode Problems' Solutions
 - [190-颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)*
 - [191-位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)*
 - [198-打家劫舍](https://leetcode-cn.com/problems/house-robber/)*
+- [202-快乐数](https://leetcode-cn.com/problems/happy-number/comments/)
 - [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)*
 - [213-打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)*
 - [221-最大正方形](https://leetcode-cn.com/problems/maximal-square/)*
