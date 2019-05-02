@@ -71,6 +71,7 @@ LeetCode Problems' Solutions
 - [171-Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/)
 - [173-二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator/)
 - [172-阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/)*
+- [179-最大数](https://leetcode-cn.com/problems/largest-number/)*
 - [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)*
 - [189-旋转数组](https://leetcode-cn.com/problems/rotate-array/)*
 - [190-颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)*
