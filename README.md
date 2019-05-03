@@ -17,6 +17,7 @@ LeetCode Problems' Solutions
 - [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
+- [031-下一个排列](https://leetcode-cn.com/problems/next-permutation/)*
 - [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
