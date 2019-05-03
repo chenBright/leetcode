@@ -63,6 +63,7 @@ LeetCode Problems' Solutions
 - [148-排序链表](https://leetcode-cn.com/problems/sort-list/)*
 - [150-逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
 - [152-乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/)*
+- [153-寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)*
 - [155-最小栈](https://leetcode-cn.com/problems/min-stack/)
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
 - [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
