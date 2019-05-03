@@ -18,6 +18,7 @@ LeetCode Problems' Solutions
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
 - [031-下一个排列](https://leetcode-cn.com/problems/next-permutation/)*
+- [033-搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)*
 - [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
