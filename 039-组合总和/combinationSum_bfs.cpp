@@ -43,6 +43,7 @@ private:
         }
 
         // [low ... high]中每个元素都匹配一次
+        // BFS（从target角度看）
         for (int i = low; i <= high; ++i) {
             resTemp.push_back(candidates[i]);
             combinationSum(candidates, resTemp, i, high, target - candidates[i]);

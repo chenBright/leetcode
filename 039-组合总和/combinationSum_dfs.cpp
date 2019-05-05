@@ -46,6 +46,7 @@ private:
 
         int candidate = candidates[index];
         int num = target / candidate; // 最多能有几个 candidate
+        // DFS（从target角度看）
         for (int i = 0; i <= num; ++i) {
             if (i != 0) {
                 resTemp.push_back(candidate);
