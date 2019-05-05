@@ -12,6 +12,15 @@ public:
 
         sort(candidates.begin(), candidates.end(), compare); // 降序
 
+        int low = 0;
+        // 跳过值比 target 大的元素
+        while (low < length) {
+            if (candidates[low] <= target) {
+                break;
+            }
+            ++low;
+        }
+
         vector<int> temp;
         combinationSum(candidates, temp, 0, target);
 
@@ -25,7 +34,7 @@ public:
 private:
     vector<vector<int> > res;
 
-    void combinationSum(vector<int> &candidates, vector<int> &resTemp, int index, int target) {
+    void combinationSum(vector<int> &candidates, vector<int> resTemp, int index, int target) {
         if (target == 0) {
             res.push_back(resTemp);
             return;
@@ -37,6 +46,7 @@ private:
 
         int candidate = candidates[index];
         int num = target / candidate; // 最多能有几个 candidate
+        // DFS（从target角度看）
         for (int i = 0; i <= num; ++i) {
             if (i != 0) {
                 resTemp.push_back(candidate);
