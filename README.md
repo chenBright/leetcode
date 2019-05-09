@@ -28,6 +28,7 @@ LeetCode Problems' Solutions
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [054-螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)
 - [055-跳跃游戏](https://leetcode-cn.com/problems/jump-game/)*
+- [056-合并区间](https://leetcode-cn.com/problems/merge-intervals/)*
 - [058-最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
 - [061-旋转链表](https://leetcode-cn.com/problems/two-sum/)
 - [062-不同路径](https://leetcode-cn.com/problems/unique-paths/)*
