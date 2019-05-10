@@ -11,6 +11,8 @@ leetcode：[073-矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes
 
 遍历完数组，保存好行号和列号之后，就将相应的行和列置0.
 
+该方法的时间复杂度为***O(n)***，空间复杂度为***O(n)***。
+
 ```c++
 class Solution {
 public:
