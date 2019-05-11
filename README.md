@@ -41,6 +41,7 @@ LeetCode Problems' Solutions
 - [070-爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)*
 - [071-简化路径](https://leetcode-cn.com/problems/simplify-path/)*
 - [073-矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/)
+- [074-搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)*
 - [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)*
 - [080-删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/)
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
