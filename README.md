@@ -44,6 +44,7 @@ LeetCode Problems' Solutions
 - [074-搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)*
 - [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)*
 - [078-子集](https://leetcode-cn.com/problems/subsets/)*（迭代、位运算）
+- [079-单词搜索](https://leetcode-cn.com/problems/word-search/)
 - [080-删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/)
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
