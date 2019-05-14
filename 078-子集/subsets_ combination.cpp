@@ -14,7 +14,7 @@ public:
         for (int i = 0; i < length; ++i) {
             vector<int> temp;
             int resLength = res.size();
-            // 当前数字与已经存在的集合组合
+            // 当前数字与已经存在的子集组合
             for (int j = 0; j < resLength; ++j) {
                 temp.clear();
                 temp.assign(res[j].begin(), res[j].end());
