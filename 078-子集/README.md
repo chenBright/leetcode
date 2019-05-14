@@ -31,7 +31,7 @@ private:
         }
 
         res.push_back(temp); // 先不考虑后面的元素，先添加当前集合
-        // 与后面没个元素分别组成一个集合
+        // 与后面每个元素分别组成一个集合
         for (int i = left; i <= right; ++i) {
             temp.push_back(nums[i]);
             subsets(nums, i + 1, right);
@@ -59,7 +59,7 @@ public:
         for (int i = 0; i < length; ++i) {
             vector<int> temp;
             int resLength = res.size();
-            // 当前数字与已经存在的集合组合
+            // 当前数字与已经存在的子集组合
             for (int j = 0; j < resLength; ++j) {
                 temp.clear();
                 temp.assign(res[j].begin(), res[j].end());

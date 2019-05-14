@@ -25,7 +25,7 @@ private:
         }
 
         res.push_back(temp); // 先不考虑后面的元素，先添加当前集合
-        // 与后面没个元素分别组成一个集合
+        // 与后面每个元素分别组成一个集合
         for (int i = left; i <= right; ++i) {
             temp.push_back(nums[i]);
             subsets(nums, i + 1, right);
