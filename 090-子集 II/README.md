@@ -68,7 +68,7 @@ private:
 - 如果该数字与前一个数字相等，则只需要与前一个数字生成的子集组合即可。与其他的子集组合的结果已经在处理前一个数字的时候生成了。
 - 否则，与所有已生成的子集组合。
 
-所以，需要每次记录上一次生成子集的数量，用来确定下一次组合的起点。参考[LeetCode 评论区 宝宝可乖了 的思路](https://leetcode-cn.com/bao-bao-ke-guai-liao)。
+所以，需要每次记录上一次生成子集的数量，用来确定下一次组合的起点。参考[LeetCode 评论区 宝宝可乖了 的思路](https://leetcode-cn.com/problems/subsets-ii/comments/39147)。
 
 ```c++
 class Solution {
