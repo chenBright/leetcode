@@ -54,6 +54,7 @@ LeetCode Problems' Solutions
 - [094-二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
 - [095- 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)*
 - [096-不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)*
+- [098-验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)
 - [100-相同的树](https://leetcode-cn.com/problems/same-tree/)*（迭代）
 - [102-二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
