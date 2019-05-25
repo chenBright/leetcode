@@ -9,7 +9,7 @@ leetcode：[090-子集 II](https://leetcode-cn.com/problems/subsets-ii/)
 
 使用***DFS回溯法***，参考[078-子集 DFS回溯法](../078-子集/subsets_bfs.cpp)。
 
-去重，则参考[040-组合总和 II](../040-组合总和 II)。
+去重，则参考[040-组合总和 II](../040-组合总和%20II/)。
 
 使用***BFS***（从target的角度看）回溯法，同时去重。
 
