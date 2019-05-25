@@ -1,8 +1,8 @@
-# 123- 买卖股票的最佳时机 III
+# 123-买卖股票的最佳时机 III
 
 ## 题目
 
-leetcode：[123- 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
+leetcode：[123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
 
 ## 动态规划1
 
