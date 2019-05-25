@@ -26,6 +26,7 @@ LeetCode Problems' Solutions
 - [039-组合总和](https://leetcode-cn.com/problems/combination-sum/)
 - [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)*
 - [048-旋转图像](https://leetcode-cn.com/problems/rotate-image/)*
+- [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)*
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [054-螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)
 - [055-跳跃游戏](https://leetcode-cn.com/problems/jump-game/)*
