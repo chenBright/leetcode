@@ -15,6 +15,7 @@ LeetCode Problems' Solutions
 - [018-四数之和](https://leetcode-cn.com/problems/4sum/)*
 - [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 - [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+- [024-两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 - [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
