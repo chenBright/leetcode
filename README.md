@@ -53,6 +53,7 @@ LeetCode Problems' Solutions
 - [081-搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)*
 - [082-删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/)
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+- [086-分隔链表](https://leetcode-cn.com/problems/partition-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
 - [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)*
 - [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)*
