@@ -20,7 +20,7 @@ public:
         }
 
         /**
-         * low不取0，high不去minLen - 1
+         * low不取0，high不取minLen - 1
          * 因为low，high表示长度，将作为isCommonPrefix的第二个参数
          */
         int low = 1;
