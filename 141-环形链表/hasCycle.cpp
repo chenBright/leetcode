@@ -9,7 +9,7 @@ struct ListNode {
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        if (head == NULL || head->next) {
+        if (head == NULL || head->next == NULL) {
             return false;
         }
 
