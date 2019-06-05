@@ -91,6 +91,7 @@ LeetCode Problems' Solutions
 - [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
 - [139-单词拆分](https://leetcode-cn.com/problems/word-break/)*
 - [141-环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
+- [142-环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)*
 - [144-二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 - [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)*
 - [147-对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/)
