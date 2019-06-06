@@ -89,6 +89,7 @@ LeetCode Problems' Solutions
 - [130-被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)*
 - [133-克隆图](https://leetcode-cn.com/problems/clone-graph/)*
 - [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
+- [138-复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)*（不熟悉深拷贝，与 133-克隆图 类似）
 - [139-单词拆分](https://leetcode-cn.com/problems/word-break/)*
 - [141-环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 - [142-环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)*
