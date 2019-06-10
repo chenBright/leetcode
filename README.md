@@ -7,6 +7,7 @@ LeetCode Problems' Solutions
 - [005-最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)*
 - [006-Z字形变换](https://leetcode-cn.com/problems/zigzag-conversion/)*
 - [007-整数反转](https://leetcode-cn.com/problems/reverse-integer/)*
+- [008-字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 - [009-回文数](https://leetcode-cn.com/problems/palindrome-number/)*
 - [011-盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
 - [013-罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)
