@@ -5,6 +5,7 @@ LeetCode Problems' Solutions
 - [002-两数相加](https://leetcode-cn.com/problems/two-sum/)
 - [003-无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)*
 - [005-最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)*
+- [006-Z字形变换](https://leetcode-cn.com/problems/zigzag-conversion/)*
 - [007-整数反转](https://leetcode-cn.com/problems/reverse-integer/)*
 - [009-回文数](https://leetcode-cn.com/problems/palindrome-number/)*
 - [011-盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
