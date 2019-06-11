@@ -10,6 +10,7 @@ LeetCode Problems' Solutions
 - [008-字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 - [009-回文数](https://leetcode-cn.com/problems/palindrome-number/)*
 - [011-盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
+- [012-整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)*
 - [013-罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)
 - [014-最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)*（TODO：字典树）
 - [015-三数之和](https://leetcode-cn.com/problems/3sum/)*
