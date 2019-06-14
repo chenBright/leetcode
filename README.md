@@ -32,6 +32,7 @@ LeetCode Problems' Solutions
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [039-组合总和](https://leetcode-cn.com/problems/combination-sum/)
 - [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)*
+- [043-字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)*
 - [048-旋转图像](https://leetcode-cn.com/problems/rotate-image/)*
 - [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)*
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
