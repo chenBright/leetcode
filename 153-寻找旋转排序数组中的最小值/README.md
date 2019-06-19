@@ -60,7 +60,7 @@ public:
 
 ## 二分查找
 
-1. 如果***nums[mid] < nums[low]***，表明数组一定旋转过，且最小值在***[mid … high]***中，则***low = mid***。
+1. 如果***nums[mid] < nums[low]***，表明数组一定旋转过，且最小值在[mid … high]中，则***low = mid***。
 2. 否则，***high = mid***。
 
 当然，也可以和***nums[high]***比较。
