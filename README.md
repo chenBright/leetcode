@@ -29,6 +29,7 @@ LeetCode Problems' Solutions
 - [033-搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)*
 - [034-在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
+- [036-有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)*
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [039-组合总和](https://leetcode-cn.com/problems/combination-sum/)
 - [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)*
@@ -113,7 +114,7 @@ LeetCode Problems' Solutions
 - [155-最小栈](https://leetcode-cn.com/problems/min-stack/)
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
 - [162-寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)*（简单的实现）
-- [165-比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/)
+- [165-比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/)*
 - [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 - [168-Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)*
 - [169-求众数](https://leetcode-cn.com/problems/majority-element/)*
