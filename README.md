@@ -115,6 +115,7 @@ LeetCode Problems' Solutions
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
 - [162-寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)*（简单的实现）
 - [165-比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/)*
+- [166-分数到小数](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/)*（不懂）
 - [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 - [168-Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)*
 - [169-求众数](https://leetcode-cn.com/problems/majority-element/)*
