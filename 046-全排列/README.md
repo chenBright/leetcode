@@ -44,6 +44,8 @@ private:
 
 ### 实现2
 
+以下几种方法都是参考[博客](https://www.cnblogs.com/grandyang/p/4358848.html)的。
+
 用`visited`数组记录访问过的元素，就不需要想实现1一样拷贝数组。
 
 ```c++
