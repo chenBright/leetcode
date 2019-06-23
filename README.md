@@ -34,6 +34,7 @@ LeetCode Problems' Solutions
 - [039-组合总和](https://leetcode-cn.com/problems/combination-sum/)
 - [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)*
 - [043-字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)*
+- [046-全排列](https://leetcode-cn.com/problems/permutations/)*（用尽可能多的方法）
 - [048-旋转图像](https://leetcode-cn.com/problems/rotate-image/)*
 - [049-字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)*
 - [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)*
@@ -63,7 +64,6 @@ LeetCode Problems' Solutions
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 - [086-分隔链表](https://leetcode-cn.com/problems/partition-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
-- [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)*
 - [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)*
 - [092-反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 - [093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)*
