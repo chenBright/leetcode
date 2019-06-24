@@ -35,6 +35,7 @@ LeetCode Problems' Solutions
 - [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)*
 - [043-字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)*
 - [046-全排列](https://leetcode-cn.com/problems/permutations/)*（用尽可能多的方法）
+- [047-全排列 II](https://leetcode-cn.com/problems/permutations-ii/)*
 - [048-旋转图像](https://leetcode-cn.com/problems/rotate-image/)*
 - [049-字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)*
 - [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)*
