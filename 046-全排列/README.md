@@ -35,7 +35,7 @@ private:
 
         for (int i = 0; i < nums.size(); ++i) {
             vector<int> tmp(nums);
-            tmp.erase(tmp.begin() + i, tmp.begin() + i + 1);
+            tmp.erase(tmp.begin() + i);
             tmpResult.push_back(nums[i]);
             permuteRecursion(tmp);
             tmpResult.pop_back();
@@ -154,7 +154,7 @@ public:
 };
 ```
 
-## STL next_permutation
+## STL next_permutation函数
 
 注意：`next_permutation`函数要求输入序列为有序。
 
