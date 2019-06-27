@@ -67,6 +67,7 @@ LeetCode Problems' Solutions
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 - [086-分隔链表](https://leetcode-cn.com/problems/partition-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
+- [089-格雷编码](https://leetcode-cn.com/problems/gray-code/)*
 - [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)*
 - [092-反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 - [093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)*
