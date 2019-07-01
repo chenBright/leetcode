@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-// 不需要拷贝临时字符串，使用索引代替
 class Solution {
 public:
     vector<vector<string> > partition(string s) {
@@ -10,7 +9,18 @@ public:
             return result;
         }
 
-        partitionRecursion(s, 0);
+        int len = s.size();
+        // dp[j][i] 表示 s[j..i] 是否为回文字符串
+        vector<vector<bool> > dp(len, vector<bool>(len, false));
+        for (int i =0; i < len; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (s[i] ==s[j] && (i - j < 2 || dp[j + 1][i - 1])) {
+                    dp[j][i] = true;
+                }
+            }
+        }
+
+        partitionRecursion(s, 0, dp);
 
         return result;
     }
@@ -19,30 +29,18 @@ private:
     vector<vector<string> > result;
     vector<string> tmpResult;
 
-    void partitionRecursion(string &s, int index) {
+    void partitionRecursion(string &s, int index, vector<vector<bool> > &dp) {
         int len = s.size();
         if (index >= len) {
             result.push_back(tmpResult);
         }
 
         for (int i = index; i < len; ++i) {
-            if (isPalindromic(s, index, i)) {
+            if (dp[index][i]) {
                 tmpResult.push_back(s.substr(index, i - index + 1));
-                partitionRecursion(s, i + 1);
+                partitionRecursion(s, i + 1, dp);
                 tmpResult.pop_back();
             }
         }
-    }
-    // s[start …… end]是否为回文字符串
-    bool isPalindromic(string &s, int start, int end) {
-        while (start <= end) {
-            if (s[start] != s[end]) {
-                return false;
-            }
-            ++start;
-            --end;
-        }
-
-        return true;
     }
 };

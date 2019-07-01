@@ -100,7 +100,7 @@ LeetCode Problems' Solutions
 - [127-单词接龙](https://leetcode-cn.com/problems/word-ladder/)*
 - [129-求根到叶子节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/)*
 - [130-被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)*
-- [131-分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)
+- [131-分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)*（动态规划）
 - [133-克隆图](https://leetcode-cn.com/problems/clone-graph/)*
 - [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
 - [138-复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)*（不熟悉深拷贝，与 133-克隆图 类似）
