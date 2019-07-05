@@ -65,6 +65,7 @@ LeetCode Problems' Solutions
 - [081-搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)*
 - [082-删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/)
 - [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+- [084-柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/)*
 - [086-分隔链表](https://leetcode-cn.com/problems/partition-list/)
 - [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/)
 - [089-格雷编码](https://leetcode-cn.com/problems/gray-code/)*
