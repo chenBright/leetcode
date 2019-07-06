@@ -117,3 +117,21 @@ public:
 };
 ```
 
+## 数学方法
+
+根据题目的规律——***除了某个元素只出现一次以外，其余每个元素均出现两次***。可以使用以下公式计算得到只出现一次的元素：
+
+`2 * (a + b + c) - (a + a + b + b + c) = c`
+
+`set`和`vector`遍历的时间复杂度都为***O(n)***，则该方法的时间复杂度为***O(n + n) = O(n)***。
+
+```c++
+class Solution {
+public:
+    int singleNumber(vector<int> &nums) {
+        unordered_set<int> s(nums.begin(), nums.end());
+        return 2 * accumulate(s.begin(), s.end(), static_cast<long>(0)) - accumulate(nums.begin(), nums.end(), static_cast<long>(0));
+    }
+};
+```
+
