@@ -113,6 +113,7 @@ LeetCode Problems' Solutions
 - [143-重排链表](https://leetcode-cn.com/problems/reorder-list/)*
 - [144-二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 - [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)*
+- [146-LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)*
 - [147-对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/)
 - [148-排序链表](https://leetcode-cn.com/problems/sort-list/)*
 - [150-逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
