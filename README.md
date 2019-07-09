@@ -142,6 +142,7 @@ LeetCode Problems' Solutions
 - [200-岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
 - [202-快乐数](https://leetcode-cn.com/problems/happy-number/comments/)
 - [203-移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)*
+- [204-计数质数](https://leetcode-cn.com/problems/count-primes/)*
 - [206-反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)*
 - [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)*
 - [213-打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)*
