@@ -145,6 +145,7 @@ LeetCode Problems' Solutions
 - [203-移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)*
 - [204-计数质数](https://leetcode-cn.com/problems/count-primes/)*
 - [206-反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)*
+- [207-课程表](https://leetcode-cn.com/problems/course-schedule/)*
 - [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)*
 - [213-打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)*
 - [215-数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)*
