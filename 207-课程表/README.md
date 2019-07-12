@@ -12,6 +12,8 @@ leetcode：[207-课程表](https://leetcode-cn.com/problems/course-schedule/)
 
 参考[博客](https://songlee24.github.io/2015/05/07/topological-sorting/)，使用BFS实现拓扑排序。
 
+该方法的时间复杂度为***O(n)***，空间复杂度为***O(n)***。
+
 ```c++
 class Solution {
 public:
@@ -53,6 +55,8 @@ public:
 ### DFS实现
 
 参考[博客 解法二](https://www.cnblogs.com/grandyang/p/4484571.html)，使用DFS实现拓扑排序。
+
+该方法的时间复杂度为***O(n)***，空间复杂度为***O(n)***。
 
 ```c++
 class Solution {
