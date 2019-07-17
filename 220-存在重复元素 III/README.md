@@ -4,7 +4,7 @@
 
 leetcode：[220-存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)
 
-## 自平衡二叉搜索树
+## 滑动窗口 + 自平衡二叉搜索树
 
 参考[LeetCode官方题解](https://leetcode-cn.com/problems/contains-duplicate-iii/solution/cun-zai-zhong-fu-yuan-su-iii-by-leetcode)。使用`set`或者`map`来维护滑动窗口，因为`set`和`map`底层是用红黑树实现的。
 
@@ -12,7 +12,7 @@ leetcode：[220-存在重复元素 III](https://leetcode-cn.com/problems/contain
 
 遍历数组，每次遍历到的元素为`x`：
 
-1. 如果树的大小超过了k*k*, 则移除最早加入树的那个数。
+1. 如果`set`的大小超过了k, 则移除最早加入树的那个数。
 2. 在`set`查找小于等于`x`的最大数字`m`，如果`x - m <= t`，则返回true；
 3. 在`set`查找大于等于`x`的最小数字`n`，如果`n - x <= t`，则返回true；
 4. 在 `set` 中插入`x`；
@@ -97,7 +97,7 @@ private:
 
 遍历数组，每次遍历到的元素为`x`：
 
-1. 如果树的大小超过了k*k*, 则移除最早加入树的那个数。
+1. 如果`set`的大小超过了k, 则移除最早加入树的那个数
 
 2. 在`set`查找小于等于`x - t`的最大数字`m`，如果`abs(x - m )<= t`，则返回true；
 
