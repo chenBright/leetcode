@@ -150,6 +150,7 @@ LeetCode Problems' Solutions
 - [208-实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)*
 - [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)*
 - [210-课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)*
+- [220-存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)*
 - [211-添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/)
 - [213-打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)*
 - [215-数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)*
