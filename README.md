@@ -161,6 +161,7 @@ LeetCode Problems' Solutions
 - [222-完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/comments/)*
 - [225-用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)*
 - [226-翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)
+- [232-2的幂](https://leetcode-cn.com/problems/power-of-two/)*
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
