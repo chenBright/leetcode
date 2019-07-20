@@ -1,8 +1,8 @@
-# 232-2的幂
+# 231-2的幂
 
 ## 题目
 
-leetcode：[232-2的幂](https://leetcode-cn.com/problems/power-of-two/)
+leetcode：[231-2的幂](https://leetcode-cn.com/problems/power-of-two/)
 
 ## 迭代
 
