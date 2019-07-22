@@ -163,6 +163,7 @@ LeetCode Problems' Solutions
 - [226-翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)
 - [231-2的幂](https://leetcode-cn.com/problems/power-of-two/)*
 - [232-用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
+- [234-回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)*
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
