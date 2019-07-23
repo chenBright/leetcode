@@ -164,6 +164,7 @@ LeetCode Problems' Solutions
 - [231-2的幂](https://leetcode-cn.com/problems/power-of-two/)*
 - [232-用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 - [234-回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)*
+- [235-二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
