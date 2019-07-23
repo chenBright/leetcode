@@ -25,17 +25,9 @@ public:
     // 最终， popStack 从栈顶往下，就是元素入队的顺序。
     // 时间复杂度为 O(n)
     void push(int x) {
-        while (!popStack.empty()) {
-            pushStack.push(popStack.top());
-            popStack.pop();
-        }
-
+        moveToAnother(popStack, pushStack);
         popStack.push(x);
-
-        while (!pushStack.empty()) {
-            popStack.push(pushStack.top());
-            pushStack.pop();
-        }
+        moveToAnother(pushStack, popStack);
     }
     
     /** Removes the element from in front of queue and returns that element. */
@@ -60,6 +52,14 @@ public:
 private:
     stack<int> pushStack; // 辅助栈
     stack<int> popStack; // 存储的元素从栈顶往下，和元素入队的顺序一样
+
+    // 将元素从 src 栈移动到 des栈
+    void moveToAnother(stack<int> &src, stack<int> &des) {
+        while (!src.empty()) {
+            des.push(src.top());
+            src.pop();
+        }
+    }
 };
 ```
 
@@ -88,10 +88,7 @@ public:
     // https://leetcode-cn.com/problems/implement-queue-using-stacks/solution/yong-zhan-shi-xian-dui-lie-by-leetcode
     int pop() {
         if (popStack.empty()) {
-            while (!pushStack.empty()) {
-                popStack.push(pushStack.top());
-                pushStack.pop();
-            }
+            moveToAnother(pushStack, popStack);
         }
         int result = popStack.top();
         popStack.pop();
@@ -105,10 +102,7 @@ public:
         // 如果 popStack 为空，
         // 则需要将 pushStack 中的元素弹出，再压入到 popStack 中
         if (popStack.empty()) {
-            while (!pushStack.empty()) {
-                popStack.push(pushStack.top());
-                pushStack.pop();
-            }
+            moveToAnother(pushStack, popStack);
         }
 
         return popStack.top();
@@ -122,6 +116,14 @@ public:
 private:
     stack<int> pushStack; // 保存入队元素
     stack<int> popStack; // 存储的元素从栈顶往下，和元素入队的顺序一样
+
+    // 将元素从 src 栈移动到 des栈
+    void moveToAnother(stack<int> &src, stack<int> &des) {
+        while (!src.empty()) {
+            des.push(src.top());
+            src.pop();
+        }
+    }
 };
 ```
 
