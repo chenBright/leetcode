@@ -160,6 +160,7 @@ LeetCode Problems' Solutions
 - [221-最大正方形](https://leetcode-cn.com/problems/maximal-square/)*
 - [222-完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/comments/)*
 - [223-矩形面积](https://leetcode-cn.com/problems/rectangle-area/)*
+- [224-基本计算器](https://leetcode-cn.com/problems/basic-calculator/)*
 - [225-用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)*
 - [226-翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)
 - [227-基本计算器 II](https://leetcode-cn.com/problems/basic-calculator/)*
