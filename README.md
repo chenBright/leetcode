@@ -166,6 +166,7 @@ LeetCode Problems' Solutions
 - [227-基本计算器 II](https://leetcode-cn.com/problems/basic-calculator/)*
 - [228-汇总区间](https://leetcode-cn.com/problems/summary-ranges/)
 - [229-求众数 II](https://leetcode-cn.com/problems/majority-element-ii/)*
+- [230-二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/)*
 - [231-2的幂](https://leetcode-cn.com/problems/power-of-two/)*
 - [232-用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 - [234-回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)*
