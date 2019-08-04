@@ -175,6 +175,7 @@ LeetCode Problems' Solutions
 - [237-删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)*
 - [238-除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)*
 - [240-搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)*
+- [241-为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses/)*（TODO：动态规划）
 - [242-有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)*
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
