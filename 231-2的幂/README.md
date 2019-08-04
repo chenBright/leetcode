@@ -17,7 +17,7 @@ public:
         long tmp = 1;
         while (tmp <= n) {
             if (tmp == n) {
-                return tmp;
+                return true;
             }
 
             tmp *= 2;
