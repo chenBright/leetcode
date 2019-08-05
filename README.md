@@ -178,6 +178,7 @@ LeetCode Problems' Solutions
 - [241-为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses/)*（TODO：动态规划）
 - [242-有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)*
 - [258-各位相加](https://leetcode-cn.com/problems/add-digits/)*
+- [260-只出现一次的数字 III](https://leetcode-cn.com/problems/single-number-iii/)*
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
