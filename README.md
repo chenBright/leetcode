@@ -181,6 +181,7 @@ LeetCode Problems' Solutions
 - [260-只出现一次的数字 III](https://leetcode-cn.com/problems/single-number-iii/)*
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
+- [268-缺失数字](https://leetcode-cn.com/problems/missing-number/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
