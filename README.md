@@ -182,6 +182,7 @@ LeetCode Problems' Solutions
 - [263-丑数](https://leetcode-cn.com/problems/ugly-number/)
 - [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)*
 - [268-缺失数字](https://leetcode-cn.com/problems/missing-number/)*
+- [274-H指数](https://leetcode-cn.com/problems/h-index/)*
 - [275-H指数 II](https://leetcode-cn.com/problems/h-index-ii/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
