@@ -186,6 +186,7 @@ LeetCode Problems' Solutions
 - [275-H指数 II](https://leetcode-cn.com/problems/h-index-ii/)*
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
 - [283-移动零](https://leetcode-cn.com/problems/move-zeroes/)*
+- [290-单词规律](https://leetcode-cn.com/problems/word-pattern/)*
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
 - [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)*
