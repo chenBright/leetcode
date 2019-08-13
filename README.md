@@ -187,6 +187,7 @@ LeetCode Problems' Solutions
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
 - [284-顶端迭代器](https://leetcode-cn.com/problems/peeking-iterator/)*
 - [283-移动零](https://leetcode-cn.com/problems/move-zeroes/)*
+- [287-寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)*
 - [290-单词规律](https://leetcode-cn.com/problems/word-pattern/)*
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
