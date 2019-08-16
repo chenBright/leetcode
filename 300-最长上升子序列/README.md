@@ -163,3 +163,117 @@ public:
     }
 };
 ```
+## 动态规划 + 二分查找
+
+参考[博客 解法二、三、四](https://github.com/grandyang/leetcode/issues/300)和[LeetCode官方题解](https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-by-leetcode)。
+
+关于使用二分查找替换子序列中的数字的理解：当出现这种情况的时候，该子序列的长度已经确定，不会再变成。而此时出现的数字形成的子序列可能会更长，所以将其放到子序列中合适的位置，以形成新的子序列。
+
+时间复杂度：***O(nlogn)***。
+
+空间复杂度：***O(n)***。
+
+### 实现1
+
+```c++
+class Solution {
+public:
+    int lengthOfLIS(vector<int> &nums) {
+        if (nums.empty()) {
+            return 0;
+        }
+
+        int len = nums.size();
+        vector<int> dp{nums[0]};
+        for (int i = 0; i < len; ++i) {
+            if (nums[i] > dp.back()) {
+                dp.push_back(nums[i]); // 符合上升序列的要求
+            } else {
+                // 查找第一个不小于 nums[i] 的值，并用 nums[i] 替换它
+                int low = 0;
+                int high = dp.size();
+                while (low < high) {
+                    int mid = (low + high) / 2;
+                    if (dp[mid] < nums[i]) {
+                        low = mid + 1;
+                    } else {
+                        high = mid;
+                    }
+                }
+                dp[high] = nums[i];
+            }
+        }
+        
+        // 最后，dp 的长度等于上升序列的长度
+        return dp.size();
+    }
+};
+```
+
+### 实现2
+
+```c++
+class Solution {
+public:
+    int lengthOfLIS(vector<int> &nums) {
+        if (nums.empty()) {
+            return 0;
+        }
+
+        int len = nums.size();
+        vector<int> dp;
+        for (int i = 0; i < len; ++i) {
+            // 查找第一个不小于 nums[i] 的值
+            int low = 0;
+            int high = dp.size();
+            while (low < high) {
+                int mid = (low + high) / 2;
+                if (dp[mid] < nums[i]) {
+                    low = mid + 1;
+                } else {
+                    high = mid;
+                }
+            }
+
+            // 如果查找失败，则将 nums[i] 添加到 dp 数组末尾；
+            // 如果查找成功，则用 nums[i] 替换它。
+            if (high >= dp.size()) {
+                dp.push_back(nums[i]);
+            } else {
+                dp[high] = nums[i];;
+            }
+        }
+        
+        // 最后，dp 的长度等于上升序列的长度
+        return dp.size();
+    }
+};
+```
+
+### 实现3
+
+```c++
+class Solution {
+public:
+    int lengthOfLIS(vector<int> &nums) {
+        if (nums.empty()) {
+            return 0;
+        }
+
+        int len = nums.size();
+        vector<int> dp;
+        for (int i = 0; i < len; ++i) {
+            // 查找第一个不小于 nums[i] 的值
+            auto it = lower_bound(dp.begin(), dp.end(), nums[i]);
+            if (it == dp.end()) {
+                dp.push_back(nums[i]);
+            } else {
+                *it = nums[i];
+            }
+        }
+        
+        // 最后，dp 的长度等于上升序列的长度
+        return dp.size();
+    }
+};
+```
