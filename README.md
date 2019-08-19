@@ -190,6 +190,7 @@ LeetCode Problems' Solutions
 - [287-寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)*
 - [290-单词规律](https://leetcode-cn.com/problems/word-pattern/)*
 - [292-Nim 游戏](https://leetcode-cn.com/problems/nim-game/)*
+- [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)*
 - [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)*
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
