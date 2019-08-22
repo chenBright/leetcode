@@ -22,6 +22,7 @@ LeetCode Problems' Solutions
 - [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 - [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 - [022-括号生成](https://leetcode-cn.com/problems/generate-parentheses/)*（没思路）
+- [23-合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
 - [024-两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 - [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
