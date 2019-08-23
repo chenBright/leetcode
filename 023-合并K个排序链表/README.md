@@ -167,3 +167,81 @@ private:
 
 ```
 
+## 排序
+
+将结点的值保存到数组中，再对数组排序，最后从数组中依次取值新建结点，并插入到新链表末尾。
+
+```c++
+class Solution {
+public:
+    ListNode* mergeKLists(vector<ListNode*> &lists) {
+        if (lists.empty()) {
+            return NULL;
+        }
+
+        vector<int> v;
+        for (const auto &list : lists) {
+            ListNode *node = list;
+            while (node != NULL) {
+                v.push_back(node->val);
+                node = node->next;
+            }
+        }
+
+        sort(v.begin(), v.end());
+
+        ListNode *dummy = new ListNode(-1);
+        ListNode *current = dummy;
+        for (int i = 0; i < v.size(); ++i) {
+            current->next = new ListNode(v[i]);
+            current = current->next;
+        }
+
+        return dummy->next;
+    }
+};
+```
+
+## 优先队列
+
+参考[博客解法二](https://github.com/grandyang/leetcode/issues/23)。
+
+将链表的头结点放入到优先队列中，每次从优先队列中取出最小值的结点，插入到新链表中。同时，将取出的结点的下一个结点放入到优先队列中，知道链表为空。
+
+循环以上过程，直到优先队列为空。
+
+```c++
+class Solution {
+public:
+    struct compare {
+        bool operator()(ListNode *a, ListNode *b) {
+            return a->val > b->val;
+        }
+    };
+
+    ListNode* mergeKLists(vector<ListNode*> &lists) {
+        priority_queue<ListNode*, vector<ListNode*>, compare> q;
+
+        for (const auto &node : lists) {
+            if (node != NULL) {
+                q.push(node);
+            }
+        }
+        
+        ListNode *dummy = new ListNode(-1);
+        ListNode *current = dummy;
+        while (!q.empty()) {
+            ListNode *tmp = q.top();
+            q.pop();
+            current->next = tmp;
+            current = current->next;
+            if (tmp->next != NULL) {
+                q.push(tmp->next);
+            }
+        }
+
+        return dummy->next;
+    }
+};
+```
+
