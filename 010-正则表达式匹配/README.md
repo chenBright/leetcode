@@ -291,5 +291,10 @@ private:
 };
 ```
 
+## 有限状态机
 
+参考LeetCode题解：
 
+- [1](https://leetcode-cn.com/problems/regular-expression-matching/solution/yi-bu-dao-wei-zhi-jie-an-zheng-ze-biao-da-shi-de-s/)
+- [2](https://leetcode-cn.com/problems/regular-expression-matching/solution/you-xian-zhuang-tai-ji-xiang-xi-zhu-shi-jiang-jie-/)
+- [3](https://leetcode-cn.com/problems/regular-expression-matching/solution/can-kao-liao-yong-pythonde-na-wei-tong-xue-de-si-l/)
