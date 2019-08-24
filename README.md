@@ -24,7 +24,7 @@ LeetCode Problems' Solutions
 - [022-括号生成](https://leetcode-cn.com/problems/generate-parentheses/)*（没思路）
 - [023-合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)*
 - [024-两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
-- [025-K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)*
+- [025-K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)*
 - [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
