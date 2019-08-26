@@ -29,6 +29,7 @@ LeetCode Problems' Solutions
 - [027-移除元素](https://leetcode-cn.com/problems/remove-element/)
 - [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP）
 - [029-两数相除](https://leetcode-cn.com/problems/divide-two-integers/)*（不懂）
+- [030-串联所有单词的子串](https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/)*
 - [031-下一个排列](https://leetcode-cn.com/problems/next-permutation/)*
 - [033-搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)*
 - [034-在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
