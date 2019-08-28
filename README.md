@@ -39,6 +39,7 @@ LeetCode Problems' Solutions
 - [038-报数](https://leetcode-cn.com/problems/count-and-say/)
 - [039-组合总和](https://leetcode-cn.com/problems/combination-sum/)
 - [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)*
+- [041-缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)*
 - [043-字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)*
 - [046-全排列](https://leetcode-cn.com/problems/permutations/)*（用尽可能多的方法）
 - [047-全排列 II](https://leetcode-cn.com/problems/permutations-ii/)*
