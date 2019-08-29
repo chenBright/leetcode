@@ -192,6 +192,7 @@ LeetCode Problems' Solutions
 - [268-缺失数字](https://leetcode-cn.com/problems/missing-number/)*
 - [274-H指数](https://leetcode-cn.com/problems/h-index/)*
 - [275-H指数 II](https://leetcode-cn.com/problems/h-index-ii/)*
+- [278-第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/)
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
 - [284-顶端迭代器](https://leetcode-cn.com/problems/peeking-iterator/)*
 - [283-移动零](https://leetcode-cn.com/problems/move-zeroes/)*
@@ -203,6 +204,8 @@ LeetCode Problems' Solutions
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
 - [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)*
+- [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)*
+- [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)
 - [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)*
 - [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式）
 - [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)*
