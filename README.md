@@ -192,6 +192,7 @@ LeetCode Problems' Solutions
 - [268-缺失数字](https://leetcode-cn.com/problems/missing-number/)*
 - [274-H指数](https://leetcode-cn.com/problems/h-index/)*
 - [275-H指数 II](https://leetcode-cn.com/problems/h-index-ii/)*
+- [278-第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/)
 - [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做）
 - [284-顶端迭代器](https://leetcode-cn.com/problems/peeking-iterator/)*
 - [283-移动零](https://leetcode-cn.com/problems/move-zeroes/)*
