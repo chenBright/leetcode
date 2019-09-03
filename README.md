@@ -205,7 +205,7 @@ LeetCode Problems' Solutions
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
 - [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)*
 - [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)*
-- [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)
+- [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)*
 - [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)*
 - [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式）
 - [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)*

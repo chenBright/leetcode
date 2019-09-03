@@ -206,3 +206,40 @@ public:
 };
 ```
 
+## 栈
+
+参考[LeetCode题解”双指针“的方法](https://leetcode-cn.com/problems/trapping-rain-water/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-8/)。
+
+时间复杂度：***O(n)***。
+
+空间复杂度：***O(n)***。
+
+```c++
+class Solution {
+public:
+    int trap(vector<int> &height) {
+        int sum = 0;
+        int current = 0;
+        stack<int> s;
+
+        while (current < height.size()) {
+            // 如果栈不空并且当前指向的高度大于栈顶高度就一直循环
+            while (!s.empty() && height[current] > height[s.top()]) {
+                int h = height[s.top()];
+                s.pop();
+                if (s.empty()) {
+                    break;
+                }
+                int distance = current - s.top() - 1; // 两堵墙之前的距离
+                int minHeight = min(height[s.top()], height[current]);
+                sum += distance * (minHeight - h);
+            }
+            s.push(current);
+            ++current;
+        }
+
+        return sum;
+    }
+};
+```
+
