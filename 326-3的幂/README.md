@@ -1,8 +1,8 @@
-# 342-3的幂
+# 326-3的幂
 
 ## 题目
 
-leetcode：[342-3的幂](https://leetcode-cn.com/problems/power-of-three/)
+leetcode：[326-3的幂](https://leetcode-cn.com/problems/power-of-three/)
 
 ## 循环
 
