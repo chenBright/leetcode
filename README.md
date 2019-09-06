@@ -202,6 +202,7 @@ LeetCode Problems' Solutions
 - [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)*
 - [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)*
 - [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)*
+- [342-3的幂](https://leetcode-cn.com/problems/power-of-three/)*（TODO 3进制）
 - [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)*
 - [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
