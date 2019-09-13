@@ -44,6 +44,7 @@ LeetCode Problems' Solutions
 - [042-接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)*
 - [043-字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)*
 - [044-通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)*（不懂）
+- [045-跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)*
 - [046-全排列](https://leetcode-cn.com/problems/permutations/)*（用尽可能多的方法）
 - [047-全排列 II](https://leetcode-cn.com/problems/permutations-ii/)*
 - [048-旋转图像](https://leetcode-cn.com/problems/rotate-image/)*
