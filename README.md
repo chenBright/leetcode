@@ -208,6 +208,7 @@ LeetCode Problems' Solutions
 - [326-3的幂](https://leetcode-cn.com/problems/power-of-three/)*（TODO 3进制）
 - [342-4的幂](https://leetcode-cn.com/problems/power-of-four/)*
 - [344-反转字符串](https://leetcode-cn.com/problems/reverse-string/)
+- [345-反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
 - [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)*
 - [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
