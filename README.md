@@ -211,6 +211,7 @@ LeetCode Problems' Solutions
 - [345-反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
 - [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)*
 - [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)*
+- [367-有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-gpe3dbjds1/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
 - [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)*
 - [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)*
