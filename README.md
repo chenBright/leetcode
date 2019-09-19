@@ -100,6 +100,7 @@ LeetCode Problems' Solutions
 - [110-平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
 - [111-二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
 - [114-二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)*（非递归实现）
+- [115-不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)*（不懂）
 - [116-填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)*
 - [117-填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)*
 - [118-杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
