@@ -6,7 +6,7 @@ leetcode：[115-不同的子序列](https://leetcode-cn.com/problems/distinct-su
 
 ## 动态规划
 
-参考[博客]([https://blog.pwrliang.com/2019/02/25/115-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/](https://blog.pwrliang.com/2019/02/25/115-不同的子序列/))。
+参考[博客](https://blog.pwrliang.com/2019/02/25/115-不同的子序列/)和[LeetCode题解](https://leetcode-cn.com/problems/distinct-subsequences/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-27/)。
 
 ### 实现
 
@@ -91,9 +91,83 @@ TODO：参考博客，将数组压缩到一维数组。
 
 ## 回溯法
 
-TODO：参考[博客]([https://blog.pwrliang.com/2019/02/25/115-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/](https://blog.pwrliang.com/2019/02/25/115-不同的子序列/))和[LeetCode题解](https://leetcode-cn.com/problems/distinct-subsequences/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-27/)。
+参考[LeetCode题解](https://leetcode-cn.com/problems/distinct-subsequences/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-27/)。
 
-## 分治
+```c++
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+        return numDistinct(s, 0, t, 0);
+    }
 
-TODO：参考[LeetCode题解](https://leetcode-cn.com/problems/distinct-subsequences/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-27/)。
+private:
+    int numDistinct(string &s, int sIndex, string &t, int tIndex) {
+        // T 是空串，选法就是 1 种
+        if (tIndex == t.size()) {
+            return 1;
+        }
+
+        // S 是空串，选法是 0 种
+        if (sIndex == s.size()) {
+            return 0;
+        }
+
+        // 如果 s[sIndex] == t[tIndex]，则
+        // 1. 在 s[sIndex + 1 ... sLen - 1] 中选出 t[tIndex + 1 ... tLen - 1]，记为 n1；
+        // 2. 在 s[sIndex + 1 ... sLen - 1] 中选出 t[tIndex ... tLen - 1]，记为 n2。
+        // 最后结果为 n1 + n2。
+        // 如果 s[sIndex] == t[tIndex]，则在 s[sIndex + 1 ... sLen - 1] 中选出 t[tIndex ... tLen - 1]。
+        if (s[sIndex] == t[tIndex]) {
+            return numDistinct(s, sIndex + 1, t, tIndex + 1)
+                 + numDistinct(s, sIndex + 1, t, tIndex);
+        } else {
+            return numDistinct(s, sIndex + 1, t, tIndex);
+        }
+    }
+};
+```
+
+该方法存在大量的重复计算。当`s`很长的时候，会***超时***。应对递归中大量到的重复计算，使用一个变量来缓存计算结果即可解决问题。这里使用二维数组``memory`来缓存计算结果，其中`memory[i][j]`表示`s[i ... sLen - 1]`中`t[j ... tLen - 1]`的个数。
+
+```c++
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+        vector<vector<int> > memory(s.size(), vector<int>(t.size(), -1));
+        return numDistinct(s, 0, t, 0, memory);
+    }
+
+private:
+    int numDistinct(string &s, int sIndex, string &t, int tIndex, vector<vector<int> > &memory) {
+        // T 是空串，选法就是 1 种
+        if (tIndex == t.size()) {
+            return 1;
+        }
+
+        // S 是空串，选法是 0 种
+        if (sIndex == s.size()) {
+            return 0;
+        }
+
+        if (memory[sIndex][tIndex] != -1) {
+            return memory[sIndex][tIndex];
+        }
+
+        // 如果 s[sIndex] == t[tIndex]，则
+        // 1. 在 s[sIndex + 1 ... sLen - 1] 中选出 t[tIndex + 1 ... tLen - 1]，记为 n1；
+        // 2. 在 s[sIndex + 1 ... sLen - 1] 中选出 t[tIndex ... tLen - 1]，记为 n2。
+        // 最后结果为 n1 + n2。
+        // 如果 s[sIndex] == t[tIndex]，则在 s[sIndex + 1 ... sLen - 1] 中选出 t[tIndex ... tLen - 1]。
+        int count = 0;
+        if (s[sIndex] == t[tIndex]) {
+            count = numDistinct(s, sIndex + 1, t, tIndex + 1, memory);
+        }
+        count += numDistinct(s, sIndex + 1, t, tIndex, memory);
+
+        memory[sIndex][tIndex] = count;
+
+        return count;
+    }
+};
+```
 
