@@ -89,7 +89,7 @@ public:
 
 TODO：参考博客，将数组压缩到一维数组。
 
-## 分治
+## 回溯法
 
 参考[LeetCode题解](https://leetcode-cn.com/problems/distinct-subsequences/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-27/)。
 
@@ -170,8 +170,4 @@ private:
     }
 };
 ```
-
-## 回溯法
-
-TODO：参考[博客]([https://blog.pwrliang.com/2019/02/25/115-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/](https://blog.pwrliang.com/2019/02/25/115-不同的子序列/))和[LeetCode题解](https://leetcode-cn.com/problems/distinct-subsequences/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-27/)。
 
