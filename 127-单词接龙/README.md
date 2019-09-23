@@ -43,7 +43,7 @@ wordList = ["hot","dot","dog","lot","log","cog"]
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string> &wordList) {
-        if (find(wordList.begin(), wordList.end(), endWord) != wordList.end()) {
+        if (find(wordList.begin(), wordList.end(), endWord) == wordList.end()) {
             return 0;
         }
 
