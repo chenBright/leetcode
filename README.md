@@ -51,6 +51,7 @@ LeetCode Problems' Solutions
 - [049-字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)*
 - [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)*
 - [051-N皇后](https://leetcode-cn.com/problems/n-queens/)*
+- [052-N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)*
 - [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 - [054-螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)
 - [055-跳跃游戏](https://leetcode-cn.com/problems/jump-game/)*
