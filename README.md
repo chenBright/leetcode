@@ -215,6 +215,7 @@ LeetCode Problems' Solutions
 - [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)*
 - [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)*
 - [367-有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-gpe3dbjds1/)*
+- [374-猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)*
 - [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)*
 - [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)*
 - [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)*
