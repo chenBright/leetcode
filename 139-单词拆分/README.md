@@ -54,6 +54,45 @@ private:
 };
 ```
 
+### 记忆化
+
+使用数组记录`s[i ... s.size() - 1]`能否被拆分，这样可以避免大量的重复计算。
+
+```c++
+class Solution {
+public:
+    bool wordBreak(string s, vector<string> &wordDict) {
+        unordered_set<string> wordSet(wordDict.begin(), wordDict.end());
+        vector<int> memory(s.size(), -1); // -1 表示没记录，0 表示 false， 1 表示 true。
+
+        return dfs(s, wordSet, 0, memory);
+    }
+
+private:
+    bool dfs(string &s, unordered_set<string> &wordSet, int start, vector<int> &memory) {
+        int strLen = s.size();
+        if (start >= strLen) {
+            return true;
+        }
+        if (memory[start] != -1) {
+            return memory[start] == 1;
+        }
+
+        for (int i = start + 1; i <= strLen; ++i) {
+            if (wordSet.count(s.substr(start, i - start)) && dfs(s, wordSet, i, memory)) {
+                memory[start] = 1;
+                return true;
+            }
+        }
+        memory[start] = 0;
+
+        return false;
+    }
+};
+```
+
+
+
 ## 广度优先搜索
 
 广度优先搜索也超时。
@@ -107,7 +146,7 @@ public:
 
 ### 思路
 
-使用数组dp记录每个位置能都被拆分。***dp\[i\]***用于表示以 ***0 ~ i-1*** 为下标范围的字符串能否被字典拆分。
+使用数组dp记录每个位置能否被拆分。***dp\[i\]***用于表示以 ***0 ~ i-1*** 为下标范围的字符串能否被字典拆分。
 
 如果 ***0 ~ j-1*** 范围的字符串在字典中，即***dp\[j\] = true***，那么此时：
 
