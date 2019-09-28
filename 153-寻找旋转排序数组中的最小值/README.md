@@ -65,7 +65,7 @@ public:
 
 当然，也可以和***nums[high]***比较。
 
-二分查找的时间复杂度为***O(logn)***。
+时间复杂度：O(logn)***。
 
 ```c++
 class Solution {
@@ -95,6 +95,33 @@ public:
         }
 
         return min(nums[low], nums[high]);
+    }
+};
+```
+
+## 分治
+
+时间复杂度：***O(logn)***。
+
+```c++
+class Solution {
+public:
+    int findMin(vector<int> &nums) {
+        return helper(nums, 0, static_cast<int>(nums.size()) - 1);
+    }
+private:
+    // 返回 [low ... high] 范围内的最小值
+    int helper(vector<int> &nums, int low, int high) {
+        if (low == high) {
+            return nums[low];
+        }
+        if (nums[low] <= nums[high]) {
+            return nums[low];
+        }
+
+        int mid = low + (high - low) / 2;
+
+        return min(helper(nums, low, mid), helper(nums, mid + 1, high));
     }
 };
 ```
