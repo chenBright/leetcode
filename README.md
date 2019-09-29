@@ -135,6 +135,7 @@ LeetCode Problems' Solutions
 - [151-翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)*
 - [152-乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/)*
 - [153-寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)*
+- [154-寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)*
 - [155-最小栈](https://leetcode-cn.com/problems/min-stack/)
 - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他）
 - [162-寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)*（简单的实现）
