@@ -7,7 +7,7 @@ leetcode：[019-删除链表的倒数第N个节点](https://leetcode-cn.com/prob
 
 ## 双指针法
 
-参考[LeetCode 删除链表的倒数第N个节点官方解答](ps://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/)。
+参考[LeetCode 删除链表的倒数第N个节点官方解答](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/)。
 
 ```c++
 class Solution {
