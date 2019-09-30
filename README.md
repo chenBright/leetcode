@@ -119,6 +119,7 @@ LeetCode Problems' Solutions
 | [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)*（动态规划） | [C++](./121-买卖股票的最佳时机/README.md) |
 | [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)*（贪心算法） | [C++](./122-买卖股票的最佳时机%20II/README.md) |
 | [123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)* | [C++](./123-买卖股票的最佳时机%20III/README.md) |
+| [124-二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) | [C++](./124-二叉树中的最大路径和/README.md) |
 | [125-验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) | [C++](./125-验证回文串/README.md) |
 | [127-单词接龙](https://leetcode-cn.com/problems/word-ladder/)* | [C++](./127-单词接龙/README.md) |
 | [129-求根到叶子节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/)* | [C++](./129-求根到叶子节点数字之和/README.md) |
