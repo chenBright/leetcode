@@ -13,7 +13,7 @@ LeetCode Problems' Solutions
 | [005-最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)* | [C++](./005-最长回文子串/README.md) |
 | [006-Z字形变换](https://leetcode-cn.com/problems/zigzag-conversion/)* | [C++](./006-Z字形变换/README.md) |
 | [007-整数反转](https://leetcode-cn.com/problems/reverse-integer/)* | [C++](./007-整数反转/README.md) |
-| [008-字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | [C++](./008-字符串转换整数 (atoi)/README.md) |
+| [008-字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | [C++](./008-字符串转换整数%20(atoi)/README.md) |
 | [009-回文数](https://leetcode-cn.com/problems/palindrome-number/)* | [C++](./009-回文数/README.md) |
 | [010-正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)*（TODO 有限状态机）| [C++](./010-正则表达式匹配/README.md) |
 | [011-盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | [C++](./011-盛最多水的容器/README.md) |
