@@ -55,7 +55,7 @@ LeetCode Problems' Solutions
 | [047-全排列 II](https://leetcode-cn.com/problems/permutations-ii/)* | [C++](./047-全排列%20II/README.md) |
 | [048-旋转图像](https://leetcode-cn.com/problems/rotate-image/)* | [C++](./048-旋转图像/README.md) |
 | [049-字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)* | [C++](./049-字母异位词分组/README.md) |
-| [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)* | [C++](./050-Pow(x, n)/README.md) |
+| [050-Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)* | [C++](./050-Pow(x,%20n)/README.md) |
 | [051-N皇后](https://leetcode-cn.com/problems/n-queens/)* | [C++](./051-N皇后/README.md) |
 | [052-N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)* | [C++](./052-N皇后%20II/README.md) |
 | [053-最大子序和](https://leetcode-cn.com/problems/maximum-subarray/) | [C++](./053-最大子序和/README.md) |
@@ -149,7 +149,7 @@ LeetCode Problems' Solutions
 | [162-寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)*（简单的实现） | [C++](./162-寻找峰值/README.md) |
 | [165-比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/)* | [C++](./165-比较版本号/README.md) |
 | [166-分数到小数](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/)*（不懂） | [C++](./166-分数到小数/README.md) |
-| [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./167-两数之和%20II - 输入有序数组/README.md) |
+| [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./167-两数之和%20II%20-%20输入有序数组/README.md) |
 | [168-Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)* | [C++](./168-Excel表列名称/README.md) |
 | [169-求众数](https://leetcode-cn.com/problems/majority-element/)* | [C++](./169-求众数/README.md) |
 | [171-Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/) | [C++](./171-Excel表列序号/README.md) |
@@ -171,11 +171,11 @@ LeetCode Problems' Solutions
 | [205-同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/)* | [C++](./205-同构字符串/README.md) |
 | [206-反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)* | [C++](./206-反转链表/README.md) |
 | [207-课程表](https://leetcode-cn.com/problems/course-schedule/)* | [C++](./207-课程表/README.md) |
-| [208-实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)* | [C++](./208-实现 Trie (前缀树)/README.md) |
+| [208-实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)* | [C++](./208-实现%20Trie%20(前缀树)/README.md) |
 | [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)* | [C++](./209-长度最小的子数组/README.md) |
 | [210-课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)* | [C++](./210-课程表%20II/README.md) |
 | [220-存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)* | [C++](./220-存在重复元素%20III/README.md) |
-| [211-添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/) | [C++](./211-添加与搜索单词 - 数据结构设计/README.md) |
+| [211-添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/) | [C++](./211-添加与搜索单词%20-%20数据结构设计/README.md) |
 | [213-打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)* | [C++](./213-打家劫舍%20II/README.md) |
 | [215-数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)* | [C++](./215-数组中的第K个最大元素/README.md) |
 | [216-组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)* | [C++](./216-组合总和%20III/README.md) |
@@ -198,7 +198,7 @@ LeetCode Problems' Solutions
 | [236-二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)* | [C++](./236-二叉树的最近公共祖先/README.md) |
 | [237-删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)* | [C++](./237-删除链表中的节点/README.md) |
 | [238-除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)* | [C++](./238-除自身以外数组的乘积/README.md) |
-| [240-搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)* | [C++](./240-搜索二维矩阵 II/README.md) |
+| [240-搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)* | [C++](./240-搜索二维矩阵%20II/README.md) |
 | [241-为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses/)*（TODO：动态规划） | [C++](./241-为运算表达式设计优先级/README.md) |
 | [242-有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)* | [C++](./242-有效的字母异位词/README.md) |
 | [258-各位相加](https://leetcode-cn.com/problems/add-digits/)* | [C++](./258-各位相加/README.md) |
@@ -214,10 +214,10 @@ LeetCode Problems' Solutions
 | [283-移动零](https://leetcode-cn.com/problems/move-zeroes/)* | [C++](./283-移动零/README.md) |
 | [287-寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)* | [C++](./287-寻找重复数/README.md) |
 | [290-单词规律](https://leetcode-cn.com/problems/word-pattern/)* | [C++](./290-单词规律/README.md) |
-| [292-Nim 游戏](https://leetcode-cn.com/problems/nim-game/)* | [C++](./292-Nim 游戏/README.md) |
+| [292-Nim 游戏](https://leetcode-cn.com/problems/nim-game/)* | [C++](./292-Nim%20游戏/README.md) |
 | [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)* | [C++](./299-猜数字游戏/README.md) |
 | [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)* | [C++](./300-最长上升子序列/README.md) |
-| [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/) | [C++](./303-区域和检索 - 数组不可变/README.md) |
+| [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/) | [C++](./303-区域和检索%20-%20数组不可变/README.md) |
 | [326-3的幂](https://leetcode-cn.com/problems/power-of-three/)*（TODO 3进制） | [C++](./326-3的幂/README.md) |
 | [342-4的幂](https://leetcode-cn.com/problems/power-of-four/)* | [C++](./342-4的幂/README.md) |
 | [344-反转字符串](https://leetcode-cn.com/problems/reverse-string/) | [C++](./344-反转字符串/README.md) |
