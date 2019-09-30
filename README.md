@@ -1,10 +1,10 @@
-# [C++](./两数之和/README.md)leetcode
+# leetcode
 LeetCode Problems' Solutions
 
-题目后面的***\****表示不会做的题目。括号内表示需要日俄别注意的解决方法。
+题目后面的*表示不会做的题目。括号内表示需要
 
 | 题目                                                         | 题解                         |
-| -----------------------------------------------------------| |
+| :----------------------------------------------------------| |
 | [001-两数之和](https://leetcode-cn.com/problems/two-sum/)*      | [C++](./001-两数之和/README.md) |
 | [002-两数相加](https://leetcode-cn.com/problems/two-sum/)        | [C++](./002-两数相加/README.md) |
 | [003-无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)* | [C++](./003-无重复字符的最长子串/README.md) |
