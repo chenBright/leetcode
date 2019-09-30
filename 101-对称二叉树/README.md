@@ -1,8 +1,8 @@
-# 100-相同的树
+# 101-对称二叉树
 
 ## 题目
 
-leetcode：[100-相同的树](https://leetcode-cn.com/problems/same-tree/)
+leetcode：[101-对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
 
 
 ## 递归
