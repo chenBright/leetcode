@@ -122,6 +122,7 @@ LeetCode Problems' Solutions
 | [124-二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) | [C++](./124-二叉树中的最大路径和/README.md) |
 | [125-验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) | [C++](./125-验证回文串/README.md) |
 | [127-单词接龙](https://leetcode-cn.com/problems/word-ladder/)* | [C++](./127-单词接龙/README.md) |
+| [128-最长连续序列](https://leetcode-cn.com/problems/longest-consecutive-sequence/) | [C++](./128-最长连续序列/README.md) |
 | [129-求根到叶子节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/)* | [C++](./129-求根到叶子节点数字之和/README.md) |
 | [130-被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)* | [C++](./130-被围绕的区域/README.md) |
 | [131-分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)*（动态规划） | [C++](./131-分割回文串/README.md) |
