@@ -126,6 +126,7 @@ LeetCode Problems' Solutions
 | [129-求根到叶子节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/)* | [C++](./129-求根到叶子节点数字之和/README.md) |
 | [130-被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)* | [C++](./130-被围绕的区域/README.md) |
 | [131-分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)*（动态规划） | [C++](./131-分割回文串/README.md) |
+| [132-分割回文串 II](https://leetcode-cn.com/problems/palindrome-partitioning-ii/) | [C++](./132-分割回文串%20II/README.md) |
 | [133-克隆图](https://leetcode-cn.com/problems/clone-graph/)* | [C++](./133-克隆图/README.md) |
 | [134-加油站](https://leetcode-cn.com/problems/gas-station/)* | [C++](./134-加油站/README.md) |
 | [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)* | [C++](./136-只出现一次的数字/README.md) |
