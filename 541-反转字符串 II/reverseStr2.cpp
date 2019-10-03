@@ -18,7 +18,9 @@ public:
 private:
     void reverseStr(string& s, int left, int right) {
         while (left < right) {
-            swap(s[left], s[right]);
+            s[left] += s[right];
+            s[right] = s[left] - s[right];
+            s[left] = s[left] - s[right];
             ++left;
             --right;
         }
