@@ -237,4 +237,5 @@ LeetCode Problems' Solutions
 | [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)* | [C++](./445-两数相加%20II/README.md) |
 | [541-反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) | [C++](./541-反转字符串%20II/README.md) |
 | [557-反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) | [C++](./反转字符串中的单词%20III/README.md) |
+| [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./合并二叉树/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
