@@ -44,3 +44,22 @@ public:
 };
 ```
 
+## 与运算，可快速移除最右边的 bit 1
+
+每次将`n & (n - 1)`，可最右边`bit 1`以及其右边的`bit 0`（如果有的话）。
+
+```c++
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int count = 0;
+        while (n) {
+            n &= n - 1; // 快速移除最右边的 bit 1
+            ++count;
+        }
+
+        return count;
+    }
+};
+```
+
