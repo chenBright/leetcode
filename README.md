@@ -88,6 +88,7 @@ LeetCode Problems' Solutions
 | [086-分隔链表](https://leetcode-cn.com/problems/partition-list/) | [C++](./086-分隔链表/README.md) |
 | [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/) | [C++](./088-合并两个有序数组/README.md) |
 | [089-格雷编码](https://leetcode-cn.com/problems/gray-code/)* | [C++](./089-格雷编码/README.md) |
+| [090-子集 II](https://leetcode-cn.com/problems/subsets-ii/) | [C++](./090-子集%20II/README.md) |
 | [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)* | [C++](./091-解码方法/README.md) |
 | [092-反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/) | [C++](./092-反转链表%20II/README.md) |
 | [093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)* | [C++](./093-复原IP地址/README.md) |
@@ -235,7 +236,8 @@ LeetCode Problems' Solutions
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
 | [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)* | [C++](./445-两数相加%20II/README.md) |
+| [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [C++](./461-汉明距离/README.md) |
 | [541-反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) | [C++](./541-反转字符串%20II/README.md) |
-| [557-反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) | [C++](./反转字符串中的单词%20III/README.md) |
-| [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./合并二叉树/README.md) |
+| [557-反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) | [C++](./557-反转字符串中的单词%20III/README.md) |
+| [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./617-合并二叉树/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
