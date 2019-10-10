@@ -239,6 +239,7 @@ LeetCode Problems' Solutions
 | [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [C++](./461-汉明距离/README.md) |
 | [538-把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)* | [C++](./538-把二叉搜索树转换为累加树/README.md) |
 | [541-反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) | [C++](./541-反转字符串%20II/README.md) |
+| [543-二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)* | [C++](./543-二叉树的直径/README.md) |
 | [557-反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) | [C++](./557-反转字符串中的单词%20III/README.md) |
 | [581-最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)* | [C++](./581-最短无序连续子数组/README.md) |
 | [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./617-合并二叉树/README.md) |
