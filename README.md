@@ -235,6 +235,7 @@ LeetCode Problems' Solutions
 | [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)* | [C++](./392-判断子序列/README.md) |
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
+| [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/) | [C++](./438-找到字符串中所有字母异位词/README.md) |
 | [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)* | [C++](./445-两数相加%20II/README.md) |
 | [448-找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | [C++](./448-找到所有数组中消失的数字/README.md) |
 | [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [C++](./461-汉明距离/README.md) |
