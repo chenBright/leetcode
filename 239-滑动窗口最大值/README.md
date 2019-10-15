@@ -112,7 +112,6 @@ public:
 参考[博客解法三](https://github.com/grandyang/leetcode/issues/239)、[LeetCode官方题解中的原理解析](https://leetcode-cn.com/problems/sliding-window-maximum/solution/shi-pin-jie-xi-shuang-duan-dui-lie-hua-dong-chuang/)。
 
 时间复杂度：***O(n)***。
-
 空间复杂度：***O(k)***。
 
 ```c++
