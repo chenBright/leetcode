@@ -233,6 +233,7 @@ LeetCode Problems' Solutions
 | [371-两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/)* | [C++](./371-两整数之和/README.md) |
 | [374-猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)* | [C++](./374-猜数字大小/README.md) |
 | [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)* | [C++](./376-摆动序列/README.md) |
+| [387-字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) | [C++](./387-字符串中的第一个唯一字符/README.md) |
 | [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)* | [C++](./392-判断子序列/README.md) |
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
