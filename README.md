@@ -202,7 +202,7 @@ LeetCode Problems' Solutions
 | [236-二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)* | [C++](./236-二叉树的最近公共祖先/README.md) |
 | [237-删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)* | [C++](./237-删除链表中的节点/README.md) |
 | [238-除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)* | [C++](./238-除自身以外数组的乘积/README.md) |
-| [239-滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [C++](./239-滑动窗口最大值/README.md) |
+| [239-滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)* | [C++](./239-滑动窗口最大值/README.md) |
 | [240-搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)* | [C++](./240-搜索二维矩阵%20II/README.md) |
 | [241-为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses/)*（TODO：动态规划） | [C++](./241-为运算表达式设计优先级/README.md) |
 | [242-有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)* | [C++](./242-有效的字母异位词/README.md) |
@@ -233,18 +233,19 @@ LeetCode Problems' Solutions
 | [371-两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/)* | [C++](./371-两整数之和/README.md) |
 | [374-猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)* | [C++](./374-猜数字大小/README.md) |
 | [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)* | [C++](./376-摆动序列/README.md) |
-| [387-字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) | [C++](./387-字符串中的第一个唯一字符/README.md) |
+| [387-字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)* | [C++](./387-字符串中的第一个唯一字符/README.md) |
 | [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)* | [C++](./392-判断子序列/README.md) |
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
-| [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/) | [C++](./438-找到字符串中所有字母异位词/README.md) |
+| [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)* | [C++](./438-找到字符串中所有字母异位词/README.md) |
 | [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)* | [C++](./445-两数相加%20II/README.md) |
-| [448-找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | [C++](./448-找到所有数组中消失的数字/README.md) |
+| [448-找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)* | [C++](./448-找到所有数组中消失的数字/README.md) |
 | [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [C++](./461-汉明距离/README.md) |
 | [538-把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)* | [C++](./538-把二叉搜索树转换为累加树/README.md) |
 | [541-反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) | [C++](./541-反转字符串%20II/README.md) |
 | [543-二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)* | [C++](./543-二叉树的直径/README.md) |
 | [557-反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) | [C++](./557-反转字符串中的单词%20III/README.md) |
+| [567-字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)* | [C++](./567-字符串的排列/README.md) |
 | [581-最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)* | [C++](./581-最短无序连续子数组/README.md) |
 | [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./617-合并二叉树/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
