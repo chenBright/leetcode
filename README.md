@@ -157,8 +157,9 @@ LeetCode Problems' Solutions
 | [168-Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)* | [C++](./168-Excel表列名称/README.md) |
 | [169-求众数](https://leetcode-cn.com/problems/majority-element/)* | [C++](./169-求众数/README.md) |
 | [171-Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/) | [C++](./171-Excel表列序号/README.md) |
-| [173-二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator/) | [C++](./173-二叉搜索树迭代器/README.md) |
 | [172-阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/)* | [C++](./172-阶乘后的零/README.md) |
+| [173-二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator/) | [C++](./173-二叉搜索树迭代器/README.md) |
+| [174-地下城游戏](https://leetcode-cn.com/problems/dungeon-game/)* | [C++](./174-地下城游戏/README.md) |
 | [179-最大数](https://leetcode-cn.com/problems/largest-number/)* | [C++](./179-最大数/README.md) |
 | [187-重复的DNA序列](https://leetcode-cn.com/problems/repeated-dna-sequences/)* | [C++](./187-重复的DNA序列/README.md) |
 | [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)* | [C++](./188-买卖股票的最佳时机%20IV/README.md) |
