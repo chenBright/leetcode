@@ -151,6 +151,7 @@ LeetCode Problems' Solutions
 | [155-最小栈](https://leetcode-cn.com/problems/min-stack/) | [C++](./155-最小栈/README.md) |
 | [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他） | [C++](./160-相交链表/README.md) |
 | [162-寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)*（简单的实现） | [C++](./162-寻找峰值/README.md) |
+| [164-最大间距](https://leetcode-cn.com/problems/maximum-gap/)* | [C++](./164-最大间距/README.md) |
 | [165-比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/)* | [C++](./165-比较版本号/README.md) |
 | [166-分数到小数](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/)*（不懂） | [C++](./166-分数到小数/README.md) |
 | [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./167-两数之和%20II%20-%20输入有序数组/README.md) |
