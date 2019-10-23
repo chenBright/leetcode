@@ -225,6 +225,7 @@ LeetCode Problems' Solutions
 | [287-寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)* | [C++](./287-寻找重复数/README.md) |
 | [290-单词规律](https://leetcode-cn.com/problems/word-pattern/)* | [C++](./290-单词规律/README.md) |
 | [292-Nim 游戏](https://leetcode-cn.com/problems/nim-game/)* | [C++](./292-Nim%20游戏/README.md) |
+| [297-二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/submissions/) | [C++](./297-二叉树的序列化与反序列化/README.md) |
 | [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)* | [C++](./299-猜数字游戏/README.md) |
 | [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)* | [C++](./300-最长上升子序列/README.md) |
 | [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/) | [C++](./303-区域和检索%20-%20数组不可变/README.md) |
