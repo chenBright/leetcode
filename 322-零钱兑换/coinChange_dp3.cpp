@@ -4,7 +4,7 @@
 #include <climits>
 using namespace std;
 
-// 自下而上
+// 自底向上
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
