@@ -230,6 +230,7 @@ LeetCode Problems' Solutions
 | [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)* | [C++](./299-猜数字游戏/README.md) |
 | [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)* | [C++](./300-最长上升子序列/README.md) |
 | [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/) | [C++](./303-区域和检索%20-%20数组不可变/README.md) |
+| [322-零钱兑换](https://leetcode-cn.com/problems/coin-change/) | [C++](./322-零钱兑换/README.md) |
 | [326-3的幂](https://leetcode-cn.com/problems/power-of-three/)*（TODO 3进制） | [C++](./326-3的幂/README.md) |
 | [342-4的幂](https://leetcode-cn.com/problems/power-of-four/)* | [C++](./342-4的幂/README.md) |
 | [344-反转字符串](https://leetcode-cn.com/problems/reverse-string/) | [C++](./344-反转字符串/README.md) |
