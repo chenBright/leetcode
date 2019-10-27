@@ -33,24 +33,25 @@ private:
         }
     }
     int Partition(vector<int> &nums, int low, int high) {
-        int i = low, j = high;
         int pivotNum = nums[low]; // 基准元素
 
-        while (i < j) {
+        while (low < high) {
+            // 因为 low 位置的元素用于基准元素， low 位置先空出来，所以要先从后面开始找。            
+
             // 从后面开始找，找到第一个不大于基准元素的元素
-            while (i < j && nums[j] > pivotNum) {
-                --j;
+            while (low < high && nums[high] > pivotNum) {
+                --high;
             }
-            nums[i] = nums[j];
+            nums[low] = nums[high];
 
             // 从前面开始找，找到第一个大于基准元素的元素
-            while (i < j && nums[i] <= pivotNum) {
-                ++i;
+            while (low < high && nums[low] <= pivotNum) {
+                ++low;
             }
-            nums[j] = nums[i];
+            nums[high] = nums[low];
         }
-        nums[i] = pivotNum;
-        return i; // 最后的位置 i == j 就是基准元素的最终位置
+        nums[low] = pivotNum;
+        return low; // 最后的位置 i == j 就是基准元素的最终位置
     }
     // 检查number的个数是否超过数组个数的一半
     bool checkMoerThanHalf(vector<int> nums, int number) {
