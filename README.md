@@ -77,11 +77,11 @@ LeetCode Problems' Solutions
 | [069-x的平方根](https://leetcode-cn.com/problems/sqrtx/)*（牛顿迭代法） | [C++](./069-x的平方根/README.md) |
 | [070-爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)* | [C++](./070-爬楼梯/README.md) |
 | [071-简化路径](https://leetcode-cn.com/problems/simplify-path/)* | [C++](./071-简化路径/README.md) |
-| [072-编辑距离](https://leetcode-cn.com/problems/edit-distance/) | [C++](./072-编辑距离/README.md) |
+| [072-编辑距离](https://leetcode-cn.com/problems/edit-distance/)* | [C++](./072-编辑距离/README.md) |
 | [073-矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/) | [C++](./073-矩阵置零/README.md) |
 | [074-搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)* | [C++](./074-搜索二维矩阵/README.md) |
 | [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)* | [C++](./075-颜色分类/README.md) |
-| [076-最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | [C++](./076-最小覆盖子串/README.md) |
+| [076-最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)* | [C++](./076-最小覆盖子串/README.md) |
 | [077-组合](https://leetcode-cn.com/problems/combinations/)* | [C++](./077-组合/README.md) |
 | [078-子集](https://leetcode-cn.com/problems/subsets/)*（迭代、位运算） | [C++](./078-子集/README.md) |
 | [079-单词搜索](https://leetcode-cn.com/problems/word-search/) | [C++](./079-单词搜索/README.md) |
@@ -90,7 +90,7 @@ LeetCode Problems' Solutions
 | [082-删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) | [C++](./082-删除排序链表中的重复元素%20II/README.md) |
 | [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) | [C++](./083-删除排序链表中的重复元素/README.md) |
 | [084-柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/)* | [C++](./084-柱状图中最大的矩形/README.md) |
-| [085-最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/) | [C++](./085-最大矩形/README.md) |
+| [085-最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/)* | [C++](./085-最大矩形/README.md) |
 | [086-分隔链表](https://leetcode-cn.com/problems/partition-list/) | [C++](./086-分隔链表/README.md) |
 | [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/) | [C++](./088-合并两个有序数组/README.md) |
 | [089-格雷编码](https://leetcode-cn.com/problems/gray-code/)* | [C++](./089-格雷编码/README.md) |
@@ -228,15 +228,16 @@ LeetCode Problems' Solutions
 | [287-寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)* | [C++](./287-寻找重复数/README.md) |
 | [290-单词规律](https://leetcode-cn.com/problems/word-pattern/)* | [C++](./290-单词规律/README.md) |
 | [292-Nim 游戏](https://leetcode-cn.com/problems/nim-game/)* | [C++](./292-Nim%20游戏/README.md) |
-| [297-二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/submissions/) | [C++](./297-二叉树的序列化与反序列化/README.md) |
+| [297-二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/submissions/)* | [C++](./297-二叉树的序列化与反序列化/README.md) |
 | [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)* | [C++](./299-猜数字游戏/README.md) |
 | [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)* | [C++](./300-最长上升子序列/README.md) |
 | [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/) | [C++](./303-区域和检索%20-%20数组不可变/README.md) |
-| [322-零钱兑换](https://leetcode-cn.com/problems/coin-change/) | [C++](./322-零钱兑换/README.md) |
+| [322-零钱兑换](https://leetcode-cn.com/problems/coin-change/)* | [C++](./322-零钱兑换/README.md) |
 | [326-3的幂](https://leetcode-cn.com/problems/power-of-three/)*（TODO 3进制） | [C++](./326-3的幂/README.md) |
 | [342-4的幂](https://leetcode-cn.com/problems/power-of-four/)* | [C++](./342-4的幂/README.md) |
 | [344-反转字符串](https://leetcode-cn.com/problems/reverse-string/) | [C++](./344-反转字符串/README.md) |
 | [345-反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | [C++](./345-反转字符串中的元音字母/README.md) |
+| [347-前K个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)* | [C++](./347-前K个高频元素/README.md) |
 | [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)* | [C++](./349-两个数组的交集/README.md) |
 | [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)* | [C++](./350-两个数组的交集%20II/README.md) |
 | [367-有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-gpe3dbjds1/)* | [C++](./367-有效的完全平方数/README.md) |
