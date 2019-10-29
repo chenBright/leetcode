@@ -150,6 +150,7 @@ LeetCode Problems' Solutions
 | [146-LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)* | [C++](./146-LRU缓存机制/README.md) |
 | [147-对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | [C++](./147-对链表进行插入排序/README.md) |
 | [148-排序链表](https://leetcode-cn.com/problems/sort-list/)* | [C++](./148-排序链表/README.md) |
+| [149-直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line/)* | [C++](./149-直线上最多的点数/README.md) |
 | [150-逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [C++](./150-逆波兰表达式求值/README.md) |
 | [151-翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)* | [C++](./151-翻转字符串里的单词/README.md) |
 | [152-乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/)* | [C++](./152-乘积最大子序列/README.md) |
