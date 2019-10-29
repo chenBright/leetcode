@@ -136,6 +136,7 @@ LeetCode Problems' Solutions
 | [132-分割回文串 II](https://leetcode-cn.com/problems/palindrome-partitioning-ii/) | [C++](./132-分割回文串%20II/README.md) |
 | [133-克隆图](https://leetcode-cn.com/problems/clone-graph/)* | [C++](./133-克隆图/README.md) |
 | [134-加油站](https://leetcode-cn.com/problems/gas-station/)* | [C++](./134-加油站/README.md) |
+| [135-分发糖果](https://leetcode-cn.com/problems/candy/)* | [C++](./135-分发糖果/README.md) |
 | [136-只出现一次的数字](https://leetcode-cn.com/problems/single-number/)* | [C++](./136-只出现一次的数字/README.md) |
 | [137-只出现一次的数字 II](https://leetcode-cn.com/problems/single-number-ii/)*（TODO 异或） | [C++](./137-只出现一次的数字%20II/README.md) |
 | [138-复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)*（不熟悉深拷贝，与 133-克隆图 类似） | [C++](./138-复制带随机指针的链表/README.md) |
