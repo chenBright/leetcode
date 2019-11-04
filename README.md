@@ -265,4 +265,5 @@ LeetCode Problems' Solutions
 | [567-字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)* | [C++](./567-字符串的排列/README.md) |
 | [581-最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)* | [C++](./581-最短无序连续子数组/README.md) |
 | [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./617-合并二叉树/README.md) |
+| [621-任务调度器](https://leetcode-cn.com/problems/task-scheduler/)*（TODO 其他更巧妙的方法） | [C++](./621-任务调度器/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
