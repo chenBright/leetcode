@@ -251,6 +251,7 @@ LeetCode Problems' Solutions
 | [376-摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence/)* | [C++](./376-摆动序列/README.md) |
 | [387-字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)* | [C++](./387-字符串中的第一个唯一字符/README.md) |
 | [392-判断子序列](https://leetcode-cn.com/problems/is-subsequence/)* | [C++](./392-判断子序列/README.md) |
+| [394-字符串解码](https://leetcode-cn.com/problems/decode-string/)* | [C++](./394-字符串解码/README.md) |
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
 | [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)* | [C++](./438-找到字符串中所有字母异位词/README.md) |
