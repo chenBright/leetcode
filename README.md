@@ -269,3 +269,4 @@ LeetCode Problems' Solutions
 | [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./617-合并二叉树/README.md) |
 | [621-任务调度器](https://leetcode-cn.com/problems/task-scheduler/)*（TODO 其他更巧妙的方法） | [C++](./621-任务调度器/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
+| [1114-按序打印](https://leetcode-cn.com/problems/print-in-order/)* | [C++](./1114-按序打印/README.md) |
