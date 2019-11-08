@@ -70,6 +70,58 @@ private:
 };
 ```
 
+## C++ 互斥量
+
+```c++
+class Foo {
+public:
+    Foo() :  flag1(false), flag2(false) {
+    }
+
+    void first(function<void()> printFirst) {
+        
+        // printFirst() outputs "first". Do not change or remove this line.
+        printFirst();
+
+        flag1 = true;
+        mutex_.unlock();
+        cond_.notify_all();
+    }
+
+    void second(function<void()> printSecond) {
+        unique_lock<mutex> lock(mutex_);
+        // 直到 falg1 == true，才能进入临界区
+        while (flag1 != true) {
+            cond_.wait(lock);
+        }
+
+        // printSecond() outputs "second". Do not change or remove this line.
+        printSecond();
+
+        flag2 = true;
+        cond_.notify_all();
+    }
+
+    void third(function<void()> printThird) {
+        unique_lock<mutex> lock(mutex_);
+        // 直到 falg1 == true && flag2 == true，才能进入临界区
+        while (flag1 != true || flag2 != true) {
+            cond_.wait(lock);
+        }
+        
+        // printThird() outputs "third". Do not change or remove this line.
+        printThird();
+    }
+
+private:
+    mutex mutex_;
+    condition_variable cond_;
+
+    bool flag1;
+    bool flag2;
+};
+```
+
 ## pthread 条件变量
 
 与使用“互斥量”的方法类似，使用两个变量来控制访问顺序。当一个线程完成函数调用后，才改变下一个线程依赖的变量，使其不再等在条件变量上。
@@ -79,14 +131,57 @@ private:
 ```c++
 class Foo {
 public:
-    Foo() :  flag1(false), flag2(false) {
-        pthread_mutex_init(&mutex_, nullptr);
-        pthread_cond_init(&cond_, nullptr);
+    Foo() {
+        mutex1_.lock();
+        mutex2_.lock();
     }
 
-    ~Foo() {
-        pthread_mutex_destroy(&mutex_);
-        pthread_cond_destroy(&cond_);
+
+    void first(function<void()> printFirst) {
+        
+        // printFirst() outputs "first". Do not change or remove this line.
+        printFirst();
+
+        // 解锁 mutex1_
+        mutex1_.unlock();
+    }
+
+    void second(function<void()> printSecond) {
+        // 对 mutex1_ 上锁
+        mutex1_.lock();
+
+        // printSecond() outputs "second". Do not change or remove this line.
+        printSecond();
+
+        // 解锁 mutex2_
+        mutex2_.unlock();
+
+        mutex1_.unlock();
+    }
+
+    void third(function<void()> printThird) {
+        // 对 mutex2_ 上锁
+        mutex2_.lock();
+        
+        // printThird() outputs "third". Do not change or remove this line.
+        printThird();
+
+        // 解锁 mutex2_
+        mutex2_.unlock();
+    }
+
+private:
+    mutex mutex1_;
+    mutex mutex2_;
+};
+```
+
+## C++ 条件变量
+
+```c++
+class Foo {
+public:
+    Foo() :  flag1(false), flag2(false) {
     }
 
     void first(function<void()> printFirst) {
@@ -95,30 +190,29 @@ public:
         printFirst();
 
         flag1 = true;
-        pthread_mutex_unlock(&mutex_);
-        pthread_cond_signal(&cond_);
+        mutex_.unlock();
+        cond_.notify_all();
     }
 
     void second(function<void()> printSecond) {
-        pthread_mutex_lock(&mutex_);
+        unique_lock<mutex> lock(mutex_);
         // 直到 falg1 == true，才能进入临界区
         while (flag1 != true) {
-            pthread_cond_wait(&cond_, &mutex_);
+            cond_.wait(lock);
         }
 
         // printSecond() outputs "second". Do not change or remove this line.
         printSecond();
 
         flag2 = true;
-        pthread_mutex_unlock(&mutex_);
-        pthread_cond_signal(&cond_);
+        cond_.notify_all();
     }
 
     void third(function<void()> printThird) {
-        pthread_mutex_lock(&mutex_);
+        unique_lock<mutex> lock(mutex_);
         // 直到 falg1 == true && flag2 == true，才能进入临界区
         while (flag1 != true || flag2 != true) {
-            pthread_cond_wait(&cond_, &mutex_);
+            cond_.wait(lock);
         }
         
         // printThird() outputs "third". Do not change or remove this line.
@@ -126,8 +220,8 @@ public:
     }
 
 private:
-    pthread_mutex_t mutex_;
-    pthread_cond_t cond_;
+    mutex mutex_;
+    condition_variable cond_;
 
     bool flag1;
     bool flag2;
