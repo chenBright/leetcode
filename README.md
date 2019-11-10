@@ -254,6 +254,7 @@ LeetCode Problems' Solutions
 | [394-字符串解码](https://leetcode-cn.com/problems/decode-string/)* | [C++](./394-字符串解码/README.md) |
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [406-根据身高重建队列](https://leetcode-cn.com/problems/queue-reconstruction-by-height/)* | [C++](./406-根据身高重建队列/README.md) |
+| [416-分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)* | [C++](./416-分割等和子集/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
 | [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)* | [C++](./438-找到字符串中所有字母异位词/README.md) |
 | [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)* | [C++](./445-两数相加%20II/README.md) |
@@ -268,6 +269,6 @@ LeetCode Problems' Solutions
 | [581-最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)* | [C++](./581-最短无序连续子数组/README.md) |
 | [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [C++](./617-合并二叉树/README.md) |
 | [621-任务调度器](https://leetcode-cn.com/problems/task-scheduler/)*（TODO 其他更巧妙的方法） | [C++](./621-任务调度器/README.md) |
-| [647-回文子串](https://leetcode-cn.com/problems/palindromic-substrings/) | [C++](./647-回文子串/README.md) |
+| [647-回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)* | [C++](./647-回文子串/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
 | [1114-按序打印](https://leetcode-cn.com/problems/print-in-order/)* | [C++](./1114-按序打印/README.md) |
