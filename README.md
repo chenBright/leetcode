@@ -275,3 +275,4 @@ LeetCode Problems' Solutions
 | [1114-按序打印](https://leetcode-cn.com/problems/print-in-order/)* | [C++](./1114-按序打印/README.md) |
 | [1115-交替打印FooBar](https://leetcode-cn.com/problems/print-foobar-alternately/)* | [C++](./1115-交替打印FooBar/README.md) |
 | [1116-打印零与奇偶数](https://leetcode-cn.com/problems/print-zero-even-odd/)* | [C++](./1116-打印零与奇偶数/README.md) |
+| [1226-哲学家进餐](https://leetcode-cn.com/problems/the-dining-philosophers/) | [C++](./1226-哲学家进餐/README.md) |
