@@ -4,32 +4,30 @@ using namespace std;
 // BFS 回溯法
 class Solution {
 public:
-    vector<vector<int> > subsets(vector<int> &nums) {
-        int length = nums.size();
-        if (length == 0) {
-            return res;
-        }
-        subsets(nums, 0, length - 1);
+    vector<vector<int> > subsets(vector<int>& nums) {
+        vector<vector<int> > result;
+        vector<int> tmpResult;
+        subsets(nums, result, tmpResult, 0);
 
-        return res;
+        return result;
     }
 
 private:
-    vector<vector<int> > res;
-    vector<int> temp;
-
-    void subsets(vector<int> &nums, int left, int right) {
-        if (left > right) {
-            res.push_back(temp);
+    void subsets(vector<int>& nums, vector<vector<int> >& result, vector<int>& tmpResult, int index) {
+        if (index == nums.size()) {
+            result.push_back(tmpResult);
             return;
         }
 
-        res.push_back(temp); // 先不考虑后面的元素，先添加当前集合
-        // 与后面每个元素分别组成一个集合
-        for (int i = left; i <= right; ++i) {
-            temp.push_back(nums[i]);
-            subsets(nums, i + 1, right);
-            temp.pop_back();
+        // 先不考虑后面的元素，先将当前集合当做子集添加当前集合。
+        result.push_back(tmpResult);
+        // 与后面每个元素分别组成一个集合，例如
+        // tmpResult = [1]，则组成两个集合：
+        // [1, 2]、[1, 3]。
+        for (int i  = index; i < nums.size(); ++i) {
+            tmpResult.push_back(nums[i]);
+            subsets(nums, result, tmpResult, ++index);
+            tmpResult.pop_back();
         }
     }
 };

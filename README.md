@@ -83,7 +83,7 @@ LeetCode Problems' Solutions
 | [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)* | [C++](./075-颜色分类/README.md) |
 | [076-最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)* | [C++](./076-最小覆盖子串/README.md) |
 | [077-组合](https://leetcode-cn.com/problems/combinations/)* | [C++](./077-组合/README.md) |
-| [078-子集](https://leetcode-cn.com/problems/subsets/)*（迭代、位运算） | [C++](./078-子集/README.md) |
+| [078-子集](https://leetcode-cn.com/problems/subsets/)**（迭代、位运算） | [C++](./078-子集/README.md) |
 | [079-单词搜索](https://leetcode-cn.com/problems/word-search/) | [C++](./079-单词搜索/README.md) |
 | [080-删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/) | [C++](./080-删除排序数组中的重复项%20II/README.md) |
 | [081-搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)* | [C++](./081-搜索旋转排序数组%20II/README.md) |
