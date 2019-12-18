@@ -76,7 +76,7 @@ LeetCode Problems' Solutions
 | [068-文本左右对齐](https://leetcode-cn.com/problems/text-justification/)*（不懂） | [C++](./068-文本左右对齐/README.md) |
 | [069-x的平方根](https://leetcode-cn.com/problems/sqrtx/)*（牛顿迭代法） | [C++](./069-x的平方根/README.md) |
 | [070-爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)* | [C++](./070-爬楼梯/README.md) |
-| [071-简化路径](https://leetcode-cn.com/problems/simplify-path/)* | [C++](./071-简化路径/README.md) |
+| [071-简化路径](https://leetcode-cn.com/problems/simplify-path/)** | [C++](./071-简化路径/README.md) |
 | [072-编辑距离](https://leetcode-cn.com/problems/edit-distance/)* | [C++](./072-编辑距离/README.md) |
 | [073-矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/) | [C++](./073-矩阵置零/README.md) |
 | [074-搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)* | [C++](./074-搜索二维矩阵/README.md) |
