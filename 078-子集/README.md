@@ -105,15 +105,16 @@ public:
 class Solution {
 public:
     vector<vector<int> > subsets(vector<int>& nums) {
-        vector<vector<int> > result;
         int length = nums.size();
-
-        result.push_back(vector<int>()); // 空集合
-
-        // 每个数字代表一个位，有两种情况（取或不取），总共 2 ^ length 中情况
+        // 每个数字代表一个位，有两种情况（取或不取），总共 2 ^ length 种组合。
         int subLength = pow(2, length);
-        // 当前取数情况，如果 nums = [1, 2, 3]，则当前 hash = 001(2)
-        int hash = 1;
+
+        vector<vector<int> > result;
+        result.reserve(subLength + 1); // 2 ^ length 种组合 + 空集合
+
+
+        // 当前取数情况，如果 nums = [1, 2, 3]，则当前 hash = 000(2)，表示空集合。
+        int hash = 0;
         while (hash < subLength) {
             vector<int> tmp;
             for (int i = 0; i < length; ++i) {
@@ -124,7 +125,7 @@ public:
                     tmp.push_back(nums[i]);
                 }
             }
-            result.push_back(tmp);
+            result.emplace_back(std::move(tmp));
             ++hash;
         }
 
