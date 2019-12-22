@@ -163,18 +163,19 @@ public:
             return 0;
         }
 
+        int num = -1;
         int count = 0;
-        int num = nums[0];
         for (int i = 0; i < nums.size(); ++i) {
-            if (num == nums[i]) {
-                ++count;
-            } else {
-                --count;
-            }
-
             if (count == 0) {
                 num = nums[i];
                 count = 1;
+                continue;
+            }
+
+            if (num != nums[i]) {
+                --count;
+            } else {
+                ++count;
             }
         }
 
