@@ -164,7 +164,7 @@ LeetCode Problems' Solutions
 | [166-分数到小数](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/)*（不懂） | [C++](./166-分数到小数/README.md) |
 | [167-两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./167-两数之和%20II%20-%20输入有序数组/README.md) |
 | [168-Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)* | [C++](./168-Excel表列名称/README.md) |
-| [169-求众数](https://leetcode-cn.com/problems/majority-element/)* | [C++](./169-求众数/README.md) |
+| [169-求众数](https://leetcode-cn.com/problems/majority-element/) | [C++](./169-求众数/README.md) |
 | [171-Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/) | [C++](./171-Excel表列序号/README.md) |
 | [172-阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/)* | [C++](./172-阶乘后的零/README.md) |
 | [173-二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator/) | [C++](./173-二叉搜索树迭代器/README.md) |
