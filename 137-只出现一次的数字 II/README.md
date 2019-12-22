@@ -14,10 +14,6 @@ leetcode：[137-只出现一次的数字 II](https://leetcode-cn.com/problems/si
 class Solution {
 public:
     int singleNumber(vector<int> &nums) {
-        if (nums.empty()) {
-            return -1;
-        }
-
         map<int, int> m;
         for (int i = 0; i < nums.size(); ++i) {
             if (m.count(nums[i])) {
@@ -80,3 +76,6 @@ public:
 };
 ```
 
+## 位运算
+
+参考[Single Number II（模拟三进制法，图表解析）](https://leetcode-cn.com/problems/single-number-ii/solution/single-number-ii-mo-ni-san-jin-zhi-fa-by-jin407891/)

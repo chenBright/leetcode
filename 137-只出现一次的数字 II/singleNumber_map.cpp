@@ -5,10 +5,6 @@ using namespace std;
 class Solution {
 public:
     int singleNumber(vector<int> &nums) {
-        if (nums.empty()) {
-            return -1;
-        }
-
         map<int, int> m;
         for (int i = 0; i < nums.size(); ++i) {
             if (m.count(nums[i])) {
