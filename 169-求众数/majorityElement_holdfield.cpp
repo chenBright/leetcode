@@ -9,18 +9,20 @@ public:
             return 0;
         }
 
+        int num = -1;
         int count = 0;
-        int num = nums[0];
         for (int i = 0; i < nums.size(); ++i) {
-            if (num == nums[i]) {
-                ++count;
-            } else {
-                --count;
-            }
-
+            // 如果 count == 0，则将当前数字作为候选数字。
             if (count == 0) {
                 num = nums[i];
                 count = 1;
+                continue;
+            }
+
+            if (num != nums[i]) {
+                --count;
+            } else {
+                ++count;
             }
         }
 
