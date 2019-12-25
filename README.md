@@ -170,10 +170,10 @@ LeetCode Problems' Solutions
 | [173-二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator/) | [C++](./173-二叉搜索树迭代器/README.md) |
 | [174-地下城游戏](https://leetcode-cn.com/problems/dungeon-game/)* | [C++](./174-地下城游戏/README.md) |
 | [179-最大数](https://leetcode-cn.com/problems/largest-number/)* | [C++](./179-最大数/README.md) |
-| [187-重复的DNA序列](https://leetcode-cn.com/problems/repeated-dna-sequences/)* | [C++](./187-重复的DNA序列/README.md) |
+| [187-重复的DNA序列](https://leetcode-cn.com/problems/repeated-dna-sequences/)** | [C++](./187-重复的DNA序列/README.md) |
 | [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)* | [C++](./188-买卖股票的最佳时机%20IV/README.md) |
 | [189-旋转数组](https://leetcode-cn.com/problems/rotate-array/)* | [C++](./189-旋转数组/README.md) |
-| [190-颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)* | [C++](./190-颠倒二进制位/README.md) |
+| [190-颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)** | [C++](./190-颠倒二进制位/README.md) |
 | [191-位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)* | [C++](./191-位1的个数/README.md) |
 | [198-打家劫舍](https://leetcode-cn.com/problems/house-robber/)* | [C++](./198-打家劫舍/README.md) |
 | [199-二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/) | [C++](./199-二叉树的右视图/README.md) |
