@@ -166,6 +166,10 @@ public:
         int num = -1;
         int count = 0;
         for (int i = 0; i < nums.size(); ++i) {
+<<<<<<< HEAD
+=======
+            // 如果 count == 0，则将当前数字作为候选数字。
+>>>>>>> 9f70c042f99cb4a3d4689a0c940d7e5b1e509401
             if (count == 0) {
                 num = nums[i];
                 count = 1;
