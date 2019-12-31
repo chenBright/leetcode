@@ -174,7 +174,7 @@ LeetCode Problems' Solutions
 | [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)* | [C++](./188-买卖股票的最佳时机%20IV/README.md) |
 | [189-旋转数组](https://leetcode-cn.com/problems/rotate-array/)* | [C++](./189-旋转数组/README.md) |
 | [190-颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/)** | [C++](./190-颠倒二进制位/README.md) |
-| [191-位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)* | [C++](./191-位1的个数/README.md) |
+| [191-位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/) | [C++](./191-位1的个数/README.md) |
 | [198-打家劫舍](https://leetcode-cn.com/problems/house-robber/)* | [C++](./198-打家劫舍/README.md) |
 | [199-二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/) | [C++](./199-二叉树的右视图/README.md) |
 | [200-岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) | [C++](./200-岛屿数量/README.md) |
@@ -205,7 +205,7 @@ LeetCode Problems' Solutions
 | [228-汇总区间](https://leetcode-cn.com/problems/summary-ranges/) | [C++](./228-汇总区间/README.md) |
 | [229-求众数 II](https://leetcode-cn.com/problems/majority-element-ii/)* | [C++](./229-求众数%20II/README.md) |
 | [230-二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/)* | [C++](./230-二叉搜索树中第K小的元素/README.md) |
-| [231-2的幂](https://leetcode-cn.com/problems/power-of-two/)* | [C++](./231-2的幂/README.md) |
+| [231-2的幂](https://leetcode-cn.com/problems/power-of-two/)** | [C++](./231-2的幂/README.md) |
 | [232-用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) | [C++](./232-用栈实现队列/README.md) |
 | [234-回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)* | [C++](./234-回文链表/README.md) |
 | [235-二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++](./235-二叉搜索树的最近公共祖先/README.md) |
