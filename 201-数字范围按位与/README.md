@@ -17,7 +17,7 @@ public:
         }
 
         return n;
-    } 
+    }
 };
 ```
 
@@ -39,7 +39,7 @@ public:
         }
 
         return m << i;
-    } 
+    }
 };
 ```
 
@@ -47,11 +47,14 @@ public:
 
 参考[博客 解法三](https://www.cnblogs.com/grandyang/p/4431646.html)。
 
+此方法实质是前一个方法的递归版本。
+
 ```c++
 class Solution {
 public:
     int rangeBitwiseAnd(int m, int n) {
-        return n > m ? (rangeBitwiseAnd(m / 2, n / 2) << 1) : m;
-    } 
+        // return n > m ? (rangeBitwiseAnd(m / 2, n / 2) << 1) : m;
+        return n > m ? (rangeBitwiseAnd(m >> 1, n >> 1) << 1) : m;
+    }
 };
 ```
