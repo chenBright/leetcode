@@ -220,7 +220,7 @@ LeetCode Problems' Solutions
 | [260-只出现一次的数字 III](https://leetcode-cn.com/problems/single-number-iii/)* | [C++](./260-只出现一次的数字%20III/README.md) |
 | [263-丑数](https://leetcode-cn.com/problems/ugly-number/) | [C++](./263-丑数/README.md) |
 | [264-丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)* | [C++](./264-丑数%20II/README.md) |
-| [268-缺失数字](https://leetcode-cn.com/problems/missing-number/)* | [C++](./268-缺失数字/README.md) |
+| [268-缺失数字](https://leetcode-cn.com/problems/missing-number/)** | [C++](./268-缺失数字/README.md) |
 | [274-H指数](https://leetcode-cn.com/problems/h-index/)* | [C++](./274-H指数/README.md) |
 | [275-H指数 II](https://leetcode-cn.com/problems/h-index-ii/)* | [C++](./275-H指数%20II/README.md) |
 | [278-第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/) | [C++](./278-第一个错误的版本/README.md) |

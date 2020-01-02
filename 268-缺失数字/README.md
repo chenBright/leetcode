@@ -74,7 +74,7 @@ public:
 
 使用异或的思想，将数组中的所有数字和`0 ... n`进行异或操作。除了缺失的数字，其他数字出现了两次，最后异或的操作等于缺失的数字。
 
-时间复杂度：***O(nlogn)***。
+时间复杂度：***O(n)***。
 
 空间复杂度：***O(1)***。
 
@@ -107,10 +107,7 @@ class Solution {
 public:
     int missingNumber(vector<int> &nums) {
         int expectedSum = nums.size() * (nums.size() + 1) / 2;
-        int actualSum = 0;
-        for (const auto &num : nums) {
-            actualSum += num;
-        }
+        int actualSum = accumulate(nums.begin(), nums.end(), 0);
 
         return expectedSum - actualSum;
     }
