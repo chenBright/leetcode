@@ -7,11 +7,7 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
-        vector<int> res;
-        if (nums.empty()) {
-            return res;
-        }
-
+        vector<int> result;
         // <值, 索引>
         unordered_map<int, int> hashMap;
         int len = nums.size();
@@ -21,14 +17,14 @@ public:
 
         for (int i = 0; i < len; ++i) {
             int anotherNum = target - nums[i]; // 另一个数
-            // 存在等于target - nums[i]的数且不是同一个数
+            // 存在等于 target - nums[i] 的数且不是同一个数
             if (hashMap.count(anotherNum) && i != hashMap[anotherNum]) {
-                res.push_back(i);
-                res.push_back(hashMap[anotherNum]); // 另一个数的索引
+                result.push_back(i);
+                result.push_back(hashMap[anotherNum]); // 另一个数的索引
                 break;
             }
         }
 
-        return res;
+        return result;
     }
 };
