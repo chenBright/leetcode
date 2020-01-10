@@ -6,7 +6,7 @@ LeetCode Problems' Solutions
 
 | 题目                                                         | 题解                         |
 | :----------------------------------------------------------| :---------------------------------------------------------- |
-| [001-两数之和](https://leetcode-cn.com/problems/two-sum/)*      | [C++](./001-两数之和/README.md) |
+| [001-两数之和](https://leetcode-cn.com/problems/two-sum/)      | [C++](./001-两数之和/README.md) |
 | [002-两数相加](https://leetcode-cn.com/problems/two-sum/)        | [C++](./002-两数相加/README.md) |
 | [003-无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)* | [C++](./003-无重复字符的最长子串/README.md) |
 | [004-寻找两个有序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)* | [C++](./004-寻找两个有序数组的中位数/README.md) |
