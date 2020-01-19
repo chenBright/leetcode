@@ -20,7 +20,7 @@ LeetCode Problems' Solutions
 | [012-整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)* | [C++](./012-整数转罗马数字/README.md) |
 | [013-罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/) | [C++](./013-罗马数字转整数/README.md) |
 | [014-最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)*（TODO：字典树）| [C++](./014-最长公共前缀/README.md) |
-| [015-三数之和](https://leetcode-cn.com/problems/3sum/)* | [C++](./015-三数之和/README.md) |
+| [015-三数之和](https://leetcode-cn.com/problems/3sum/)** | [C++](./015-三数之和/README.md) |
 | [016-最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) | [C++](./016-最接近的三数之和/README.md) |
 | [017-电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)* | [C++](./017-电话号码的字母组合/README.md) |
 | [018-四数之和](https://leetcode-cn.com/problems/4sum/)* | [C++](./018-四数之和/README.md) |

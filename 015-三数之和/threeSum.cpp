@@ -6,18 +6,17 @@ class Solution {
 public:
     vector<vector<int> > threeSum(vector<int> &nums) {
         vector<vector<int> > res;
-        int len = nums.size();
+        int length = nums.size();
         sort(nums.begin(), nums.end());
-        for (int i = 0; i < len; ++i) {
+        for (int i = 0; i < length; ++i) {
             if (i == 0 || nums[i] > nums[i - 1]) { // 去重
                 int j = i + 1;
-                int k = nums.size() - 1;
+                int k = length - 1;
                 // 双指针
                 while (j < k) {
                     int sum = nums[j] + nums[k];
                     if (sum == -nums[i]) {
-                        vector<int> temp = {nums[i], nums[j], nums[k]};
-                        res.push_back(temp);
+                        res.push_back({nums[i], nums[j], nums[k]});
                         ++j;
                         --k;
                         while (j < k && nums[j] == nums[j - 1]) { // 去重
