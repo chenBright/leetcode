@@ -9,7 +9,7 @@ LeetCode Problems' Solutions
 | [001-两数之和](https://leetcode-cn.com/problems/two-sum/)      | [C++](./001-两数之和/README.md) |
 | [002-两数相加](https://leetcode-cn.com/problems/two-sum/)        | [C++](./002-两数相加/README.md) |
 | [003-无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)* | [C++](./003-无重复字符的最长子串/README.md) |
-| [004-寻找两个有序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)* | [C++](./004-寻找两个有序数组的中位数/README.md) |
+| [004-寻找两个有序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)** | [C++](./004-寻找两个有序数组的中位数/README.md) |
 | [005-最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)** | [C++](./005-最长回文子串/README.md) |
 | [006-Z字形变换](https://leetcode-cn.com/problems/zigzag-conversion/)* | [C++](./006-Z字形变换/README.md) |
 | [007-整数反转](https://leetcode-cn.com/problems/reverse-integer/)* | [C++](./007-整数反转/README.md) |
