@@ -24,7 +24,7 @@ leetcode：[053-最大子序和](https://leetcode-cn.com/problems/maximum-subarr
 分治的时间复杂度为**O(nlogn)**。
 
 ```c++
-lass Solution {
+class Solution {
 public:
     int maxSubArray(vector<int> &nums) {
         if (nums.empty()) {
@@ -80,14 +80,14 @@ private:
 
 ## 动态规划
 
-如果用函数f(i)表示以第i个数字结尾的子数组的最大和，那么我们需要求出max(f[0...n])。我们可以给出如下递归公式求f(i)：
+如果用函数 f(i) 表示以第 i 个数字结尾的子数组的最大和，那么我们需要求出 max(f[0...n])。我们可以给出如下递归公式求 f(i)：
 
 ![动态规划递推方程](./dp.jpg)
 
 这个公式的意义：
 
-1. 当以第(i-1)个数字为结尾的子数组中所有数字的和f(i-1)小于0时，如果把这个负数和第i个数相加，得到的结果反而不第i个数本身还要小，所以这种情况下最大子数组和是第i个数本身。
-2. 如果以第(i-1)个数字为结尾的子数组中所有数字的和f(i-1)大于0，与第i个数累加就得到了以第i个数结尾的子数组中所有数字的和。
+1. 当以第 (i-1) 个数字为结尾的子数组中所有数字的和 f(i-1) 小于 0 时，如果把这个负数和第 i 个数相加，得到的结果反而不第 i 个数本身还要小，所以这种情况下最大子数组和是第 i 个数本身。
+2. 如果以第 (i-1) 个数字为结尾的子数组中所有数字的和 f(i-1) 大于 0，与第 i 个数累加就得到了以第 i 个数结尾的子数组中所有数字的和。
 
 动态规划的时间复杂度为**O(n)**。
 
@@ -96,11 +96,11 @@ class Solution {
 public:
     int maxSubArray(vector<int> &nums) {
         int sum = 0;
-        int max = INT_MIN;
-        for (int i = 0; i < nums.size(); ++i) {
-            sum += nums[i];
-            if (sum > max) {
-                max = sum;
+        int result = INT_MIN;
+        for (const auto& num : nums) {
+            sum += num;
+            if (sum > result) {
+                result = sum;
             }
 
             if (sum < 0) {
@@ -108,7 +108,7 @@ public:
             }
         }
 
-        return max;
+        return result;
     }
 };
 ```
