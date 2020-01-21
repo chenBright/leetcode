@@ -20,6 +20,7 @@ public:
             int i = (iMin + iMax) / 2;
             int j = (m + n + 1) / 2 - i;
 
+            // 判断边界条件，以保证在数组中取值时不越界。
             if (j != 0 && i != m && nums2[j - 1] > nums1[i]) {
                 iMin = i + 1;
             } else if (i != 0 && j != n && nums1[i - 1] > nums2[j]) {
