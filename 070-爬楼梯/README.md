@@ -37,6 +37,8 @@ private:
 
 观察前面的递归，发现`f(n) = f(n-1) + f(n-2)`。这符合斐波那契数列的规律。
 
+### 辅助数组
+
 ```c++
 class Solution {
 public:
@@ -49,6 +51,26 @@ public:
         }
 
         return cache[n];
+    }
+};
+```
+
+### 不需要辅助数组
+
+```c++
+class Solution {
+public:
+    int climbStairs(int n) {
+        int a = 0;
+        int b = 1;
+        int result = 0;
+        for (int i = 1; i <= n; ++i) {
+            result = a + b;
+            a = b;
+            b = result;
+        }
+
+        return result;
     }
 };
 ```
