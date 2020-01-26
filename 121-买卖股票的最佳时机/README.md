@@ -10,7 +10,7 @@ leetcode：[121-买卖股票的最佳时机](https://leetcode-cn.com/problems/be
 
 ## 蛮力法
 
-蛮力法的时间复杂度为***O(n^2)***。
+蛮力法的时间复杂度为**O(n^2)**。
 
 ```c++
 class Solution {
@@ -40,7 +40,7 @@ public:
 2. 归并过的数组右半边；
 3. 整个数组，即`右半边最右边的元素(右半边最大值) - 左半边最左边的元素(左半边最小值) `。
 
-归并排序的时间复杂度为***O(nlogn)***。
+归并排序的时间复杂度为**O(nlogn)**。
 
 ```c++
 class Solution {
@@ -64,7 +64,10 @@ private:
         int mid = (low + high) / 2;
         int leftProfit = maxProfit(prices, low, mid, temp); // 左半边的最大利润
         int rightProfit = maxProfit(prices, mid + 1, high, temp); // 右半边的最大利润
-        int holeProfit = prices[high] - prices[low]; // 右半边最大值 - 左半边最小值
+        // 右半边最大值 - 左半边最小值
+        // 因为左右半边的数组都排过序了，
+        // 所以左半边的最小值为 prices[low]，右半边的最大值为 prices[high]。
+        int holeProfit = prices[high] - prices[low];
 
         int profit = leftProfit > rightProfit ? leftProfit : rightProfit;
         if (holeProfit > profit) {
@@ -74,7 +77,7 @@ private:
         int left = low;
         int right = mid + 1;
         int tempIndex = low;
-        // 归并
+        // 归并排序
         while (left <= mid && right <= high) {
             if (prices[left] <= prices[right]) {
                 temp[tempIndex++] = prices[left++];
@@ -103,7 +106,7 @@ private:
 
 前`i`天的最大利润 = max{前`i-1 `天的最大利润，第`i`天的价格 - 前`i-1`天中的最小价格}。
 
-动态规划的时间复杂度为***O(n)***。
+动态规划的时间复杂度为**O(n)**。
 
 ```c++
 class Solution {
@@ -111,13 +114,13 @@ public:
     int maxProfit(vector<int> &prices) {
         int profit = 0;
         int minPrice = INT_MAX; // 最小价格
-        for (auto it = prices.begin(); it != prices.end(); ++it) {
-            if (*it < minPrice) {
-                minPrice = *it;
+        for (const auto& num : prices) {
+            if (num < minPrice) {
+                minPrice = num;
             }
-            profit = max(profit, *it - minPrice);
+            profit = max(profit, num - minPrice);
         }
-        
+
         return profit;
     }
 };

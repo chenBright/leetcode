@@ -23,7 +23,10 @@ private:
         int mid = (low + high) / 2;
         int leftProfit = maxProfit(prices, low, mid, temp); // 左半边的最大利润
         int rightProfit = maxProfit(prices, mid + 1, high, temp); // 右半边的最大利润
-        int holeProfit = prices[high] - prices[low]; // 右半边最大值 - 左半边最小值
+        // 右半边最大值 - 左半边最小值
+        // 因为左右半边的数组都排过序了，
+        // 所以左半边的最小值为 prices[low]，右半边的最大值为 prices[high]。
+        int holeProfit = prices[high] - prices[low];
 
         int profit = leftProfit > rightProfit ? leftProfit : rightProfit;
         if (holeProfit > profit) {
@@ -33,7 +36,7 @@ private:
         int left = low;
         int right = mid + 1;
         int tempIndex = low;
-        // 归并
+        // 归并排序
         while (left <= mid && right <= high) {
             if (prices[left] <= prices[right]) {
                 temp[tempIndex++] = prices[left++];

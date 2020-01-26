@@ -8,13 +8,13 @@ public:
     int maxProfit(vector<int> &prices) {
         int profit = 0;
         int minPrice = INT_MAX; // 最小价格
-        for (auto it = prices.begin(); it != prices.end(); ++it) {
-            if (*it < minPrice) {
-                minPrice = *it;
+        for (const auto& num : prices) {
+            if (num < minPrice) {
+                minPrice = num;
             }
-            profit = max(profit, *it - minPrice);
+            profit = max(profit, num - minPrice);
         }
-        
+
         return profit;
     }
 };
