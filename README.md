@@ -123,7 +123,7 @@ LeetCode Problems' Solutions
 | [118-杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/) | [C++](./118-杨辉三角/README.md) |
 | [119-杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/) | [C++](./119-杨辉三角%20II/README.md) |
 | [120-三角形最小路径和](https://leetcode-cn.com/problems/triangle/)* | [C++](./120-三角形最小路径和/README.md) |
-| [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)*（动态规划） | [C++](./121-买卖股票的最佳时机/README.md) |
+| [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)**（动态规划） | [C++](./121-买卖股票的最佳时机/README.md) |
 | [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)*（贪心算法） | [C++](./122-买卖股票的最佳时机%20II/README.md) |
 | [123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)* | [C++](./123-买卖股票的最佳时机%20III/README.md) |
 | [124-二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)* | [C++](./124-二叉树中的最大路径和/README.md) |
