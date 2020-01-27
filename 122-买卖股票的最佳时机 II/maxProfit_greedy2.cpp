@@ -5,10 +5,6 @@ class Solution {
 public:
     int maxProfit(vector<int> &prices) {
         int profit = 0;
-        if (prices.empty()) {
-            return profit;
-        }
-
         for (auto it = prices.begin(); it + 1 != prices.end(); ++it) {
             int diff = *(it + 1) - *it;
             // 只要第i天的价格比第i+1天的价格低，则在第i天买入，第i+1天卖出

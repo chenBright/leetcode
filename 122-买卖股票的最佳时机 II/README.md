@@ -8,7 +8,7 @@ leetcode：[122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems
 
 参考[LeetCode买卖股票的最佳时机 II官方解答](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/)。
 
-贪心算法的时间复杂度为***O(n)***。
+贪心算法的时间复杂度为**O(n)**。
 
 ### 贪心算法1
 
@@ -21,10 +21,6 @@ class Solution {
 public:
     int maxProfit(vector<int> &prices) {
         int profit = 0;
-        if (prices.empty()) {
-            return profit;
-        }
-        
         int vally = 0;
         int peak = 0;
         auto it = prices.begin();
@@ -60,10 +56,6 @@ class Solution {
 public:
     int maxProfit(vector<int> &prices) {
         int profit = 0;
-        if (prices.empty()) {
-            return profit;
-        }
-
         for (auto it = prices.begin(); it + 1 != prices.end(); ++it) {
             int diff = *(it + 1) - *it;
             // 只要第i天的价格比第i+1天的价格低，则在第i天买入，第i+1天卖出
