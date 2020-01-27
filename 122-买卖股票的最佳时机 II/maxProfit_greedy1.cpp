@@ -5,10 +5,6 @@ class Solution {
 public:
     int maxProfit(vector<int> &prices) {
         int profit = 0;
-        if (prices.empty()) {
-            return profit;
-        }
-        
         int vally = 0;
         int peak = 0;
         auto it = prices.begin();
