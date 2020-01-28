@@ -3,25 +3,30 @@ using namespace std;
 
 class Solution {
 public:
-    int maxProfit(vector<int> &prices) {
+    int maxProfit(vector<int>& prices) {
         int profit = 0;
-        int vally = 0;
-        int peak = 0;
-        auto it = prices.begin();
-        while (it + 1 != prices.end()) {
+        int minPrice = INT_MAX;
+        int length = prices.size();
+        for (int i = 0; i + 1 < length; ++i) {
             // 找到极小值
-            while (it + 1 != prices.end() && *it >= *(it + 1)) {
-                ++it;
+            while (i + 1 < length && prices[i] >= prices[i + 1]) {
+                ++i;
             }
-            vally = *it;
+            if (i >= length) {
+                break;
+            }
+            minPrice = prices[i];
+            ++i;
 
             // 找到极大值
-            while (it + 1 != prices.end() && *it <= *(it + 1)) {
-                ++it;
+            while (i + 1 < length && prices[i] <= prices[i + 1]) {
+                ++i;
             }
-            peak = *it;
+            if (i >= length) {
+                break;
+            }
 
-            profit += peak - vally;
+            profit += prices[i] - minPrice;
         }
 
         return profit;
