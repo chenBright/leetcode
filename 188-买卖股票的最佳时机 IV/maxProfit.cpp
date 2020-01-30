@@ -2,12 +2,12 @@
 using namespace std;
 
 /**
- * 1. 当k大于等于数组长度一半时, 
+ * 1. 当k大于等于数组长度一半时,
  * 问题退化为贪心问题此时采用 122-买卖股票的最佳时机 II 的方法。
- * 
+ *
  * 2. 当k不大于数组长度一半时，
- * 可以使用 123- 买卖股票的最佳时机 III 的方法来解决，
- * 将两笔买卖的变量扩展成长度为k的二维数组即可。
+ * 可以使用 123-买卖股票的最佳时机 III 的方法来解决，
+ * 将两笔买卖的变量扩展成长度为 k 的二维数组，即 123 题中的 k = 2。
  */
 class Solution {
 public:
@@ -38,13 +38,9 @@ public:
 private:
     int maxProfit_greedy(vector<int> &prices) {
         int profit = 0;
-        if (prices.empty()) {
-            return profit;
-        }
-
-        for (auto it = prices.begin(); it + 1 != prices.end(); ++it) {
-            int diff = *(it + 1) - *it;
-            // 只要第i天的价格比第i+1天的价格低，则在第i天买入，第i+1天卖出
+        for (int i = 0; i + 1 < prices.size(); ++i) {
+            int diff = prices[i + 1] - prices[i];
+            // 只要第 i 天的价格比第 i+1 天的价格低，则在第 i 天买入，第 i+1 天卖出
             if (diff > 0) {
                 profit += diff;
             }
