@@ -8,7 +8,7 @@ leetcode：[035-搜索插入位置](https://leetcode-cn.com/problems/search-inse
 ## 暴力破解
 遍历数组每个元素，找到第一个大于等于target的元素的位置并返回。如果数组中没有大于等于target的元素，则返回素组长度。
 
-该方法的时间复杂度为***O(n)***。
+该方法的时间复杂度为**O(n)**。
 
 ```c++
 class Solution {
@@ -34,7 +34,9 @@ public:
 - 如果数组中存在等于target的元素，则返回该元素的索引。
 - 如果数组中不存在等于target的元素，则返回二分查找结束时`low`指向的位置。
 
-该方法的时间复杂度为***O(logn)***。
+该方法的时间复杂度为**O(logn)**。
+
+## 迭代实现
 
 ```c++
 class Solution {
@@ -55,6 +57,21 @@ public:
         }
 
         return low;
+    }
+};
+```
+
+### STL lower_bound
+
+```c++
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        if (nums.empty()) {
+            return 0;
+        }
+
+        return lower_bound(nums.begin(), nums.end(), target) - nums.begin();
     }
 };
 ```
