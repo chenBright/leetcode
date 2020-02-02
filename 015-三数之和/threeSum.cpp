@@ -8,7 +8,7 @@ public:
         vector<vector<int> > res;
         int length = nums.size();
         sort(nums.begin(), nums.end());
-        for (int i = 0; i < length; ++i) {
+        for (int i = 0; i < length - 3; ++i) {
             if (i == 0 || nums[i] > nums[i - 1]) { // 去重
                 int j = i + 1;
                 int k = length - 1;

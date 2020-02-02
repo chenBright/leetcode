@@ -12,7 +12,7 @@ leetcode：[015-三数之和](https://leetcode-cn.com/problems/3sum/)
 
 （另外需要注意的是**去重**的问题）
 
-双指针法的时间复杂度为***O(n^2)***。
+双指针法的时间复杂度为**O(n^2)**。
 
 ```c++
 class Solution {
@@ -21,7 +21,7 @@ public:
         vector<vector<int> > res;
         int length = nums.size();
         sort(nums.begin(), nums.end());
-        for (int i = 0; i < length; ++i) {
+        for (int i = 0; i < length - 3; ++i) {
             if (i == 0 || nums[i] > nums[i - 1]) { // 去重
                 int j = i + 1;
                 int k = length - 1;
