@@ -23,7 +23,7 @@ LeetCode Problems' Solutions
 | [015-三数之和](https://leetcode-cn.com/problems/3sum/)** | [C++](./015-三数之和/README.md) |
 | [016-最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)** | [C++](./016-最接近的三数之和/README.md) |
 | [017-电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)* | [C++](./017-电话号码的字母组合/README.md) |
-| [018-四数之和](https://leetcode-cn.com/problems/4sum/)* | [C++](./018-四数之和/README.md) |
+| [018-四数之和](https://leetcode-cn.com/problems/4sum/) | [C++](./018-四数之和/README.md) |
 | [019-删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) | [C++](./019-删除链表的倒数第N个节点/README.md) |
 | [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) | [C++](./020-有效的括号/README.md) |
 | [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [C++](./021-合并两个有序链表/README.md) |
