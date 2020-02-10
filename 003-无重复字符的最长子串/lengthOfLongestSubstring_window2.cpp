@@ -6,26 +6,25 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int strLen = s.size();
-        vector<int> indexs(256, -1); // 字符哈希表
+        int strLength = s.size();
+        vector<int> indexs(256, 0); // 字符哈希表
         int start = 0;
         int end = 0;
-        int maxLen = 0;
+        int maxLength = 0;
 
-        while (start < strLen && end < strLen) {
-            int index = indexs[s[end]]; // 字符索引
+        while (start < strLength && end < strLength) {
             // 如果字符未出现过，则扩大滑动窗口
-            if (index == -1) {
-                indexs[s[end]] = end;
-                maxLen = max(maxLen, end - start + 1);
+            if (indexs[s[end]] == 0) {
+                indexs[s[end]] = 1;
+                maxLength = max(maxLength, end - start + 1);
                 // 移动滑动窗口右边界
                 ++end;
             } else {
                 // 移动滑动窗口左边界
-                indexs[s[start++]] = -1;
+                indexs[s[start++]] = 0;
             }
         }
 
-        return maxLen;
+        return maxLength;
     }
 };
