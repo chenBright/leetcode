@@ -22,7 +22,7 @@ private:
     string longestCommonPrefix(vector<string> &strs, int left, int right) {
         if (left == right) {
             return strs[left];
-        } 
+        }
         else if (left > right) {
             return "";
         }
@@ -30,11 +30,11 @@ private:
         int mid = (left + right) / 2;
         string leftStr = longestCommonPrefix(strs, left, mid); // 查找左半边字符串的最长公共前缀
         string rightStr = longestCommonPrefix(strs, mid + 1, right); // 查找右半边字符串的最长公共前缀
-        
+
         return commonPrefix(leftStr, rightStr); // 左右两部分的最长公共前缀
     }
 
-    string commonPrefix(string left, string right) {
+    string commonPrefix(string& left, string& right) {
         int minSize = min(left.size(), right.size());
 
         for (int i = 0; i < minSize; ++i) {
