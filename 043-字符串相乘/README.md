@@ -6,7 +6,7 @@ leetcode：[043-字符串相乘](https://leetcode-cn.com/problems/multiply-strin
 
 ## 模拟乘法
 
-需要注意的是：字符串存储数字的方式是大端模式，即最高位从0开始。则乘法的规律为***`nums1`的第i位与`nums2`的第j位相乘，其结果在最终乘积结果的第[i + j, i + j + 1]上***。例如: `123 * 45`,  “123”的第1位的“2” 和“45”的第0位“4”乘积“08”存放在结果的第[1, 2]位上。
+需要注意的是：字符串存储数字的方式是大端模式，即最高位从0开始。则乘法的规律为**`nums1`的第i位与`nums2`的第j位相乘，其结果在最终乘积结果的第[i + j, i + j + 1]上**。例如: `123 * 45`,  `123`的第 1 位的`2`和`45`的第0 位`4`乘积“08”存放在结果的第[1, 2]位上。
 
 ```c++
 class Solution {
@@ -16,11 +16,11 @@ public:
             return "0";
         }
 
-        int len1 = num1.size();
-        int len2 = num2.size();
-        string result(len1 + len2, '0');
-        for (int i = len1 - 1; i >= 0; --i) {
-            for (int j = len2 - 1; j >= 0; --j) {
+        int length1 = num1.size();
+        int length2 = num2.size();
+        string result(length1 + length2, '0');
+        for (int i = length1 - 1; i >= 0; --i) {
+            for (int j = length2 - 1; j >= 0; --j) {
                 // 两数相乘，再加上原低位数值
                 int tmp = charToInt(num1[i]) * charToInt(num2[j]) + charToInt(result[i + j + 1]);
                 result[i + j] += tmp / 10;
@@ -30,11 +30,11 @@ public:
 
         auto index = result.find_first_not_of('0'); // 查找第一个不是'0'的元素的位置
 
-        return index != string::npos ? result.substr(index, len1 + len2) : "0";
+        return index != string::npos ? result.substr(index) : "0";
     }
 
 private:
-    int charToInt(const char c) {
+    inline int charToInt(const char c) {
         return c - '0';
     }
 };
