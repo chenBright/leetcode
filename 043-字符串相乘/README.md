@@ -6,7 +6,7 @@ leetcode：[043-字符串相乘](https://leetcode-cn.com/problems/multiply-strin
 
 ## 模拟乘法
 
-需要注意的是：字符串存储数字的方式是大端模式，即最高位从0开始。则乘法的规律为***`nums1`的第i位与`nums2`的第j位相乘，其结果在最终乘积结果的第[i + j, i + j + 1]上***。例如: `123 * 45`,  “123”的第1位的“2” 和“45”的第0位“4”乘积“08”存放在结果的第[1, 2]位上。
+需要注意的是：字符串存储数字的方式是大端模式，即最高位从0开始。则乘法的规律为**`nums1`的第i位与`nums2`的第j位相乘，其结果在最终乘积结果的第[i + j, i + j + 1]上**。例如: `123 * 45`,  `123`的第 1 位的`2`和`45`的第0 位`4`乘积“08”存放在结果的第[1, 2]位上。
 
 ```c++
 class Solution {
@@ -34,7 +34,7 @@ public:
     }
 
 private:
-    int charToInt(const char c) {
+    inline int charToInt(const char c) {
         return c - '0';
     }
 };
