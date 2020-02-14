@@ -152,7 +152,7 @@ LeetCode Problems' Solutions
 | [148-排序链表](https://leetcode-cn.com/problems/sort-list/)* | [C++](./148-排序链表/README.md) |
 | [149-直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line/)* | [C++](./149-直线上最多的点数/README.md) |
 | [150-逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [C++](./150-逆波兰表达式求值/README.md) |
-| [151-翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)* | [C++](./151-翻转字符串里的单词/README.md) |
+| [151-翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) | [C++](./151-翻转字符串里的单词/README.md) |
 | [152-乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/)* | [C++](./152-乘积最大子序列/README.md) |
 | [153-寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)* | [C++](./153-寻找旋转排序数组中的最小值/README.md) |
 | [154-寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)* | [C++](./154-寻找旋转排序数组中的最小值%20II/README.md) |
