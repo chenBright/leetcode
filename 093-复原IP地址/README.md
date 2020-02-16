@@ -20,45 +20,41 @@ leetcode：[093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addr
 class Solution {
 public:
     vector<string> restoreIpAddresses(string s) {
-        if (s.empty()) {
-            return result;
-        }
+        vector<string> result;
 
-        dfs(s, "", 0);
+        dfs(s, 0, result, "", 0);
 
         return result;
     }
 
 private:
-    vector<string> result;
-
-    void dfs(string s, string tmpStr, int num) {
+    void dfs(string& s, int index, vector<string>& result, string tmpStr, int num) {
+        int length = s.size();
         if (num == 4) {
-            if (s.empty()) {
+            if (index == length) {
                 result.push_back(tmpStr);
             }
             return;
         }
 
-        int len = s.size();
-        for (int i = 0; i < 3 && i < len; ++i) {
-            string tmp(s.begin(), s.begin() + i + 1);
+        for (int i = 0; i < 3 && i < length; ++i) {
+            string tmp(s.begin() + index, s.begin() + index + i + 1);
             if (valid(tmp)) {
-                dfs(s.substr(i + 1, len - i - 1), num == 0 ? tmp : tmpStr + "." + tmp, num + 1);
+                dfs(s, index + i + 1, result, num == 0 ? tmp : tmpStr + "." + tmp, num + 1);
             } else {
                 return;
             }
         }
     }
 
-    bool valid(string s) {
-        int len = s.size();
-        if (s.empty() || len > 3 || (len > 1 && s[0] == '0')) {
+    bool valid(string& s) {
+        int length = s.size();
+        if (s.empty() || length > 3 || (length > 1 && s[0] == '0')) {
             return false;
         }
-        
-        int n = atoi(s.c_str());
-        return n <= 255 ? true : false;
+
+        int num = atoi(s.c_str());
+        return num <= 255;
     }
 };
 ```
@@ -69,21 +65,19 @@ private:
 class Solution {
 public:
     vector<string> restoreIpAddresses(string s) {
-        if (s.empty()) {
-            return result;
-        }
+        vector<string> result;
+        string tmpStr = "";
 
-        dfs(s, "", 0);
+        dfs(s, 0, result, tmpStr, 0);
 
         return result;
     }
 
 private:
-    vector<string> result;
-
-    void dfs(string s, string tmpStr, int num) {
+    void dfs(string& s, int index, vector<string>& result, string& tmpStr, int num) {
+        int length = s.size();
         if (num == 4) {
-            if (s.empty()) {
+            if (index == length) {
                 result.push_back(tmpStr);
             }
             return;
@@ -95,24 +89,24 @@ private:
         }
 
         for (int i = 0; i < 3 && i < len; ++i) {
-            string tmp(s.begin(), s.begin() + i + 1);
+            string tmp(s.begin() + index, s.begin() + index + i + 1);
             if (valid(tmp)) {
                 tmpStr += tmp;
-                dfs(s.substr(i + 1, len - (i + 1)), tmpStr, num + 1);
+                dfs(s, index + i + 1, result, tmpStr, num + 1);
                 tmpStr.erase(tmpStr.length() - (i + 1), i + 1); // 删除 tmp
             }
         }
-        tmpStr.pop_back(); // 删除 “.”     
+        tmpStr.pop_back(); // 删除 “.”
     }
 
-    bool valid(string &s) {
-        int len = s.size();
-        if (s.empty() || len > 3 || (len > 1 && s[0] == '0')) {
+    bool valid(string& s) {
+        int length = s.size();
+        if (s.empty() || length > 3 || (length > 1 && s[0] == '0')) {
             return false;
         }
-        
+
         int n = atoi(s.c_str());
-        return n <= 255 ? true : false;
+        return n <= 255;
     }
 };
 ```
