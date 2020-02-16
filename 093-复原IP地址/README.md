@@ -16,6 +16,9 @@ leetcode：[093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addr
 - ip数字不能大于255；
 - ip如果第一个数字为0，只能是`0`，不能是`00`、`01`、`001`。即如果第一个数字为0，那该段只能是一个字符，否则，为不合法ip。
 
+时间复杂度：需要检查的组合不多于**27**个。
+空间复杂度：不多于**19**个有效IP地址。
+
 ```c++
 class Solution {
 public:
