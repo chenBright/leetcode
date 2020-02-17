@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-    int longestConsecutive(vector<int> &nums) {
+    int longestConsecutive(vector<int>& nums) {
         unordered_map<int, int> m; // <数字，所在连续序列的长度>
         int result = 0;
         for (const auto &num : nums) {

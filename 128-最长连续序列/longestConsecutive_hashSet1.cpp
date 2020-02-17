@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-    int longestConsecutive(vector<int> &nums) {
+    int longestConsecutive(vector<int>& nums) {
         unordered_set<int> s(nums.begin(), nums.end());
 
         int result = 0;
