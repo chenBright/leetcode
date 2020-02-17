@@ -23,17 +23,18 @@ private:
             return;
         }
 
-        int len = s.size();
         if (num > 0) {
             tmpStr += ".";
         }
 
-        for (int i = 0; i < 3 && i < len; ++i) {
+        for (int i = 0; i < 3 && i < length; ++i) {
             string tmp(s.begin() + index, s.begin() + index + i + 1);
             if (valid(tmp)) {
                 tmpStr += tmp;
                 dfs(s, index + i + 1, result, tmpStr, num + 1);
-                tmpStr.erase(tmpStr.length() - (i + 1), i + 1); // 删除 tmp
+                tmpStr.erase(tmpStr.size() - (i + 1), i + 1); // 删除 tmp
+            } else {
+                break;
             }
         }
         tmpStr.pop_back(); // 删除 “.”
