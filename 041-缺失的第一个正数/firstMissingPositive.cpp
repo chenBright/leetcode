@@ -13,9 +13,9 @@ public:
             }
         }
 
-        for (int i = 0; i < length; ++i) {
-            if (nums[i] != i + 1) {
-                return i + 1;
+        for (int j = 0; j < length; ++j) {
+            if (nums[j] != j + 1) {
+                return j + 1;
             }
         }
 

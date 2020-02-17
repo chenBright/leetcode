@@ -4,7 +4,7 @@
 
 leetcode：[041-缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)
 
-## 桶排序
+## 桶排序 + 抽屉原理
 
 参考[LeetCode题解](https://leetcode-cn.com/problems/first-missing-positive/solution/tong-pai-xu-python-dai-ma-by-liweiwei1419/)。
 
@@ -20,9 +20,9 @@ public:
             }
         }
 
-        for (int i = 0; i < length; ++i) {
-            if (nums[i] != i + 1) {
-                return i + 1;
+        for (int j = 0; j < length; ++j) {
+            if (nums[j] != j + 1) {
+                return j + 1;
             }
         }
 
