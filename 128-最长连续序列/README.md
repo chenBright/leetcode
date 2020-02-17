@@ -13,7 +13,7 @@ leetcode：[128-最长连续序列](https://leetcode-cn.com/problems/longest-con
 ```c++
 class Solution {
 public:
-    int longestConsecutive(vector<int> &nums) {
+    int longestConsecutive(vector<int>& nums) {
         unordered_set<int> s(nums.begin(), nums.end());
 
         int result = 0;
@@ -44,7 +44,7 @@ public:
 ```c++
 class Solution {
 public:
-    int longestConsecutive(vector<int> &nums) {
+    int longestConsecutive(vector<int>& nums) {
         if (nums.empty()) {
             return 0;
         }
@@ -80,12 +80,12 @@ public:
 
 ## HashMap
 
-参考[LeetCode评论区“江五渣”的思路](https://leetcode-cn.com/problems/longest-consecutive-sequence/comments/13385)。
+参考[LeetCode评论区“江不知”的思路](https://leetcode-cn.com/problems/longest-consecutive-sequence/comments/13385)。
 
 ```c++
 class Solution {
 public:
-    int longestConsecutive(vector<int> &nums) {
+    int longestConsecutive(vector<int>& nums) {
         unordered_map<int, int> m; // <数字，所在连续序列的长度>
         int result = 0;
         for (const auto &num : nums) {
@@ -108,4 +108,3 @@ public:
     }
 };
 ```
-
