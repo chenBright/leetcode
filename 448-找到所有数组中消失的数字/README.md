@@ -11,9 +11,9 @@ leetcode：[448-找到所有数组中消失的数字](https://leetcode-cn.com/pr
 - 如果`previous == num`，则继续遍历；
 - 如果`previous + 1 != num`，则将[previous, num)范围内的数字加入结果中。
 
-时间复杂度：***O(nlogn)***。
+时间复杂度：**O(nlogn)**。
 
-空间复杂度：***O(1)***。
+空间复杂度：**O(1)**。
 
 ```c++
 class Solution {
@@ -52,9 +52,9 @@ public:
 
 使用`unordered_set`记录出现过的数字，然后从1遍历到n，查找`unordered_set`中是否有出现过该数字。如果没有，则将其加入到结果中。
 
-时间复杂度：***O(n)***。
+时间复杂度：**O(n)**。
 
-空间复杂度：***O(n)***。
+空间复杂度：**O(n)**。
 
 ```c++
 class Solution {
@@ -82,22 +82,26 @@ public:
 
 结论：[8,2] 分别对应的index为[5,6]（消失的数字）。
 
-时间复杂度：***O(n)***。
+时间复杂度：**O(n)**。
 
-空间复杂度：***O(1)***。
+空间复杂度：**O(1)**。
 
 ```c++
 class Solution {
 public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
-        for (int i = 0; i < nums.size(); ++i) {
-            nums[abs(nums[i]) - 1] = -abs(nums[abs(nums[i]) - 1]);
+        int length = nums.size();
+        for (int i = 0; i < length; ++i) {
+            int num = abs(nums[i]);
+            if (nums[num - 1] > 0) {
+                nums[num - 1] *= -1;
+            }
         }
-        
+
         vector<int> result;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] > 0) {
-                result.push_back(i + 1);
+        for (int j = 0; j < length; ++j) {
+            if (nums[j] > 0) {
+                result.push_back(j + 1);
             }
         }
 
@@ -106,32 +110,32 @@ public:
 };
 ```
 
-## 交换
+## 桶排序 + 抽屉原理
 
 修改前一个方法，改为将`nums[i]`放到`nums[i] - 1`的位置上。这样，最后出现过的数字与其位置的关系为`nums[i] == i + 1`，不符合该条件的`i + 1`即为消失的数字。
 
 其中，交换的方法有多种。因为交换的细节不是该题关注的重点，所以该实现直接使用`swap`函数来交换两个数字。交换的多种方法可以参考[461-汉明距离](../461-汉明距离/README.m)。
 
-时间复杂度：***O(n)***。
+时间复杂度：**O(n)**。
 
-空间复杂度：***O(1)***。
+空间复杂度：**O(1)**。
 
 ```c++
 class Solution {
 public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
-        for (int i = 0; i < nums.size(); ++i) {
+        int length = nums.size();
+        for (int i = 0; i < length; ++i) {
             // 将 nums[i] 放到 nums[nums[i] - 1] 的位置上
             if (nums[i] != nums[nums[i] - 1]) {
                 swap(nums[i], nums[nums[i] - 1]);
-                --i;
             }
         }
 
         vector<int> result;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] != i + 1) {
-                result.push_back(i + 1);
+        for (int j = 0; j < length; ++j) {
+            if (nums[j] != j + 1) {
+                result.push_back(j + 1);
             }
         }
 

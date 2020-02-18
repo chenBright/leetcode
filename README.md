@@ -259,7 +259,7 @@ LeetCode Problems' Solutions
 | [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)* | [C++](./438-找到字符串中所有字母异位词/README.md) |
 | [442-数组中重复的数据](https://leetcode-cn.com/problems/longest-consecutive-sequence/) | [C++](./442-数组中重复的数据/README.md) |
 | [445-两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)* | [C++](./445-两数相加%20II/README.md) |
-| [448-找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)* | [C++](./448-找到所有数组中消失的数字/README.md) |
+| [448-找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)** | [C++](./448-找到所有数组中消失的数字/README.md) |
 | [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [C++](./461-汉明距离/README.md) |
 | [494-目标和](https://leetcode-cn.com/problems/target-sum/)* | [C++](./494-目标和/README.md) |
 | [538-把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)* | [C++](./538-把二叉搜索树转换为累加树/README.md) |
