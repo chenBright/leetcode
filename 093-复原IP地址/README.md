@@ -90,7 +90,7 @@ private:
             tmpStr += ".";
         }
 
-        for (int i = 0; i < 3 && i < length; ++i) {
+        for (int i = 0; i < 3 && index + i < length; ++i) {
             string tmp(s.begin() + index, s.begin() + index + i + 1);
             if (valid(tmp)) {
                 tmpStr += tmp;
@@ -100,7 +100,10 @@ private:
                 break;
             }
         }
-        tmpStr.pop_back(); // 删除 “.”
+
+        if (num > 0) {
+            tmpStr.pop_back(); // 删除 “.”
+        }
     }
 
     bool valid(string& s) {
