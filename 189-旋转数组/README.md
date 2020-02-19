@@ -8,7 +8,7 @@ leetcode：[189-旋转数组](https://leetcode-cn.com/problems/rotate-array/)
 
 借助一个变量，来将数组循环移动k次。但当数组长度和k很大时，很耗时，LeetCode输出“超出时间限制”。
 
-该方法的时间复杂度为***O(kn)***，空间复杂度为***O(1)***。
+该方法的时间复杂度为**O(kn)**，空间复杂度为**O(1)**。
 
 ```c++
 class Solution {
@@ -46,7 +46,7 @@ public:
 
 3. reverse(i, nums.size() - 1);
 
-例如nums为***1, 2, 3, 4, 5, 6***，n为***3***：
+例如nums为`1, 2, 3, 4, 5, 6`，n为`3`：
 
 1. 1, 2, 3, 4, 5, 6 -=> 6, 5, 4, 3, 2, 1
 
@@ -54,7 +54,7 @@ public:
 
 3. `4, 5, 6, 3, 2, 1 -=> 4, 5, 6, 1, 2, 3`
 
-该方法的时间复杂度为***O(n)***，空间复杂度为***O(1)***。
+该方法的时间复杂度为**O(n)***，空间复杂度为**O(1)**。
 
 ```c++
 class Solution {
@@ -69,16 +69,9 @@ public:
             k = k % length;
         }
 
-        reverse(nums, 0, length - 1);
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, length - 1);
-    }
-
-private:
-    void reverse(vector<int> &nums, int left, int right) {
-        while (left < right) {
-            swap(nums[left++], nums[right--]);
-        }
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin() + k);
+        reverse(nums.begin() + k, nums.end());
     }
 };
 ```
