@@ -60,48 +60,85 @@ public:
 
 ## 二分查找
 
-1. 如果***nums[mid] < nums[low]***，表明数组一定旋转过，且最小值在[mid … high]中，则***low = mid***。
-2. 否则，***high = mid***。
+1. 如果`nums[mid] < nums[0]`，表明数组一定旋转过，且最小值在`[mid, high]`中，则`low = mid`。
+2. 否则，`high = mid`。
 
-当然，也可以和***nums[high]***比较。
-
-时间复杂度：O(logn)***。
+时间复杂度：**O(logn)**。
 
 ```c++
 class Solution {
 public:
     int findMin(vector<int> &nums) {
-        int length = nums.size();
-        if (length == 0) {
+        if (nums.empty()) {
             return -1;
         }
 
         // 数组有序
-        if (nums[0] <= nums[length - 1]) {
+        // 取等于是考虑到数组只有一个元素的情况
+        if (nums.front() <= nums.back()) {
             return nums[0];
         }
 
         int low = 0;
-        int high = length - 1;
-        int mid;
-        while (low < high && high - low > 1) {
+        int high = static_cast<int>(nums.size()) - 1;
+        while (low < high) {
             int mid = (low + high) / 2;
+            // 如果是升序数组，nums[mid] 肯定大于 nums[0]。
+            // 在旋转数组中，nums[mid] > nums[low]，表示最小值在 [mid, high] 中。
             // 不是 mid+(-)1，因为 [mid + 1 ... high]可能是有序数组，即 nums[mid + 1] 是最小值
-            if (nums[mid] > nums[low]) {
-                low = mid; 
-            } else { // 一定旋转过
+            if (nums[mid] < nums.front()) {
                 high = mid;
+            } else { // 一定旋转过
+                low = mid + 1;
             }
         }
 
-        return min(nums[low], nums[high]);
+        // 此时，low == high
+        return nums[high];
+    }
+};
+
+当然，也可以和`nums[length - 1]`比较。
+
+
+
+```c++
+class Solution {
+public:
+    int findMin(vector<int> &nums) {
+        if (nums.empty()) {
+            return -1;
+        }
+
+        // 数组有序
+        // 取等于是考虑到数组只有一个元素的情况
+        if (nums.front() <= nums.back()) {
+            return nums[0];
+        }
+
+        int low = 0;
+        int high = static_cast<int>(nums.size()) - 1;
+        while (low < high) {
+            int mid = (low + high) / 2;
+            // 无论是在升序数组中，还是在旋转数组中，nums[mid] 肯定大于 nums[0]。
+            // 也可以与 nums[length - 1] 比较。
+            // 此时，nums[mid] < nums[length - 1]，表示最小值肯定不在在 [mid, high] 中。
+            if (nums[mid] < nums.back()) {
+                high = mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        // 此时，low == high
+        return nums[low];
     }
 };
 ```
 
 ## 分治
 
-时间复杂度：***O(logn)***。
+时间复杂度：**O(logn)**。
 
 ```c++
 class Solution {
