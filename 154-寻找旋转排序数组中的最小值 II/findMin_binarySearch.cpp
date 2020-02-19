@@ -16,7 +16,9 @@ public:
                 low = mid + 1;
             } else if (nums[mid] < nums[high]) {
                 high = mid;
-            } else { // nums[mid] == nums[high] 时，无法判断收缩的方向，则 --high 再查找
+            } else {
+                // nums[mid] == nums[high] 时，无法判断收缩的方向，则 --high 再查找
+                // 例如 [10,1,10,10,10]
                 --high;
             }
         }

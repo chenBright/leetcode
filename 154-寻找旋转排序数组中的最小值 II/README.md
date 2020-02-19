@@ -6,7 +6,7 @@ leetcode：[154-寻找旋转排序数组中的最小值 II](https://leetcode-cn.
 
 ## 二分查找
 
-时间复杂度：***O(logn)***。
+时间复杂度：**O(logn)**。
 
 ```c++
 class Solution {
@@ -24,7 +24,9 @@ public:
                 low = mid + 1;
             } else if (nums[mid] < nums[high]) {
                 high = mid;
-            } else { // nums[mid] == nums[high] 时，无法判断收缩的方向，则 --high 再查找
+            } else {
+                // nums[mid] == nums[high] 时，无法判断收缩的方向，则 --high 再查找
+                // 例如 [10,1,10,10,10]
                 --high;
             }
         }
@@ -35,7 +37,7 @@ public:
 
 ## 分治
 
-时间复杂度：***O(logn)***。
+时间复杂度：**O(logn)**。
 
 ```c++
 class Solution {
