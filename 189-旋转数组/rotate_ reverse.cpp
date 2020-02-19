@@ -15,15 +15,8 @@ public:
             k = k % length;
         }
 
-        reverse(nums, 0, length - 1);
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, length - 1);
-    }
-
-private:
-    void reverse(vector<int> &nums, int left, int right) {
-        while (left < right) {
-            swap(nums[left++], nums[right--]);
-        }
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin() + k);
+        reverse(nums.begin() + k, nums.end());
     }
 };
