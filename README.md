@@ -38,7 +38,7 @@ LeetCode Problems' Solutions
 | [030-串联所有单词的子串](https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/)* | [C++](./030-串联所有单词的子串/README.md) |
 | [031-下一个排列](https://leetcode-cn.com/problems/next-permutation/)*| [C++](./031-下一个排列/README.md) |
 | [032-最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)*| [C++](./032-最长有效括号/README.md) |
-| [033-搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)* | [C++](./033-搜索旋转排序数组/README.md) |
+| [033-搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)** | [C++](./033-搜索旋转排序数组/README.md) |
 | [034-在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [C++](./034-在排序数组中查找元素的第一个和最后一个位置/README.md) |
 | [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [C++](./035-搜索插入位置/README.md) |
 | [036-有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)* | [C++](./036-有效的数独/README.md) |
@@ -154,8 +154,8 @@ LeetCode Problems' Solutions
 | [150-逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [C++](./150-逆波兰表达式求值/README.md) |
 | [151-翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) | [C++](./151-翻转字符串里的单词/README.md) |
 | [152-乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/)* | [C++](./152-乘积最大子序列/README.md) |
-| [153-寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)* | [C++](./153-寻找旋转排序数组中的最小值/README.md) |
-| [154-寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)* | [C++](./154-寻找旋转排序数组中的最小值%20II/README.md) |
+| [153-寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)** | [C++](./153-寻找旋转排序数组中的最小值/README.md) |
+| [154-寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)** | [C++](./154-寻找旋转排序数组中的最小值%20II/README.md) |
 | [155-最小栈](https://leetcode-cn.com/problems/min-stack/) | [C++](./155-最小栈/README.md) |
 | [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)*（栈、哈希表、其他） | [C++](./160-相交链表/README.md) |
 | [162-寻找峰值](https://leetcode-cn.com/problems/find-peak-element/)*（简单的实现） | [C++](./162-寻找峰值/README.md) |
