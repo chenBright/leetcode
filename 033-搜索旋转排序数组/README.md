@@ -26,7 +26,7 @@ public:
             int mid = (low + high) / 2;
             // 不是 mid+(-)1，因为 [mid + 1 ... high]可能是有序数组，即 nums[mid + 1] 是最小值
             if (nums[mid] > nums[low]) { // 左半边有序
-                low = mid; 
+                low = mid;
             } else { // 右半边有序
                 high = mid;
             }
@@ -62,25 +62,20 @@ private:
 
 ### 方法2
 
-- 当***nums[mid] > nums[low]***，表示***[low … mid]***有序：
-  - 当***nums[low] <= target < nums[mid]***时，则***high = mid - 1***；
-  - 否则，***low = mid + 1***。
-- 当***nums[mid] < nums[low]***，表示***[mid … high]***有序:
-  - 当***nums[mid] < target <= nums[high]***时，则***low = mid + 1***；
-  - 否则，***high = mid - 1***。
+- 当`nums[mid] == target`，则查找成功。
+- 当`nums[mid] < nums[high]`，表示`(mid, high]`有序：
+  - 当`nums[low] <= target < nums[mid]`时，则`high = mid - 1`；
+  - 否则，`low = mid + 1`。
+- 当`nums[mid] > nums[low]`，表示`[low, mid)`有序:
+  - 当`nums[mid] < target <= nums[high]`时，则`low = mid + 1`；
+  - 否则，`high = mid - 1`。
 
 ```c++
 class Solution {
 public:
     int search(vector<int> &nums, int target) {
-        int length = nums.size();
-        if (length == 0) {
-            return -1;
-        }
-
         int low = 0;
-        int high = length - 1;
-        int mid;
+        int high = static_cast<int>(nums.size()) - 1;
         while (low <= high) {
             int mid = (low + high) / 2;
             int midNum = nums[mid];
@@ -89,17 +84,21 @@ public:
             if (midNum == target) {
                 return mid;
             }
-            if (midNum >= lowNum) { // 左半边有序
-                if (target >= lowNum && target < midNum) { // target 在[low ... mid - 1]之间
-                    high = mid - 1;
-                } else { // target 在[mid + 1 ... mid]之间
+            if (midNum < highNum) { // 右半边有序
+                if (target > midNum && target <= highNum) {
+                    // target 在[mid + 1 ... high]之间
                     low = mid + 1;
+                } else {
+                    // target 在[low ... mid - 1]之间
+                    high = mid - 1;
                 }
-            } else { // 右半边有序
-                if (target > midNum && target <= highNum) { // target 在[mid + 1 ... high]之间
-                    low = mid + 1;
-                } else { // target 在[low ... mid - 1]之间
+            } else { // 左半边有序
+                if (target >= lowNum && target < midNum) {
+                    // target 在[low ... mid - 1]之间
                     high = mid - 1;
+                } else {
+                    // target 在[mid + 1 ... mid]之间
+                    low = mid + 1;
                 }
             }
         }
@@ -108,4 +107,3 @@ public:
     }
 };
 ```
-
