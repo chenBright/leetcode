@@ -8,7 +8,8 @@ public:
             return -1;
         }
 
-        int index = findMin(nums); // 先
+        int index = findMin(nums); // 先找出最小值
+        // 将数组分成两个有序数组，最后在两个数组中进行二分查找。
         int result = binarySearch(nums, 0, index - 1, target);
         if (result >= 0) {
             return result;

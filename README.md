@@ -86,7 +86,7 @@ LeetCode Problems' Solutions
 | [078-子集](https://leetcode-cn.com/problems/subsets/)**（迭代、位运算） | [C++](./078-子集/README.md) |
 | [079-单词搜索](https://leetcode-cn.com/problems/word-search/) | [C++](./079-单词搜索/README.md) |
 | [080-删除排序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/) | [C++](./080-删除排序数组中的重复项%20II/README.md) |
-| [081-搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)* | [C++](./081-搜索旋转排序数组%20II/README.md) |
+| [081-搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)** | [C++](./081-搜索旋转排序数组%20II/README.md) |
 | [082-删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) | [C++](./082-删除排序链表中的重复元素%20II/README.md) |
 | [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) | [C++](./083-删除排序链表中的重复元素/README.md) |
 | [084-柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/)* | [C++](./084-柱状图中最大的矩形/README.md) |
