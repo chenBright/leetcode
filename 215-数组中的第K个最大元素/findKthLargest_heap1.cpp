@@ -1,16 +1,14 @@
 #include <vector>
 #include <algorithm>
-#include <functional>
 using namespace std;
 
 
-// 使用最小堆找出前k大的数字
+// 使用最小堆找出前 k 大的数字
 class Solution {
 public:
     int findKthLargest(vector<int> &nums, int k) {
-        int res = -1;
-        if (k == 0 || k > nums.size()) {
-            return res;
+        if (nums.empty() || k == 0 || k > nums.size()) {
+            return -1;
         }
 
         make_heap(nums.begin(), nums.end(), less<int>());  // 构造最大堆

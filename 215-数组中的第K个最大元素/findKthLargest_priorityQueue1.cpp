@@ -4,13 +4,12 @@
 using namespace std;
 
 
-// 使用优先队列找出前k大的数字
+// 使用优先队列找出前 k 大的数字
 class Solution {
 public:
     int findKthLargest(vector<int> &nums, int k) {
-        int res = -1;
-        if (k == 0 || k > nums.size()) {
-            return res;
+        if (nums.empty() || k == 0 || k > nums.size()) {
+            return -1;
         }
 
         priority_queue<int, vector<int>, less<int> > pq(nums.begin(), nums.end());

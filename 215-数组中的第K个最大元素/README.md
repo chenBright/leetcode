@@ -91,56 +91,60 @@ public:
 
 ## 基于Partition函数的查找第K大的数
 
-使用快排中的Partition函数修改数组，使得第k个数字左边的数字都比第k个数字大，右边的数字都比第k个数字小，则第k个数字即为所求。
+使用快排中的`partition`函数修改数组，使得第 k 个数字左边的数字都比第 k 个数字大，右边的数字都比第 k 个数字小，则第 k 个数字即为所求。
 
 该方法的时间复杂度为**O(n)**。
 
 ```c++
 class Solution {
 public:
-    int findKthLargest(vector<int> &nums, int k) {
-        int res = -1;
+    int findKthLargest(vector<int>& nums, int k) {
         if (k == 0 || k > nums.size()) {
-            return res;
+            return -1;
         }
 
-        findKth(nums, 0, nums.size() - 1, k - 1);
-
-        return nums[k - 1];
+        return findKth(nums, 0, nums.size() - 1, k - 1);
     }
 
 private:
-    void findKth(vector<int> &nums, int low, int high, int k) {
-        int index = Partition(nums, low, high);
-
-        if (index == k) {
-            return;
-        } else if (index < k) {
-            findKth(nums, index + 1, high, k);
+    int findKth(vector<int>& nums, int low, int high, int kIndex) {
+        int index = partition(nums, low, high);
+        if (index == kIndex) {
+            return nums[kIndex];
+        } else if (index < kIndex) {
+            return findKth(nums, index + 1, high, kIndex);
         } else {
-            findKth(nums, low, index - 1, k);
+            return findKth(nums, low, index - 1, kIndex);
         }
     }
-    int Partition(vector<int> &nums, int low, int high) {
-        int i = low;
-        int j = high;
+
+    int partition(vector<int>& nums, int low, int high) {
         int pivotNum = nums[low];  // 基准元素
 
-        while (i < j) {
+        while (low < high) {
             // 从后面开始找，找到第一个不小于基准元素的元素
-            while (i < j && nums[j] < pivotNum) {
-                --j;
+            while (low < high && nums[high] < pivotNum) {
+                --high;
             }
-            nums[i] = nums[j];
+            if (low == high) {
+                break;
+            }
+            nums[low] = nums[high];
+            ++low;
 
             // 从前面开始找，找到第一个小于基准元素的元素
-            while (i < j && nums[i] >= pivotNum) {
-                ++i;
+            while (low < high && nums[low] >= pivotNum) {
+                ++low;
             }
-            nums[j] = nums[i];
+            if (low == high) {
+                break;
+            }
+            nums[high] = nums[low];
+            --high;
         }
-        nums[i] = pivotNum;
-        return i;
+        nums[low] = pivotNum;
+
+        return low;
     }
 };
 ```
@@ -173,7 +177,7 @@ public:
 
 ## 优先队列
 
-在c++中优先队列是用堆现实的，所以**大堆**的思路一样。当然，时间复杂度也是***O(n+k*logn)**。
+在c++中优先队列是用堆现实的，所以**大堆**的思路一样。当然，时间复杂度也是**O(n+k*logn)**。
 
 ```c++
 class Solution {
@@ -196,38 +200,92 @@ public:
 };
 ```
 
+## 小堆
+
+对于前面**大堆**的方法，没有必要构建容量为`n`的堆，只需要构建一个容量为`k`的小堆。使用剩下的`n-k`个元素与堆顶元素比较：
+
+- 如果元素比堆顶元素大，则删除堆顶元素，然后插入该元素。
+
+- 否则，不更新大堆。
+
+时间复杂度为**O(k+(n-k)*logk) = O(nlogk)**。
+
+### 优先队列实现
+
+优先队列的底层结构是堆。
+
+```c++
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        int length = nums.size();
+        if (nums.empty() || k == 0 || k > length) {
+            return -1;
+        }
+
+        // 构建容量为 k 的最小堆
+        priority_queue<int, vector<int>, greater<int> > q(nums.begin(), nums.begin() + k);
+
+        for (int i = k; i < length; ++i) {
+            if (nums[i] > q.top()) {
+                q.pop();
+                q.push(nums[i]);
+            }
+        }
+
+        return q.top();
+    }
+};
+```
+### 堆函数
+
+使用 STL 中的对函数：`make_heap`。
+
+```c++
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        int length = nums.size();
+        if (nums.empty() || k == 0 || k > length) {
+            return -1;
+        }
+
+        make_heap(nums.begin(), nums.begin() + k, greater<int>());
+
+        for (int i = k; i < length; ++i) {
+            if (nums[i] > nums[0]) {
+                swap(nums[i], nums[0]);
+                make_heap(nums.begin(), nums.begin() + k, greater<int>());
+            }
+        }
+
+        return nums[0];
+    }
+};
+```
+
 ## 红黑树
 
-对于前面**大堆**的方法，没有必要构建容量为n的堆，只需要构建一个容量为k的小堆。使用剩下的n-k个元素与堆顶元素比较：
-
-\- 如果元素比堆顶元素大，则删除堆顶元素，然后插入该元素。
-
-\- 否则，不更新大堆。
-
-该方法的时间复杂度为**O(k+(n-k)*logk) = O(nlogk)**。
+使用**红黑树**也可以实现**小堆**的思路。`multiset`的底层数据结构是红黑树。
 
 ```c++
 class Solution {
 public:
     int findKthLargest(vector<int> &nums, int k) {
-        int res = -1;
-        if (k == 0 || k > nums.size()) {
-            return res;
+        int length = nums.size();
+        if (nums.empty() || k == 0 || k > length) {
+            return -1;
         }
 
-        multiset<int, less<int> > maxSet;
-        multiset<int, less<int> >::iterator maxIt;
+        // 构造含有 k 个元素红黑树（小堆）
+        multiset<int, less<int> > maxSet(nums.begin(), nums.begin() + k);
 
-        for (vector<int>::iterator it = nums.begin(); it != nums.end(); ++it) {
-            if (maxSet.size() < k) { // 构造含有k个元素红黑树（小堆）
-                maxSet.insert(*it);
-            } else {
-                maxIt = maxSet.begin();
-                // 如果元素比堆顶元素大，则删除堆顶元素，然后插入该元素
-                if (*it > *maxIt) {
-                    maxSet.erase(maxIt);
-                    maxSet.insert(*it);
-                }
+        for (int i = k; i < length; ++i) {
+            auto it = maxSet.begin();
+            // 如果元素比堆顶元素大，则删除堆顶元素，然后插入该元素。
+            if (nums[i] > *it) {
+                maxSet.erase(it);
+                maxSet.insert(nums[i]);
             }
         }
 
