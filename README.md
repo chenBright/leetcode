@@ -191,7 +191,7 @@ LeetCode Problems' Solutions
 | [220-存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)* | [C++](./220-存在重复元素%20III/README.md) |
 | [211-添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/) | [C++](./211-添加与搜索单词%20-%20数据结构设计/README.md) |
 | [213-打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)* | [C++](./213-打家劫舍%20II/README.md) |
-| [215-数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)* | [C++](./215-数组中的第K个最大元素/README.md) |
+| [215-数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)** | [C++](./215-数组中的第K个最大元素/README.md) |
 | [216-组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)* | [C++](./216-组合总和%20III/README.md) |
 | [217-存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/) | [C++](./217-存在重复元素/README.md) |
 | [219-存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/) | [C++](./219-存在重复元素%20II/README.md) |
