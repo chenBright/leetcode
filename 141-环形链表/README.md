@@ -4,46 +4,60 @@
 
 leetcode：[141-环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 
-## 快慢指针
+## 哈希表
 
-- 快指针：每次"走两步"
-- 慢指针：每次"走一次"
+使用哈希表记录遍历过的结点。如果链表存在环，则在遍历到环的入口时，在哈希表中可以找到该结点。
 
-如果遍历到两个我指针其中一个指向`NULL`，则表示不是环形链表；否则，快指针在环形链表中会"追上"慢指针，即`pFast == pSlow`。
+时间复杂度为**O(n)**。
 
-该方法的时间复杂度为***O(n)***。
+空间复杂度为**O(n)**。
 
 ```c++
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        if (head == NULL || head->next) {
-            return false;
-        }
-
-        ListNode *pSlow = head->next; // 慢指针
-        ListNode *pFast = pSlow->next; // 快指针
-
-        while (pSlow != NULL && pFast != NULL) {
-            if (pSlow == pFast) {
+        unordered_set<ListNode*> s;
+        while (head != NULL) {
+            if (s.count(head) != 0) {
                 return true;
             }
 
-            pSlow = nextNode(pSlow, 1);
-            pFast = nextNode(pFast, 2);
+            s.insert(head);
+            head = head->next;
         }
 
         return false;
     }
+};
+```
 
-private:
-    // 下一结点
-    ListNode* nextNode(ListNode* node, int step) {
-        for (int i = 0; i < step && node != NULL; ++i) {
-            node = node->next;
+## 快慢指针
+
+- 快指针：每次"走两步"
+- 慢指针：每次"走一步"
+
+如果遍历到两个我指针其中一个指向`NULL`，则表示不是环形链表；否则，快指针在环形链表中会"追上"慢指针，即`pFast == pSlow`。
+
+时间复杂度为**O(n)**。
+
+空间复杂度为**O(1)**。
+
+```c++
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        ListNode* slowP = head;
+        ListNode* fastP = head;
+        while (fastP != NULL && fastP->next != NULL) {
+            slowP = slowP->next;
+            fastP = fastP->next->next;
+
+            if (slowP == fastP) {
+                return true;
+            }
         }
 
-        return node;
+        return false;
     }
 };
 ```
