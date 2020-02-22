@@ -1,4 +1,5 @@
-#include <iostream>
+#include <unordered_set>
+using namespace std;
 
 struct ListNode {
     int val;
@@ -9,15 +10,14 @@ struct ListNode {
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        ListNode* slowP = head;
-        ListNode* fastP = head;
-        while (fastP != NULL && fastP->next != NULL) {
-            slowP = slowP->next;
-            fastP = fastP->next->next;
-
-            if (slowP == fastP) {
+        unordered_set<ListNode*> s;
+        while (head != NULL) {
+            if (s.count(head) != 0) {
                 return true;
             }
+
+            s.insert(head);
+            head = head->next;
         }
 
         return false;
