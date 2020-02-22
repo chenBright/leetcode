@@ -1,4 +1,4 @@
-#include <unordered_map>
+#include <unordered_set>
 using namespace std;
 
 struct ListNode {
@@ -6,19 +6,18 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
- 
+
 class Solution {
 public:
-    ListNode* getIntersectionNode(ListNode *headA, ListNode *headB) {
-        unordered_map<ListNode*, int> nodeMap;
-
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+        unordered_set<ListNode*> s;
         while (headA != NULL) {
-            nodeMap.insert(make_pair(headA, 1));
+            s.insert(headA);
             headA = headA->next;
         }
 
         while (headB != NULL) {
-            if (nodeMap.count(headB)) {
+            if (s.count(headB) != 0) {
                 return headB;
             }
             headB = headB->next;
