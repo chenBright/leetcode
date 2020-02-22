@@ -10,35 +10,29 @@ struct ListNode {
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        if (head == NULL || head->next == NULL) {
-            return NULL;
-        }
+        ListNode* slowP = head;
+        ListNode* fastP = head;
+        bool flag = false; // 是否存在环
+        while (fastP != NULL && fastP->next != NULL) {
+            slowP = slowP->next;
+            fastP = fastP->next->next;
 
-        ListNode *pSlow = head->next; // 慢指针
-        ListNode *pFast = pSlow->next; // 快指针
-
-        bool hasCycle = false;
-        while (pFast != NULL && pFast->next != NULL) {
-            if (pSlow == pFast) {
-                hasCycle = true;
+            if (slowP == fastP) {
+                flag = true;
                 break;
             }
-
-            pSlow = pSlow->next;
-            pFast = pFast->next->next;
         }
 
-        if (!hasCycle) {
+        if (!flag) {
             return NULL;
         }
 
-        pFast = head; // 复用快指针
-        while (pFast != pSlow) {
-            pFast = pFast->next;
-            pSlow = pSlow->next;
+        slowP = head;
+        while (slowP != fastP) {
+            slowP = slowP->next;
+            fastP = fastP->next;
         }
 
-        return pSlow;
+        return slowP;
     }
-
 };

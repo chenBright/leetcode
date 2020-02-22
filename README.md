@@ -143,7 +143,7 @@ LeetCode Problems' Solutions
 | [139-单词拆分](https://leetcode-cn.com/problems/word-break/)* | [C++](./139-单词拆分/README.md) |
 | [140-单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/)* | [C++](./140-单词拆分%20II/README.md) |
 | [141-环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) | [C++](./141-环形链表/README.md) |
-| [142-环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)* | [C++](./142-环形链表%20II/README.md) |
+| [142-环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)** | [C++](./142-环形链表%20II/README.md) |
 | [143-重排链表](https://leetcode-cn.com/problems/reorder-list/)* | [C++](./143-重排链表/README.md) |
 | [144-二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | [C++](./144-二叉树的前序遍历/README.md) |
 | [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)* | [C++](./145-二叉树的后序遍历/README.md) |

@@ -10,38 +10,16 @@ struct ListNode {
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        if (!hasCycle(head)) {
-            return NULL;
-        }
-
-        unordered_set<ListNode*> nodeSet;
-        ListNode *node = head;
-        while (nodeSet.find(node) == nodeSet.end()) {
-            nodeSet.insert(node);
-            node = node->next;
-        }
-
-        return node;
-    }
-
-private:
-    bool hasCycle(ListNode *head) {
-        if (head == NULL || head->next == NULL) {
-            return false;
-        }
-
-        ListNode *pSlow = head->next; // 慢指针
-        ListNode *pFast = pSlow->next; // 快指针
-
-        while (pFast != NULL && pFast->next != NULL) {
-            if (pSlow == pFast) {
-                return true;
+        unordered_set<ListNode*> s;
+        while (head != NULL) {
+            if (s.count(head) != 0) {
+                return head;
             }
 
-            pSlow = pSlow->next;
-            pFast = pFast->next->next;
+            s.insert(head);
+            head = head->next;
         }
 
-        return false;
+        return NULL;
     }
 };
