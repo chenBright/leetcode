@@ -8,7 +8,7 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+    ListNode *getIntersectionNode(ListNode* headA, ListNode* headB) {
         int lengthA = getLength(headA);
         int lengthB = getLength(headB);
 

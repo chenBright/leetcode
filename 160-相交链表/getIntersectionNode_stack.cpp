@@ -6,10 +6,10 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
- 
+
 class Solution {
 public:
-    ListNode* getIntersectionNode(ListNode *headA, ListNode *headB) {
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
         stack<ListNode*> nodeStack1, nodeStack2;
         convertListToStack(headA, nodeStack1);
         convertListToStack(headB, nodeStack2);

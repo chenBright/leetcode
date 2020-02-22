@@ -9,7 +9,7 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* getIntersectionNode(ListNode *headA, ListNode *headB) {
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
         unordered_set<ListNode*> s;
         while (headA != NULL) {
             s.insert(headA);
