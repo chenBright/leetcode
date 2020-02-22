@@ -9,48 +9,71 @@ struct ListNode {
 // 归并排序
 class Solution {
 public:
-    ListNode* sortList(ListNode *head) {
-        return head == NULL ? head : mergeSort(head);
-    }
-
-private:
-    ListNode* mergeSort(ListNode *head) {
+    ListNode* sortList(ListNode* head) {
         if (head == NULL || head->next == NULL) {
             return head;
         }
 
-        ListNode *p = head; // 慢指针
-        ListNode *q = head; // 快指针
-        ListNode *pre = NULL;
-        // 快慢指针找中点
-        while (q != NULL && q->next != NULL) {
-            pre = p;
-            p = p->next;
-            q = q->next->next;
-        }
-        pre->next = NULL;
-        ListNode *left = mergeSort(head);
-        ListNode *right = mergeSort(p);
+        ListNode* midNode = mid(head);
+        ListNode* left = sortList(head);
+        ListNode* right = sortList(midNode);
+
         return merge(left, right);
     }
+private:
+    ListNode* mid(ListNode* head) {
+        if (head == NULL || head->next == NULL) {
+            return head;
+        }
 
-    // 归并
-    ListNode* merge(ListNode *left, ListNode *right) {
-        ListNode *dummyHead = new ListNode(-1);
-        ListNode *current = dummyHead;
+        ListNode* slowP = head;
+        ListNode* fastP = head;
+        ListNode* preNode;
+        while (fastP != NULL && fastP->next != NULL) {
+            preNode = slowP;
+            slowP = slowP->next;
+            fastP = fastP->next->next;
+        }
+        // 将链表分成两个链表
+        preNode->next = NULL;
+
+        return slowP;
+    }
+
+    ListNode* merge(ListNode* left, ListNode* right) {
+        if (left == NULL) {
+            return right;
+        } else if (right == NULL) {
+            return left;
+        }
+
+        ListNode* head;
+        if (left->val <= right->val) {
+            head = left;
+            left = left->next;
+        } else {
+            head = right;
+            right = right->next;
+        }
+
+        ListNode* node = head;
         while (left != NULL && right != NULL) {
-            if (left->val < right->val) {
-                current->next = left;
-                current = current->next;
+            if (left->val <= right->val) {
+                node->next = left;
                 left = left->next;
             } else {
-                current->next = right;
-                current = current->next;
+                node->next = right;
                 right = right->next;
             }
+            node = node->next;
         }
-        current->next = left == NULL ? right : left;
 
-        return dummyHead->next;
+        if (left == NULL) {
+            node->next = right;
+        } else if (right == NULL) {
+            node->next = left;
+        }
+
+        return head;
     }
 };
