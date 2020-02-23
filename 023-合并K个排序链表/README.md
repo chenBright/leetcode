@@ -59,35 +59,33 @@ private:
 ```c++
 class Solution {
 public:
-    ListNode* mergeKLists(vector<ListNode*> &lists) {
-        ListNode *dummy = new ListNode(-1);
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
         if (lists.empty()) {
-            return dummy->next;
+            return NULL;
         }
 
-        ListNode *node = dummy;
-        bool flag = true; // 是否有不为空的链表
-        while (flag) {
-            flag = false;
-            ListNode *minNode = new ListNode(INT_MAX); // 记录最小值
-            int index; // 记录取出链表头结点的链表索引
-            for (int i = 0; i < lists.size(); ++i) {
-                if (lists[i] != NULL) {
-                    if (lists[i]->val < minNode->val) {
-                        minNode = lists[i];
-                        index = i;
-                    }
-                    flag = true;
+        ListNode* dummy = new ListNode(INT_MAX);
+        ListNode* lastNode = dummy; // 归并后的链表的最后一个结点
+        int length = lists.size();
+        while (true) {
+            ListNode* minNode = dummy; // k 个链表中值最下的结点
+            int listIndex = -1;
+            for (int i = 0; i < length; ++i) {
+                if (lists[i] != NULL && lists[i]->val < minNode->val) {
+                    minNode = lists[i];
+                    listIndex = i;
                 }
             }
 
-            if (flag) {
-                ListNode *tmp = lists[index];
-                lists[index] = lists[index]->next; 
-                tmp->next = node->next;
-                node->next = tmp;
+            if (listIndex == -1) {
+                break;
             }
-            node = node->next;
+
+            lists[listIndex] = lists[listIndex]->next;
+            // 插入到新链表
+            minNode->next = lastNode->next;
+            lastNode->next = minNode;
+            lastNode = lastNode->next;
         }
 
         return dummy->next;
@@ -227,7 +225,7 @@ public:
                 q.push(node);
             }
         }
-        
+
         ListNode *dummy = new ListNode(-1);
         ListNode *current = dummy;
         while (!q.empty()) {
