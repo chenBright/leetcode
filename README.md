@@ -30,7 +30,7 @@ LeetCode Problems' Solutions
 | [022-括号生成](https://leetcode-cn.com/problems/generate-parentheses/)*（没思路） | [C++](./022-括号生成/README.md) |
 | [023-合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)** | [C++](./023-合并K个排序链表/README.md) |
 | [024-两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/) | [C++](./024-两两交换链表中的节点/README.md) |
-| [025-K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)* | [C++](./025-K个一组翻转链表/README.md) |
+| [025-K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)** | [C++](./025-K个一组翻转链表/README.md) |
 | [026-删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) | [C++](./026-删除排序数组中的重复项/README.md) |
 | [027-移除元素](https://leetcode-cn.com/problems/remove-element/) | [C++](./027-移除元素/README.md) |
 | [028-实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)*（TODO：KMP） | [C++](./028-实现strStr()/README.md) |
