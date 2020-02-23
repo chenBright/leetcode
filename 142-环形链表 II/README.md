@@ -43,18 +43,17 @@ public:
     ListNode *detectCycle(ListNode *head) {
         ListNode* slowP = head;
         ListNode* fastP = head;
-        bool flag = false; // 是否存在环
         while (fastP != NULL && fastP->next != NULL) {
             slowP = slowP->next;
             fastP = fastP->next->next;
 
             if (slowP == fastP) {
-                flag = true;
                 break;
             }
         }
 
-        if (!flag) {
+        // 无环
+        if (fastP == NULL || fastP->next == NULL) {
             return NULL;
         }
 
