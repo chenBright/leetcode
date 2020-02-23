@@ -1,20 +1,12 @@
-# 025-K个一组翻转链表
+#include <vector>
+using namespace std;
 
-## 题目
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
 
-leetcode：[025-K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
-
-## 思路
-
-解题的关键是：对一个组翻转后，原来首尾的结点的位置互换，即原组内第一个结点变成组内最后一个结点，原组内最后一个结点变成第一个结点。处理好这个问题，就能解决这道题了。
-
-参考[LeetCode题解](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/kge-yi-zu-fan-zhuan-lian-biao-by-powcai/)。
-
-下图为反转的过程（图来自[LeetCode题解](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/kge-yi-zu-fan-zhuan-lian-biao-by-powcai/)，侵删）。
-
-![img](/Users/chenbright/Desktop/c:c++_workspace/leetcode/025-K 个一组翻转链表/img.png)
-
-```c++
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
@@ -69,5 +61,3 @@ private:
         return dummy->next;
     }
 };
-```
-
