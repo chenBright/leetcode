@@ -14,6 +14,17 @@ private:
             return;
         }
 
+        auto indexs = paritition(nums, left, right);
+
+        quickSort(nums, left, indexs.first);
+        quickSort(nums, indexs.second, right);
+    }
+
+    pair<int, int> paritition(vector<int>& nums, int left, int right) {
+        if (left >= right) {
+            return make_pair(left, left);
+        }
+
         int i = left;
         int j = right;
         int k = i + 1;
@@ -31,7 +42,6 @@ private:
             }
         }
 
-        quickSort(nums, left, i - 1);
-        quickSort(nums, j + 1, right);
+        return make_pair(i - 1, j + 1);
     }
 };
