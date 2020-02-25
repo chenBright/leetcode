@@ -13,16 +13,20 @@ leetcode：[236-二叉树的最近公共祖先](https://leetcode-cn.com/problems
 ```c++
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         stack<TreeNode*> pNodes;
-        dfs(root, p, pNodes);
+        if (!postOrder(root, p, pNodes)) {
+            return NULL;
+        }
 
         stack<TreeNode*> qNodes;
-        dfs(root, q, qNodes);
+        if (!postOrder(root, q, qNodes)) {
+            return NULL;
+        }
 
         TreeNode *ancestor = NULL;
-        // 栈顶到栈地为根结点到目标结点
-        // 查找最后一个相等的结点，即为最近公共祖先
+        // 栈顶到栈底为根结点到目标结点。
+        // 查找最后一个相等的结点，即为最近公共祖先。
         while (!pNodes.empty() && !qNodes.empty()) {
             if (pNodes.top() != qNodes.top()) {
                 break;
@@ -36,26 +40,16 @@ public:
     }
 
 private:
-    bool dfs(TreeNode *root, TreeNode *target, stack<TreeNode*> &nodes) {
+    // 后序遍历查找目标结点
+    bool postOrder(TreeNode* root, TreeNode* target, stack<TreeNode*>& nodes) {
         if (root == NULL) {
             return false;
         }
 
-        if (root == target) {
+        if (root == target
+            || postOrder(root->left, target, nodes)
+            || postOrder(root->right, target, nodes)) {
             nodes.push(target);
-            return true;
-        }
-
-        bool leftResult = dfs(root->left, target, nodes);
-        if (leftResult) {
-            nodes.push(root);
-            return true;
-        }
-
-        bool rightResult = dfs(root->right, target, nodes);
-
-        if (rightResult) {
-            nodes.push(root);
             return true;
         }
 
@@ -69,7 +63,7 @@ private:
 ```c++
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if (root == NULL || root == p || root == q) {
             return root;
         }
@@ -96,16 +90,20 @@ public:
 ```c++
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         deque<TreeNode*> pNodes;
-        postOrderIteration(root, p, pNodes);
+        if (!postOrderIteration(root, p, pNodes)) {
+            return NULL;
+        }
 
         deque<TreeNode*> qNodes;
-        postOrderIteration(root, q, qNodes);
+        if (!postOrderIteration(root, q, qNodes)) {
+            return NULL;
+        }
 
         TreeNode *ancestor = NULL;
-        // 栈顶到栈地为目标结点到根结点
-        // 查找第一个相等的结点，即为最近公共祖先
+        // 栈顶到栈底为根结点到目标结点。
+        // 查找最后一个相等的结点，即为最近公共祖先。
         while (!pNodes.empty() && !qNodes.empty()) {
             if (pNodes.front() != qNodes.front()) {
                 break;
@@ -119,9 +117,10 @@ public:
     }
 
 private:
-    void postOrderIteration(TreeNode *root, TreeNode *target, deque<TreeNode*> &nodes) {
+    // 后序遍历查找目标结点
+    bool postOrderIteration(TreeNode* root, TreeNode* target, deque<TreeNode*>& nodes) {
         if (root == NULL) {
-            return;
+            return false;
         }
 
         TreeNode *node = root;
@@ -130,7 +129,7 @@ private:
            if (node != NULL) { // 一直走到最左边
                 nodes.push_back(node);
                 if (node == target) {
-                    break;
+                    return true;
                 }
                 node = node->left;
             } else {
@@ -148,6 +147,8 @@ private:
                 }
             }
         }
+
+        return false;
     }
 };
 ```
@@ -156,16 +157,22 @@ private:
 
 参考[LeetCode官方题解——“使用父指针迭代”](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/er-cha-shu-de-zui-jin-gong-gong-zu-xian-by-leetcod)。
 
+- 从根节点开始遍历树。
+- 在找到`p`和`q`之前，将父指针存储在字典中。
+- 一旦我们找到了`p`和`q`，我们就可以使用父亲字典获得`p`的所有祖先，并添加到一个称为祖先的集合中。
+- 同样，我们遍历节点`q`的祖先。如果祖先存在于为`p`设置的祖先中，这意味着这是`p`和`q`之间的第一个共同祖先（同时向上遍历），因此这是最近公共祖先节点。
+
+
 ```c++
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
-        queue<TreeNode*> nodeQ;
-        nodeQ.push(root);
-
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         unordered_map<TreeNode*, TreeNode*> childToParent; // <子结点 , 父结点>
         childToParent[root] = NULL;
 
+        queue<TreeNode*> nodeQ;
+        nodeQ.push(root);
+        // 层序遍历
         while (childToParent.count(p) == 0 || childToParent.count(q) == 0) {
             TreeNode *node = nodeQ.front();
             nodeQ.pop();

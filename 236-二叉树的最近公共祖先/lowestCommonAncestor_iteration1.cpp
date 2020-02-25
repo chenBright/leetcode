@@ -10,16 +10,20 @@ struct TreeNode {
 
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         deque<TreeNode*> pNodes;
-        postOrderIteration(root, p, pNodes);
+        if (!postOrderIteration(root, p, pNodes)) {
+            return NULL;
+        }
 
         deque<TreeNode*> qNodes;
-        postOrderIteration(root, q, qNodes);
+        if (!postOrderIteration(root, q, qNodes)) {
+            return NULL;
+        }
 
         TreeNode *ancestor = NULL;
-        // 栈顶到栈地为目标结点到根结点
-        // 查找第一个相等的结点，即为最近公共祖先
+        // 栈顶到栈底为根结点到目标结点。
+        // 查找最后一个相等的结点，即为最近公共祖先。
         while (!pNodes.empty() && !qNodes.empty()) {
             if (pNodes.front() != qNodes.front()) {
                 break;
@@ -33,9 +37,10 @@ public:
     }
 
 private:
-    void postOrderIteration(TreeNode *root, TreeNode *target, deque<TreeNode*> &nodes) {
+    // 后序遍历查找目标结点
+    bool postOrderIteration(TreeNode* root, TreeNode* target, deque<TreeNode*>& nodes) {
         if (root == NULL) {
-            return;
+            return false;
         }
 
         TreeNode *node = root;
@@ -44,7 +49,7 @@ private:
            if (node != NULL) { // 一直走到最左边
                 nodes.push_back(node);
                 if (node == target) {
-                    break;
+                    return true;
                 }
                 node = node->left;
             } else {
@@ -62,5 +67,7 @@ private:
                 }
             }
         }
+
+        return false;
     }
 };
