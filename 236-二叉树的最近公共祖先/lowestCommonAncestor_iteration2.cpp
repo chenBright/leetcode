@@ -12,13 +12,13 @@ struct TreeNode {
 
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
-        queue<TreeNode*> nodeQ;
-        nodeQ.push(root);
-
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         unordered_map<TreeNode*, TreeNode*> childToParent; // <子结点 , 父结点>
         childToParent[root] = NULL;
 
+        queue<TreeNode*> nodeQ;
+        nodeQ.push(root);
+        // 层序遍历
         while (childToParent.count(p) == 0 || childToParent.count(q) == 0) {
             TreeNode *node = nodeQ.front();
             nodeQ.pop();

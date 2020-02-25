@@ -209,7 +209,7 @@ LeetCode Problems' Solutions
 | [232-用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) | [C++](./232-用栈实现队列/README.md) |
 | [234-回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)* | [C++](./234-回文链表/README.md) |
 | [235-二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [C++](./235-二叉搜索树的最近公共祖先/README.md) |
-| [236-二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)* | [C++](./236-二叉树的最近公共祖先/README.md) |
+| [236-二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)** | [C++](./236-二叉树的最近公共祖先/README.md) |
 | [237-删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)* | [C++](./237-删除链表中的节点/README.md) |
 | [238-除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/)* | [C++](./238-除自身以外数组的乘积/README.md) |
 | [239-滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)* | [C++](./239-滑动窗口最大值/README.md) |
