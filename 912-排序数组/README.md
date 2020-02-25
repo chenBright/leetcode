@@ -99,7 +99,7 @@ public:
         int length = nums.size();
         for (int gap = length / 2; gap > 0; gap /= 2) { // 间隔
             for (int i = gap; i < length; ++i) {
-                for (int j = i; j >= gap && nums[j] < nums[j - gap]; j -= gap) {
+                for (int j = i; j - gap >= 0 && nums[j] < nums[j - gap]; j -= gap) {
                     swap(nums[j], nums[j - gap]);
                 }
             }
@@ -206,9 +206,13 @@ private:
 
 ## 快速排序
 
+时间复杂度：**O(nlogn)**。
+
+### 基本实现
+
 快速排序通过一个切分元素将数组分为两个子数组，左子数组小于等于切分元素，右子数组大于等于切分元素，将这两个子数组排序也就将整个数组排序了。
 
-时间复杂度：**O(nlogn)**。
+#### 递归
 
 ```c++
 class Solution {
@@ -257,6 +261,74 @@ private:
 };
 ```
 
+## 迭代
+
+```c++
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        quickSort(nums, 0, static_cast<int>(nums.size()) - 1);
+
+        return nums;
+    }
+private:
+    void quickSort(vector<int>& nums, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+
+        queue<pair<int, int> > q; // 保存需要排序的区域，<left, right>
+        q.push(make_pair(left, right));
+        while (!q.empty()) {
+            auto region = q.front();
+            q.pop();
+
+            int index = paritition(nums, region.first, region.second);
+            // 分区长度大于 1，则将入队列中继续排序。
+            if (region.first < index - 1) {
+                q.push(make_pair(region.first, index - 1));
+            }
+            if (index + 1 < region.second) {
+                q.push(make_pair(index + 1, region.second));
+            }
+        }
+    }
+
+    int paritition(vector<int>& nums, int left, int right) {
+        if (left >= right) {
+            return left;
+        }
+
+        int i = left;
+        int j = right;
+        int pivot = nums[left];
+        while (i < j) {
+            // 因为 i 空出来了，所以先从后面开始。
+            // 找到小于等于 pivot 的元素
+            while (i < j && nums[j] > pivot) {
+                --j;
+            }
+            if (i == j) {
+                break;
+            }
+            nums[i++] = nums[j];
+
+            // 找到大于 pivot 的元素
+            while (i < j && nums[i] <= pivot) {
+                ++i;
+            }
+            if (i == j) {
+                break;
+            }
+            nums[j--] = nums[i];
+        }
+        nums[i] = pivot;
+
+        return i;
+    }
+};
+```
+
 ### 优化--三向切分
 
 对于有大量重复元素的数组，可以将数组切分为三部分，分别对应小于、等于和大于切分元素。
@@ -277,17 +349,27 @@ private:
             return;
         }
 
+        auto indexs = paritition(nums, left, right);
+
+        quickSort(nums, left, indexs.first);
+        quickSort(nums, indexs.second, right);
+    }
+
+    pair<int, int> paritition(vector<int>& nums, int left, int right) {
+        if (left >= right) {
+            return make_pair(left, left);
+        }
+
         int i = left;
         int j = right;
         int k = i + 1;
-        int pivot = nums[i];
         while (k <= j) {
             // 小于 pivot 的范围：[low, i - 1]
             // 等于 pivot 的范围：[i, k]
             // 大于 pivot 的范围：[j + 1, high]
-            if (nums[k] < pivot) {
+            if (nums[k] < nums[i]) {
                 swap(nums[k++], nums[i++]);
-            } else if (nums[k] > pivot) {
+            } else if (nums[k] > nums[i]) {
                 // 因为 nums[j] 未比较，所以 k 不变。下一循环时，再比较。
                 swap(nums[k], nums[j--]);
             } else {
@@ -295,8 +377,67 @@ private:
             }
         }
 
-        quickSort(nums, left, i - 1);
-        quickSort(nums, j + 1, right);
+        return make_pair(i - 1, j + 1);
+    }
+};
+```
+
+#### 迭代
+
+```c++
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        quickSort(nums, 0, static_cast<int>(nums.size()) - 1);
+
+        return nums;
+    }
+private:
+    void quickSort(vector<int>& nums, int low, int high) {
+        if (low >= high) {
+            return;
+        }
+
+        queue<pair<int, int> > q;
+        q.push(make_pair(low, high));
+        while (!q.empty()) {
+            auto region = q.front();
+            q.pop();
+
+            auto indexs = paritition(nums, region.first, region.second);
+            // 分区长度大于 1，则将入队列中继续排序。
+            if (region.first < indexs.first) {
+                q.push(make_pair(region.first, indexs.first));
+            }
+            if (indexs.second < region.second) {
+                q.push(make_pair(indexs.second, region.second));
+            }
+        }
+    }
+
+    pair<int, int> paritition(vector<int>& nums, int left, int right) {
+        if (left >= right) {
+            return make_pair(left, left);
+        }
+
+        int i = left;
+        int j = right;
+        int k = i + 1;
+        while (k <= j) {
+            // 小于 pivot 的范围：[low, i - 1]
+            // 等于 pivot 的范围：[i, k]
+            // 大于 pivot 的范围：[j + 1, high]
+            if (nums[k] < nums[i]) {
+                swap(nums[k++], nums[i++]);
+            } else if (nums[k] > nums[i]) {
+                // 因为 nums[j] 未比较，所以 k 不变。下一循环时，再比较。
+                swap(nums[k], nums[j--]);
+            } else {
+                ++k;
+            }
+        }
+
+        return make_pair(i - 1, j + 1);
     }
 };
 ```
