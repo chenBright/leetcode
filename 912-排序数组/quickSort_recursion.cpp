@@ -14,34 +14,41 @@ private:
             return;
         }
 
-        int i = left;
-        int j = right;
-        int pivot = nums[i];
-        while (i < j) {
-            // 因为 i 空出来了，所以先从后面开始。
+
+        int index = paritition(nums, left, right);
+        
+        quickSort(nums, left, index - 1);
+        quickSort(nums, index + 1, right);
+    }
+
+    int paritition(vector<int>& nums, int left, int right) {
+        if (left >= right) {
+            return left;
+        }
+
+        int pivot = nums[left];
+        while (left < right) {
+            // 因为 left 空出来了，所以先从后面开始。
             // 找到小于等于 pivot 的元素
-            while (i < j && nums[j] > pivot) {
-                --j;
+            while (left < right && nums[right] > pivot) {
+                --right;
             }
-            if (i == j) {
+            if (left == right) {
                 break;
             }
-            nums[i] = nums[j];
-            ++i;
+            nums[left++] = nums[right];
 
             // 找到大于 pivot 的元素
-            while (i < j && nums[i] <= pivot) {
-                ++i;
+            while (left < right && nums[left] <= pivot) {
+                ++left;
             }
-            if (i == j) {
+            if (left == right) {
                 break;
             }
-            nums[j] = nums[i];
-            --j;
+            nums[right--] = nums[left];
         }
-        nums[i] = pivot;
+        nums[left] = pivot;
 
-        quickSort(nums, left, i - 1);
-        quickSort(nums, i + 1, right);
+        return left;
     }
 };

@@ -37,31 +37,29 @@ private:
             return left;
         }
 
-        int i = left;
-        int j = right;
         int pivot = nums[left];
-        while (i < j) {
-            // 因为 i 空出来了，所以先从后面开始。
+        while (left < right) {
+            // 因为 left 空出来了，所以先从后面开始。
             // 找到小于等于 pivot 的元素
-            while (i < j && nums[j] > pivot) {
-                --j;
+            while (left < right && nums[right] > pivot) {
+                --right;
             }
-            if (i == j) {
+            if (left == right) {
                 break;
             }
-            nums[i++] = nums[j];
+            nums[left++] = nums[right];
 
             // 找到大于 pivot 的元素
-            while (i < j && nums[i] <= pivot) {
-                ++i;
+            while (left < right && nums[left] <= pivot) {
+                ++left;
             }
-            if (i == j) {
+            if (left == right) {
                 break;
             }
-            nums[j--] = nums[i];
+            nums[right--] = nums[left];
         }
-        nums[i] = pivot;
+        nums[left] = pivot;
 
-        return i;
+        return left;
     }
 };
