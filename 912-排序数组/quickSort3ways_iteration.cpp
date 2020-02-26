@@ -34,7 +34,7 @@ private:
 
     pair<int, int> paritition(vector<int>& nums, int left, int right) {
         if (left >= right) {
-            return make_pair(left, left);
+            return make_pair(INT_MIN, INT_MAX);
         }
 
         int i = left;
