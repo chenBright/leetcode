@@ -1,4 +1,5 @@
 #include <vector>
+#include <limits>
 using namespace std;
 
 struct ListNode {
@@ -9,65 +10,35 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* mergeKLists(vector<ListNode*> &lists) {
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
         if (lists.empty()) {
             return NULL;
         }
 
-        while (lists.size() > 1) {
-            vector<ListNode*> tmp;
-            int listsLen = lists.size();
-            // 两两合并链表
-            for (int i = 0; i < listsLen / 2; ++i) {
-                tmp.push_back(mergeTwoLists(lists[i], lists[i + listsLen / 2]));
+        ListNode* dummy = new ListNode(INT_MAX);
+        ListNode* lastNode = dummy; // 归并后的链表的最后一个结点
+        int length = lists.size();
+        while (true) {
+            ListNode* minNode = dummy; // k 个链表中值最下的结点
+            int listIndex = -1;
+            for (int i = 0; i < length; ++i) {
+                if (lists[i] != NULL && lists[i]->val < minNode->val) {
+                    minNode = lists[i];
+                    listIndex = i;
+                }
             }
-            // 如果链表数为奇数，则最后一个链表轮空，下一循环再合并
-            if (listsLen % 2 == 1) {
-                tmp.push_back(lists.back());
+
+            if (listIndex == -1) {
+                break;
             }
 
-            lists.swap(tmp);
+            lists[listIndex] = lists[listIndex]->next;
+            // 插入到新链表
+            minNode->next = lastNode->next;
+            lastNode->next = minNode;
+            lastNode = lastNode->next;
         }
 
-        return lists[0];
-    }
-private:
-    ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) {
-        if (l1 == NULL) {
-            return l2;
-        }
-        if (l2 == NULL) {
-            return l1;
-        }
-
-        // 先确定头结点
-        ListNode *root = NULL;
-        if (l2->val < l1->val) {
-            root = l2;
-            l2 = l2->next;
-        } else {
-            root = l1;
-            l1 = l1->next;
-        }
-
-        ListNode *node = root;
-        while (l1 != NULL && l2 != NULL) {
-            if (l1->val < l2->val) {
-                node->next = l1;
-                l1 = l1->next;
-            } else {
-                node->next = l2;
-                l2 = l2->next;
-            }
-            node = node->next;
-        }
-
-        if (l1 == NULL) {
-            node->next = l2;
-        } else if (l2 == NULL) {
-            node->next = l1;
-        }
-
-        return root;
+        return dummy->next;
     }
 };

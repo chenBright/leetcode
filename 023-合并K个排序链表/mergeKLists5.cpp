@@ -1,7 +1,4 @@
 #include <vector>
-#include <limits>
-#include <unordered_map>
-#include <algorithm>
 using namespace std;
 
 struct ListNode {
@@ -10,43 +7,52 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-// 计数排序
 class Solution {
 public:
-    ListNode* mergeKLists(vector<ListNode*> &lists) {
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
         if (lists.empty()) {
             return NULL;
         }
 
-        unordered_map<int, int> m;
-        int maxVal = INT_MIN;
-        int minVal = INT_MAX;
-        for (const auto &list : lists) {
-            ListNode *node = list;
-            while (node != NULL) {
-                maxVal = max(node->val, maxVal);
-                minVal = min(node->val, minVal);
-                if (m.count(node->val) == 0) {
-                    m[node->val] = 1;
-                } else {
-                    ++m[node->val];
-                }
-                node = node->next;
+        int length = lists.size();
+        // 非递归归并排序的归并思路
+        for (int interval = 1; interval < length; interval *= 2) { // 间隔
+            for (int i = 0; i < length - interval; i += 2 * interval) {
+                lists[i] = merge(lists[i], lists[i + interval]);
             }
         }
 
-        ListNode *dummy = new ListNode(-1);
-        ListNode *current = dummy;
-        for (int i = minVal; i <= maxVal; ++i) {
-            if (m.count(i) == 0) {
-                continue;
-            }
+        return lists[0];
+    }
+private:
+    ListNode* merge(ListNode* l1, ListNode* l2) {
+        if (l1 == NULL) {
+            return l2;
+        } else if (l2 == NULL) {
+            return l1;
+        }
 
-            while (m[i] > 0) {
-                current->next = new ListNode(i);
-                current = current->next;
-                --m[i];
+        ListNode* dummy = new ListNode(-1);
+        ListNode* lastNode = dummy;
+        while (l1 != NULL && l2 != NULL) {
+            ListNode* node = NULL;
+            if (l1->val < l2->val) {
+                node = l1;
+                l1 = l1->next;
+            } else {
+                node = l2;
+                l2 = l2->next;
             }
+            node->next = dummy->next;
+            lastNode->next = node;
+            lastNode = lastNode->next;
+        }
+
+        if (l1 != NULL) {
+            lastNode->next = l1;
+        }
+        if (l2 != NULL) {
+            lastNode->next = l2;
         }
 
         return dummy->next;

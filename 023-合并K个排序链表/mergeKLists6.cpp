@@ -1,7 +1,5 @@
 #include <vector>
-#include <limits>
-#include <vector>
-#include <algorithm>
+#include <queue>
 using namespace std;
 
 struct ListNode {
@@ -10,30 +8,39 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-// 排序
+// 优先队列（最小堆）
 class Solution {
 public:
-    ListNode* mergeKLists(vector<ListNode*> &lists) {
-        if (lists.empty()) {
-            return NULL;
+    struct compare {
+        // 上浮操作
+        // a：父结点
+        // b：子结点
+        // 返回 true，则上浮结点
+        bool operator()(ListNode *a, ListNode *b) {
+            return a->val > b->val;
         }
+    };
 
-        vector<int> v;
-        for (const auto &list : lists) {
-            ListNode *node = list;
-            while (node != NULL) {
-                v.push_back(node->val);
-                node = node->next;
+    ListNode* mergeKLists(vector<ListNode*> &lists) {
+        // 小堆
+        priority_queue<ListNode*, vector<ListNode*>, compare> q;
+
+        for (const auto &node : lists) {
+            if (node != NULL) {
+                q.push(node);
             }
         }
 
-        sort(v.begin(), v.end());
-
         ListNode *dummy = new ListNode(-1);
         ListNode *current = dummy;
-        for (int i = 0; i < v.size(); ++i) {
-            current->next = new ListNode(v[i]);
+        while (!q.empty()) {
+            ListNode *tmp = q.top();
+            q.pop();
+            current->next = tmp;
             current = current->next;
+            if (tmp->next != NULL) {
+                q.push(tmp->next);
+            }
         }
 
         return dummy->next;

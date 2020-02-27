@@ -52,6 +52,41 @@ private:
 };
 ```
 
+## 排序
+
+将结点的值保存到数组中，再对数组排序，最后从数组中依次取值新建结点，并插入到新链表末尾。
+
+```c++
+class Solution {
+public:
+    ListNode* mergeKLists(vector<ListNode*> &lists) {
+        if (lists.empty()) {
+            return NULL;
+        }
+
+        vector<int> v;
+        for (const auto &list : lists) {
+            ListNode *node = list;
+            while (node != NULL) {
+                v.push_back(node->val);
+                node = node->next;
+            }
+        }
+
+        sort(v.begin(), v.end());
+
+        ListNode *dummy = new ListNode(-1);
+        ListNode *current = dummy;
+        for (int i = 0; i < v.size(); ++i) {
+            current->next = new ListNode(v[i]);
+            current = current->next;
+        }
+
+        return dummy->next;
+    }
+};
+```
+
 ## 取最小的链表头
 
 每次从取出所有链表中最小的头结点，将其插入到新链表尾部。
@@ -165,34 +200,57 @@ private:
 
 ```
 
-## 排序
+可以不使用辅助数组，原地即可合并链表。
 
-将结点的值保存到数组中，再对数组排序，最后从数组中依次取值新建结点，并插入到新链表末尾。
+参考[912-排序数组](./912-排序数组/README.md#迭代实现自底向上)中非递归归并排序的归并思路。
 
 ```c++
 class Solution {
 public:
-    ListNode* mergeKLists(vector<ListNode*> &lists) {
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
         if (lists.empty()) {
             return NULL;
         }
 
-        vector<int> v;
-        for (const auto &list : lists) {
-            ListNode *node = list;
-            while (node != NULL) {
-                v.push_back(node->val);
-                node = node->next;
+        int length = lists.size();
+        // 非递归归并排序的归并思路
+        for (int interval = 1; interval < length; interval *= 2) { // 间隔
+            for (int i = 0; i < length - interval; i += 2 * interval) {
+                lists[i] = merge(lists[i], lists[i + interval]);
             }
         }
 
-        sort(v.begin(), v.end());
+        return lists[0];
+    }
+private:
+    ListNode* merge(ListNode* l1, ListNode* l2) {
+        if (l1 == NULL) {
+            return l2;
+        } else if (l2 == NULL) {
+            return l1;
+        }
 
-        ListNode *dummy = new ListNode(-1);
-        ListNode *current = dummy;
-        for (int i = 0; i < v.size(); ++i) {
-            current->next = new ListNode(v[i]);
-            current = current->next;
+        ListNode* dummy = new ListNode(-1);
+        ListNode* lastNode = dummy;
+        while (l1 != NULL && l2 != NULL) {
+            ListNode* node = NULL;
+            if (l1->val < l2->val) {
+                node = l1;
+                l1 = l1->next;
+            } else {
+                node = l2;
+                l2 = l2->next;
+            }
+            node->next = dummy->next;
+            lastNode->next = node;
+            lastNode = lastNode->next;
+        }
+
+        if (l1 != NULL) {
+            lastNode->next = l1;
+        }
+        if (l2 != NULL) {
+            lastNode->next = l2;
         }
 
         return dummy->next;
@@ -212,12 +270,17 @@ public:
 class Solution {
 public:
     struct compare {
+        // 上浮操作
+        // a：父结点
+        // b：子结点
+        // 返回 true，则上浮结点
         bool operator()(ListNode *a, ListNode *b) {
             return a->val > b->val;
         }
     };
 
     ListNode* mergeKLists(vector<ListNode*> &lists) {
+        // 小堆
         priority_queue<ListNode*, vector<ListNode*>, compare> q;
 
         for (const auto &node : lists) {
