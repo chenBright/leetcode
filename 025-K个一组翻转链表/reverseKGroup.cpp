@@ -28,23 +28,21 @@ public:
                 break;
             }
 
-            ListNode* nextPreNode = left;
             ListNode* right = head;
             head = head->next;
+            // 翻转后，right 变成分组的第一个结点，用分组的前一个结点指向 right。
+            preNode->next = right;
+            // 更新
+            preNode = left;
 
-            // 翻转后，返回新分组的第一个结点，用分组的前一个结点指向新分组。
-            preNode->next = reverse(left, right);
-
-            // 更新分组的前一个结点
-            preNode = nextPreNode;
+            reverse(left, right);
         }
 
         return dummy->next;
     }
 
 private:
-    // 翻转后，返回新分组的第一个结点
-    ListNode* reverse(ListNode* left, ListNode* right) {
+    void reverse(ListNode* left, ListNode* right) {
         ListNode* dummy = new ListNode(-1);
         // 分组后面一个结点，用作循环结束条件
         ListNode* end = right->next;
@@ -57,7 +55,5 @@ private:
             tmp->next = dummy->next;
             dummy->next = tmp;
         }
-
-        return dummy->next;
     }
 };
