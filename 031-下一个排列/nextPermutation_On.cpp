@@ -11,19 +11,24 @@ public:
         }
 
         int i = length - 2;
-        while (i >= 0 && nums[i + 1] <= nums[i]) {
+        while (i >= 0 && nums[i] >= nums[i + 1]) {
             --i;
         }
 
-        if (i >= 0) {
-            int j = length - 1;
-            while (j >= 0 && nums[j] <= nums[i]) {
-                --j;
-            }
-            swap(nums[i], nums[j]);
+        // 此时序列为最大，直接翻转整个数组。
+        if (i < 0) {
+            reverse(nums.begin(), nums.end());
+            return;
         }
-        for (int start = i + 1, end = length - 1; start < end; ++start, --end) {
-            swap(nums[start], nums[end]);
+
+        // 找到第一对数 nums[j] > nums[i]，即升序结构
+        int j = length - 1;
+        while (nums[j] <= nums[i]) {
+            --j;
         }
+        swap(nums[i], nums[j]);
+
+        // 对区域 [i + 1, length - 1] 排序，达到序列最小
+        sort(nums.begin() + i + 1, nums.end());
     }
 };
