@@ -6,11 +6,11 @@ public:
     vector<int> sortArray(vector<int>& nums) {
         int length = nums.size();
         aux.reserve(length);
-        for (int i = 1; i < length; i *= 2) { // 分组大小
-            for (int low = 0; low < length - i; low += 2 * i) {
-                // 归并的第一个子数组：[low, low + i - 1]
-                // 归并的第二个子数组：[low + i, min(low + 2 * i - 1, length - 1)]
-                merge(nums, low, low + i - 1, min(low + 2 * i - 1, length - 1));
+        for (int interval = 1; interval < length; interval *= 2) { // 分组大小
+            for (int low = 0; low < length - interval; low += 2 * interval) {
+                // 归并的第一个子数组：[low, low + interval - 1]
+                // 归并的第二个子数组：[low + interval, min(low + 2 * interval - 1, length - 1)]
+                merge(nums, low, low + interval - 1, min(low + 2 * interval - 1, length - 1));
             }
         }
         return nums;
