@@ -1,4 +1,5 @@
 #include <vector>
+#include <queue>
 using namespace std;
 
 struct TreeNode {
@@ -11,79 +12,42 @@ struct TreeNode {
 class Solution {
 public:
     vector<vector<int> > zigzagLevelOrder(TreeNode* root) {
-        vector<vector<int> > res; // 结果
-
+        vector<vector<int> > result;
         if (root == NULL) {
-            return res;
+            return result;
         }
 
-        bool isLeft = true; // 从左开始打印
-        vector<TreeNode*> vNode; // 保存结点
-        vector<int> vInt; // 保存结点的值
-
-        vNode.push_back(root);
-        vInt.push_back(root->val);
-        res.push_back(vInt);
-        isLeft = !isLeft; // 从右开始打印
-
-        while (!vNode.empty()) {
-            if (isLeft) {
-                printFromLeft(vNode, vInt);
-            } else {
-                printFromRight(vNode, vInt);
+        queue<TreeNode*> q;
+        q.push(root);
+        vector<int> level;              // 暂存层结果
+        TreeNode* lastNode = root;      // 当前层的最后一个结点（最右边的结点）
+        TreeNode* nextLastNode = NULL;  // 下一层的最后一个结点（最右边的结点）
+        int count = 1;
+        while (!q.empty()) {
+            TreeNode* node = q.front();
+            q.pop();
+            level.push_back(node->val);
+            if (node->left != NULL) {
+                nextLastNode = node->left;
+                q.push(node->left);
             }
-            isLeft = !isLeft;
-
-            if (!vInt.empty()) {
-                res.push_back(vInt);
-            }
-        }
-
-        return res;
-    }
-
-private:
-    // 从左开始打印
-    void printFromLeft(vector<TreeNode*> &vNode, vector<int> &vInt) {
-        vInt.clear();
-
-        vector<TreeNode*> temp;
-        for (vector<TreeNode*>::iterator it = vNode.begin(); it != vNode.end(); ++it) {
-            if ((*it)->left != NULL) {
-                temp.push_back((*it)->left);
-                vInt.push_back((*it)->left->val);
+            if (node->right != NULL) {
+                nextLastNode = node->right;
+                q.push(node->right);
             }
 
-            if ((*it)->right != NULL) {
-                temp.push_back((*it)->right);
-                vInt.push_back((*it)->right->val);
+            if (node == lastNode) {
+                // 偶数层逆向打印
+                if (count % 2 == 0) {
+                    reverse(level.begin(), level.end());
+                }
+                ++count;
+                result.push_back(level);
+                level.clear();
+                lastNode = nextLastNode;
             }
         }
-        vNode.clear();
-        if (!temp.empty()) {
-            vNode.assign(temp.begin(), temp.end());
-        }
-    }
 
-    // 从右开始打印
-    void printFromRight(vector<TreeNode*> &vNode, vector<int> &vInt) {
-        vInt.clear();
-
-        vector<TreeNode*> temp;
-        for (vector<TreeNode*>::reverse_iterator it = vNode.rbegin(); it != vNode.rend(); ++it) {
-            if ((*it)->right != NULL) {
-                temp.push_back((*it)->right);
-                vInt.push_back((*it)->right->val);
-            }
-
-            if ((*it)->left != NULL) {
-                temp.push_back((*it)->left);
-                vInt.push_back((*it)->left->val);
-            }
-        }
-        vNode.clear();
-        if (!temp.empty()) {
-            vNode.assign(temp.rbegin(), temp.rend()); // 前面遍历将结点变成逆序，现在将结点顺序变回原来的顺序
-        }
+        return result;
     }
 };
