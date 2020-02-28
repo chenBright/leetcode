@@ -65,7 +65,7 @@ LeetCode Problems' Solutions
 | [057-插入区间](https://leetcode-cn.com/problems/insert-interval/) | [C++](./057-插入区间/README.md) |
 | [058-最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) | [C++](./058-最后一个单词的长度/README.md) |
 | [059-螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/comments/) | [C++](./059-螺旋矩阵%20II/README.md) |
-| [060-第k个排列](https://leetcode-cn.com/problems/permutation-sequence/)* | [C++](./060-第k个排列/README.md) |
+| [060-第k个排列](https://leetcode-cn.com/problems/permutation-sequence/) | [C++](./060-第k个排列/README.md) |
 | [061-旋转链表](https://leetcode-cn.com/problems/two-sum/) | [C++](./061-旋转链表/README.md) |
 | [062-不同路径](https://leetcode-cn.com/problems/unique-paths/)* | [C++](./062-不同路径/README.md) |
 | [063-不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)* | [C++](./063-不同路径%20II/README.md) |

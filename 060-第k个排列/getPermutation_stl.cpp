@@ -6,19 +6,15 @@ using namespace std;
 class Solution {
 public:
     string getPermutation(int n, int k) {
-        string result;
-        for (int i = 1; i <= n; ++i) {
-            result.push_back(i + '0');
+        string str(n, '1');
+        for (int i = 0; i < n; ++i) {
+            str[i] = i + '1';
         }
 
-        int j = 0;
-        do {
-            ++j;
-            if (j == k) {
-                break;
-            }
-        } while (next_permutation(result.begin(), result.end()));
+        for (int j = 0; j < k - 1; ++j) {
+            next_permutation(str.begin(), str.end());
+        }
 
-        return result;
+        return str;
     }
 };
