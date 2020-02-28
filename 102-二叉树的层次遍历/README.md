@@ -10,37 +10,38 @@ leetcode：[102-二叉树的层次遍历](https://leetcode-cn.com/problems/binar
 class Solution {
 public:
     vector<vector<int> > levelOrder(TreeNode* root) {
-        vector<vector<int> > res;
+        vector<vector<int> > result;
         if (root == NULL) {
-            return res;
+            return result;
         }
 
         queue<TreeNode*> q;
         q.push(root);
-        vector<TreeNode*> v; // 保存子结点
-        vector<int> temp; // 暂存行结果
+        vector<int> level;              // 暂存层结果
+        TreeNode* lastNode = root;      // 当前层的最后一个结点（最右边的结点）
+        TreeNode* nextLastNode = NULL;  // 下一层的最后一个结点（最右边的结点）
         while (!q.empty()) {
-            // 一次性处理一行
-            while (!q.empty()) {
-                TreeNode *node = q.front();
-                q.pop();
-                temp.push_back(node->val);
-                if (node->left != NULL) {
-                    v.push_back(node->left);
-                }
-                if (node->right != NULL) {
-                    v.push_back(node->right);
-                }
+            TreeNode* node = q.front();
+            q.pop();
+            level.push_back(node->val);
+            if (node->left != NULL) {
+                q.push(node->left);
+                nextLastNode = node->left;
             }
-            for (vector<TreeNode*>::iterator it = v.begin(); it != v.end(); ++it) {
-                q.push(*it);
+            if (node->right != NULL) {
+                q.push(node->right);
+                nextLastNode = node->right;
             }
-            res.push_back(temp); // 保存结果
-            temp.clear();
-            v.clear();
+
+            // 遍历到层的最后一个结点
+            if (node == lastNode) {
+                result.push_back(level);
+                level.clear();
+                lastNode = nextLastNode;
+            }
         }
 
-        return res;
+        return result;
     }
 };
 ```
