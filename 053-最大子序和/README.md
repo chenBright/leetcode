@@ -99,9 +99,7 @@ public:
         int result = INT_MIN;
         for (const auto& num : nums) {
             sum += num;
-            if (sum > result) {
-                result = sum;
-            }
+            result = max(result, sum);
 
             if (sum < 0) {
                 sum = 0;
