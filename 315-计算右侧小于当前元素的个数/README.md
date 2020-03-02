@@ -32,7 +32,7 @@ public:
     vector<int> countSmaller(vector<int>& nums) {
         int length = nums.size();
         vector<int> result(length, 0);
-        if (length == 0) {
+        if (nums.empty()) {
             return result;
         }
 
@@ -149,3 +149,6 @@ private:
 };
 ```
 
+## 树状数组
+
+略
