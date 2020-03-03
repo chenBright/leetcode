@@ -21,8 +21,7 @@ public:
         BSTNode* root = NULL;
         // 从后往前构建二叉搜索树
         for (int i = length - 1; i >=  0; --i) {
-            BSTNode* node = new BSTNode(nums[i]);
-            root = insertNode(root, node, result[i]);
+            root = insertNode(root, new BSTNode(nums[i]), result[i]);
         }
 
         return result;
