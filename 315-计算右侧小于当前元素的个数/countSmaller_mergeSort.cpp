@@ -16,7 +16,7 @@ public:
             indexs[i] = i;
         }
 
-        mergeSort(nums, indexs, 0, static_cast<int>(nums.size()) - 1, result);
+        mergeSort(nums, indexs, 0, length - 1, result);
 
         return result;
     }
