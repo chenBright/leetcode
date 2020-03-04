@@ -1,14 +1,7 @@
 #include <vector>
 using namespace std;
 
-/**
- * 1. 当k大于等于数组长度一半时,
- * 问题退化为贪心问题此时采用 122-买卖股票的最佳时机 II 的方法。
- *
- * 2. 当k不大于数组长度一半时，
- * 可以使用 123-买卖股票的最佳时机 III 的方法来解决，
- * 将两笔买卖的变量扩展成长度为 k 的二维数组，即 123 题中的 k = 2。
- */
+
 class Solution {
 public:
     int maxProfit(int k, vector<int>& prices) {
@@ -16,31 +9,29 @@ public:
             return 0;
         }
 
-        int len = prices.size();
-        if (k >= len / 2) {
-            return maxProfit_greedy(prices);
+        int length = prices.size();
+        if (k >= length / 2) {
+            return maxProfitGreedy(prices);
         }
 
-        int profit = 0;
-        vector<pair<int, int> > deals(k, make_pair(INT_MIN, 0));
-        for (int p : prices) {
-            deals[0].first = max(deals[0].first, -p);
-            deals[0].second = max(deals[0].second, deals[0].first + p);
+        vector<vector<int> > dp(k, vector<int>{INT_MIN, 0});
+        for (const auto& price : prices) {
+            dp[0][0] = max(dp[0][0], -price);
+            dp[0][1] = max(dp[0][1], dp[0][0] + price);
             for (int i = 1; i < k; ++i) {
-                deals[i].first = max(deals[i].first, deals[i - 1].second - p);
-                deals[i].second = max(deals[i].second, deals[i].first + p);
+                dp[i][0] = max(dp[i][0], dp[i - 1][1] - price);
+                dp[i][1] = max(dp[i][1], dp[i][0] + price);
             }
         }
 
-        return deals[k - 1].second;
+        return dp[k - 1][1];
     }
-
 private:
-    int maxProfit_greedy(vector<int> &prices) {
+    int maxProfitGreedy(vector<int>& prices) {
         int profit = 0;
-        for (int i = 0; i + 1 < prices.size(); ++i) {
-            int diff = prices[i + 1] - prices[i];
-            // 只要第 i 天的价格比第 i+1 天的价格低，则在第 i 天买入，第 i+1 天卖出
+        int minPrice = INT_MIN;
+        for (int i = 1; i < prices.size(); ++i) {
+            int diff = prices[i] - prices[i - 1];
             if (diff > 0) {
                 profit += diff;
             }
@@ -48,4 +39,5 @@ private:
 
         return profit;
     }
+
 };

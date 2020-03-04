@@ -4,6 +4,15 @@
 
 leetcode：[123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
 
+## 股票问题索引
+
+- [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
+- [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+- [123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
+- [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
+- [309-最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+- [714-买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
 ## 动态规划1
 
 参考[hestyle博客](https://blog.csdn.net/qq_41855420/article/details/87867155)。
@@ -51,7 +60,7 @@ public:
 
 ## 动态规划2
 
-参考[LeetCode中文评论区](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/comments/10208)以及[LeetCode英文评论区](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/39611/Is-it-Best-Solution-with-O(n)-O(1).)。
+参考[一个方法团灭 6 道股票问题](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/)、[LeetCode中文评论区](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/comments/10208)和[LeetCode英文评论区，](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/39611/Is-it-Best-Solution-with-O(n)-O(1).)与[122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)的思路一样。
 
 动态规划的时间复杂度为**O(n)**。
 
@@ -68,20 +77,18 @@ public:
          * 分别对四个变量进行相应的更新, 最后secSell就是最大
          * 收益值(secSell >= fstSell)
          */
-        int fstBuy = INT_MIN, fstSell = 0;
-        int secBuy =INT_MIN, secSell = 0;
-        for(int p : prices) {
-            fstBuy = max(fstBuy, -p);
-            fstSell = max(fstSell, fstBuy + p);
-            secBuy = max(secBuy, fstSell - p);
-            secSell = max(secSell, secBuy + p);
+        int fstBuy = INT_MIN;
+        int fstSell = 0;
+        int secBuy =INT_MIN;
+        int secSell = 0;
+        for(int price : prices) {
+            fstBuy = max(fstBuy, -price);
+            fstSell = max(fstSell, fstBuy + price);
+            secBuy = max(secBuy, fstSell - price);
+            secSell = max(secSell, secBuy + price);
         }
 
         return secSell;
     }
 };
 ```
-
-## 其他
-
-参考[股票问题的总结](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/)

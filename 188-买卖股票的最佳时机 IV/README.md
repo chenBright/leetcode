@@ -4,14 +4,22 @@
 
 leetcode：[188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
 
+## 股票问题索引
+
+- [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
+- [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+- [123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
+- [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
+- [309-最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+- [714-买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
+
 ## 动态规划
 
-参考[LeetCode评论区 SEU.FidGet 的答案](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/comments/10285)。
+参考[一个方法团灭 6 道股票问题](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/)
 
-实际上就是整合和扩展了[122-买卖股票的最佳时机 II](../122-买卖股票的最佳时机%20II/)和 [123-买卖股票的最佳时机III](../123-买卖股票的最佳时机%20III/)的方法。
 
-1. 当k大于等于数组长度一半时, 问题退化为贪心问题此时采用[122-买卖股票的最佳时机 II](../122-买卖股票的最佳时机%20II)的方法。
-2. 当k不大于数组长度一半时，可以使用[123-买卖股票的最佳时机 III](../123-买卖股票的最佳时机%20III)的方法来解决，将两笔买卖的变量扩展成长度为 k 的二维数组，即 123 题中的 k = 2。`deals[i][0]`和`deals[i][1]`分别表示第`i`比交易买入和卖出时各自的最大收益。
+使用[123-买卖股票的最佳时机 III](../123-买卖股票的最佳时机%20III)的方法来解决，将两笔买卖的变量扩展成长度为 k 的二维数组，即 123 题中的 k = 2。`deals[i][0]`和`deals[i][1]`分别表示第`i`比交易买入和卖出时各自的最大收益。
 
 ```c++
 class Solution {
@@ -21,31 +29,29 @@ public:
             return 0;
         }
 
-        int len = prices.size();
-        if (k >= len / 2) {
-            return maxProfit_greedy(prices);
+        int length = prices.size();
+        if (k >= length / 2) {
+            return maxProfitGreedy(prices);
         }
 
-        int profit = 0;
-        vector<pair<int, int> > deals(k, make_pair(INT_MIN, 0));
-        for (int p : prices) {
-            deals[0].first = max(deals[0].first, -p);
-            deals[0].second = max(deals[0].second, deals[0].first + p);
+        vector<vector<int>> dp(k, vector<int>{INT_MIN, 0});
+        for (const auto& price : prices) {
+            dp[0][0] = max(dp[0][0], -price);
+            dp[0][1] = max(dp[0][1], dp[0][0] + price);
             for (int i = 1; i < k; ++i) {
-                deals[i].first = max(deals[i].first, deals[i - 1].second - p);
-                deals[i].second = max(deals[i].second, deals[i].first + p);
+                dp[i][0] = max(dp[i][0], dp[i - 1][1] - price);
+                dp[i][1] = max(dp[i][1], dp[i][0] + price);
             }
         }
 
-        return deals[k - 1].second;
+        return dp[k - 1][1];
     }
-
 private:
-    int maxProfit_greedy(vector<int> &prices) {
+    int maxProfitGreedy(vector<int>& prices) {
         int profit = 0;
-        for (int i = 0; i + 1 < prices.size(); ++i) {
-            int diff = prices[i + 1] - prices[i];
-            // 只要第 i 天的价格比第 i+1 天的价格低，则在第 i 天买入，第 i+1 天卖出
+        int minPrice = INT_MIN;
+        for (int i = 1; i < prices.size(); ++i) {
+            int diff = prices[i] - prices[i - 1];
             if (diff > 0) {
                 profit += diff;
             }
@@ -53,6 +59,7 @@ private:
 
         return profit;
     }
+
 };
 ```
 
