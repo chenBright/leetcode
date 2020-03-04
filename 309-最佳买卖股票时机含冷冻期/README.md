@@ -4,9 +4,19 @@
 
 leetcode：[309-最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 
+## 股票问题索引
+
+- [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
+- [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+- [123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
+- [188-买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
+- [309-最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+- [714-买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
+
 ## 动态规划
 
-参考[LeetCode题解](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-lab/)。
+参考[一个方法团灭 6 道股票问题](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/)
 
 时间复杂度：**O(n)**。
 
@@ -14,22 +24,21 @@ leetcode：[309-最佳买卖股票时机含冷冻期](https://leetcode-cn.com/pr
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int dp_0 = 0;       // dp[i][0]，表示当前没有持有股票
-        int dp_1 = INT_MIN; // 代表 dp[i][1]，表示当前持有股票
-        int dp_pre_0 = 0;   // 代表 dp[i-2][0]，表示上一次卖出股票
+        int dp_0 = INT_MIN; // 代表 dp[i][0]，表示当前持有股票
+        int dp_1 = 0;       // 代表 dp[i][1]，表示当前没有持有股票
+        int dp_pre_1 = 0;   // 代表 dp[i-2][1]，表示上一次卖出股票
 
-        for (const auto& p : prices) {
-            int tmp = dp_0;
+        for (const auto& price : prices) {
             // 前一天没有持有股票，当日也没有持有股票，没有操作
             // 前一天持有股票，当日卖出股票
-            dp_0 = max(dp_0, dp_1 + p);
+            dp_0 = max(dp_0, dp_pre_1 - price);
+            dp_pre_1 = dp_1;
             // 前一天持有股票，当日也持有股票，没有操作
             // 上一次卖出股票，前一天没有操作，当日买入股票
-            dp_1 = max(dp_1, dp_pre_0 - p);
-            dp_pre_0 = tmp;
+            dp_1 = max(dp_1, dp_0 + price);
         }
 
-        return dp_0;
+        return dp_1;
     }
 };
 ```
@@ -67,11 +76,11 @@ public:
             dp[i][1] = max(dp[i - 1][1], dp[i - 1][2] - prices[i]);
             // 前一天过渡期，当日也是过渡期
             // 前一天卖出股票，当日也是过渡期
-            dp[i][2] = max(dp[i - 1][2], dp[i - 1][1]);
+            dp[i][2] = max(dp[i - 1][2], dp[i - 1][0]);
         }
 
         // 最后一天最大值情况为要么什么都不做，要么卖出股票。
-        return max(dp[length - 1][0], dp[length - 1][0]);
+        return max(dp[length - 1][0], dp[length - 1][2]);
     }
 };
 ```
@@ -83,8 +92,8 @@ class Solution {
 public:
     int maxProfit(vector<int>& prices) {
         int sold = 0;       // 卖出股票
-        int rest = 0;       // 过渡期
         int hold = INT_MIN; // 持有股票
+        int rest = 0;       // 过渡期
         for (int p : prices) {
             int pre_sold = sold;
             // 前一天 hold，当日卖出股票
