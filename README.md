@@ -263,6 +263,7 @@ LeetCode Problems' Solutions
 | [448-找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)** | [C++](./448-找到所有数组中消失的数字/README.md) |
 | [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [C++](./461-汉明距离/README.md) |
 | [494-目标和](https://leetcode-cn.com/problems/target-sum/)* | [C++](./494-目标和/README.md) |
+| [496-下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/) | [C++](./496-下一个更大元素%20I/README.md) |
 | [538-把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)* | [C++](./538-把二叉搜索树转换为累加树/README.md) |
 | [541-反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) | [C++](./541-反转字符串%20II/README.md) |
 | [543-二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)* | [C++](./543-二叉树的直径/README.md) |
