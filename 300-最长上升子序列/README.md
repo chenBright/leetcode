@@ -90,9 +90,9 @@ private:
 - 如果能，则`dp[i] = 1 + dp[j]`；
 - 否则，`dp[i] = 1`。
 
-时间复杂度：***O(n)***。
+时间复杂度：**O(n)**。
 
-空间复杂度：***O(n)***。
+空间复杂度：**O(n)**。
 
 ```c++
 class Solution {
@@ -102,20 +102,18 @@ public:
             return 0;
         }
 
-        int len = nums.size();
+        int length = nums.size();
         // dp[i] 表示以 nums[i] 为序列的第一个数字的最长子序列的长度
-        vector<int> dp(len, 1);
+        vector<int> dp(length, 1);
         int maxLength = 1;
-        for (int i = len - 1; i >= 0; --i) {
-            int tmpLength = 1;
+        for (int i = length - 1; i >= 0; --i) {
             // nums[i] 与以 nums[j]（j = i + 1 ... nums.size() - 1）为起点的子序列能否组成上升序列
-            for (int j = i + 1; j < len; ++j) {
+            for (int j = i + 1; j < length; ++j) {
                 if (nums[i] < nums[j]) {
                     // 如果能，则 dp[i] = 1 + dp[j]
-                    tmpLength = max(tmpLength, 1 + dp[j]);
+                    dp[i] = max(dp[i], 1 + dp[j]);
                 }
             }
-            dp[i] = max(dp[i], tmpLength);
             maxLength = max(maxLength, dp[i]);
         }
 
@@ -133,9 +131,9 @@ public:
 - 如果能，则`dp[i] = 1 + dp[j]`；
 - 否则，`dp[i] = 1`。
 
-时间复杂度：***O(n^2)***。
+时间复杂度：**O(n^2)**。
 
-空间复杂度：***O(n)***。
+空间复杂度：**O(n)**。
 
 ```c++
 class Solution {
@@ -145,17 +143,15 @@ public:
             return 0;
         }
 
-        int len = nums.size();
-        vector<int> dp(len, 1);
+        int length = nums.size();
+        vector<int> dp(length, 1);
         int maxLength = 1;
-        for (int i = 1; i < len; ++i) {
-            int tmpLength = 1;
+        for (int i = 1; i < length; ++i) {
             for (int j = 0; j < i; ++j) {
                 if (nums[j] < nums[i]) {
-                    tmpLength = max(tmpLength, 1 + dp[j]);
+                    dp[i] = max(dp[i], 1 + dp[j]);
                 }
             }
-            dp[i] = tmpLength;
             maxLength = max(maxLength, dp[i]);
         }
 
@@ -165,13 +161,15 @@ public:
 ```
 ## 动态规划 + 二分查找
 
-参考[博客 解法二、三、四](https://github.com/grandyang/leetcode/issues/300)和[LeetCode官方题解](https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-by-leetcode)。
+参考：
+- [最长上升子序列（动态规划 + 二分查找，清晰图解）](https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/)
+- [博客 解法二、三、四](https://github.com/grandyang/leetcode/issues/300)。
 
-关于使用二分查找替换子序列中的数字的理解：当出现这种情况的时候，该子序列的长度已经确定，不会再变成。而此时出现的数字形成的子序列可能会更长，所以将其放到子序列中合适的位置，以形成新的子序列。
+关于使用二分查找替换子序列中的数字的理解：数组`dp`是一个排序数组，`dp[i]`记录长度为`i + 1`的子序列的最后一个元素。例如`[1,4,6]`序列，长度为`1、2、3`的子序列尾部元素值为`1、4、6`。当遍历到`j`的位置时，前一种方法使用线性查找的方式，查找比`nums[j]`小的元素，确定一个上升子序列。该方法使用二分查找查找`dp`中第一个不小于`nums[j]`的元素`num`，`nums[j]`和`num`一样，都可以与前面的元素形成同样长度的最大上升子序列。将`num`替换成`nums[j]`，则后面的大于`nums[j]`但小于`num`的元素，可以形成更长的上升子序列。
 
-时间复杂度：***O(nlogn)***。
+时间复杂度：**O(nlogn)**。
 
-空间复杂度：***O(n)***。
+空间复杂度：**O(n)**。
 
 ### 实现1
 
@@ -203,7 +201,7 @@ public:
                 dp[high] = nums[i];
             }
         }
-        
+
         // 最后，dp 的长度等于上升序列的长度
         return dp.size();
     }
@@ -243,7 +241,7 @@ public:
                 dp[high] = nums[i];;
             }
         }
-        
+
         // 最后，dp 的长度等于上升序列的长度
         return dp.size();
     }
@@ -262,16 +260,16 @@ public:
 
         int len = nums.size();
         vector<int> dp;
-        for (int i = 0; i < len; ++i) {
+        for (const auto& num : nums) {
             // 查找第一个不小于 nums[i] 的值
-            auto it = lower_bound(dp.begin(), dp.end(), nums[i]);
+            auto it = lower_bound(dp.begin(), dp.end(), num);
             if (it == dp.end()) {
-                dp.push_back(nums[i]);
+                dp.push_back(num);
             } else {
-                *it = nums[i];
+                *it = num;
             }
         }
-        
+
         // 最后，dp 的长度等于上升序列的长度
         return dp.size();
     }

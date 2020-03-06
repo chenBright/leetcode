@@ -232,7 +232,7 @@ LeetCode Problems' Solutions
 | [292-Nim 游戏](https://leetcode-cn.com/problems/nim-game/)* | [C++](./292-Nim%20游戏/README.md) |
 | [297-二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/submissions/)* | [C++](./297-二叉树的序列化与反序列化/README.md) |
 | [299-猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/)* | [C++](./299-猜数字游戏/README.md) |
-| [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)* | [C++](./300-最长上升子序列/README.md) |
+| [300-最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)** | [C++](./300-最长上升子序列/README.md) |
 | [303-区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)* | [C++](./303-区域和检索%20-%20数组不可变/README.md) |
 | [309-最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)** | [C++](./309-最佳买卖股票时机含冷冻期/README.md) |
 | [315-计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)* | [C++](./315-计算右侧小于当前元素的个数/README.md) |
