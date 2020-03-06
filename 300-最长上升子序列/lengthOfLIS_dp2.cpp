@@ -9,17 +9,15 @@ public:
             return 0;
         }
 
-        int len = nums.size();
-        vector<int> dp(len, 1);
+        int length = nums.size();
+        vector<int> dp(length, 1);
         int maxLength = 1;
-        for (int i = 1; i < len; ++i) {
-            int tmpLength = 1;
+        for (int i = 1; i < length; ++i) {
             for (int j = 0; j < i; ++j) {
                 if (nums[j] < nums[i]) {
-                    tmpLength = max(tmpLength, 1 + dp[j]);
+                    dp[i] = max(dp[i], 1 + dp[j]);
                 }
             }
-            dp[i] = tmpLength;
             maxLength = max(maxLength, dp[i]);
         }
 

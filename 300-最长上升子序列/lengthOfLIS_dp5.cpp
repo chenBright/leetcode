@@ -11,16 +11,16 @@ public:
 
         int len = nums.size();
         vector<int> dp;
-        for (int i = 0; i < len; ++i) {
+        for (const auto& num : nums) {
             // 查找第一个不小于 nums[i] 的值
-            auto it = lower_bound(dp.begin(), dp.end(), nums[i]);
+            auto it = lower_bound(dp.begin(), dp.end(), num);
             if (it == dp.end()) {
-                dp.push_back(nums[i]);
+                dp.push_back(num);
             } else {
-                *it = nums[i];
+                *it = num;
             }
         }
-        
+
         // 最后，dp 的长度等于上升序列的长度
         return dp.size();
     }
