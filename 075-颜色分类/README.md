@@ -9,7 +9,7 @@ leetcode：[075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)
 
 第一次遍历数组，记录0、1、2的个数。第二遍遍历数组，重写数组。
 
-该方法的时间复杂度为***O(n)***。
+该方法的时间复杂度为**O(n)**。
 
 ```c++
 class Solution {
@@ -41,23 +41,22 @@ public:
 };
 ```
 
-## 三向切分的快速排序
+## 三向切分快速排序的 Paritition
 
-使用[《算法》](<https://book.douban.com/subject/10432347/>)P188 中的“三向切分的快速排序”，从左到右遍历数组，维护一个指针low使得***nums[0 … low - 1]中的元素都小于1***，一个指针high使得***nums[high … nums.size() - 1]中的元素都大于1***，一个指针i（用于遍历数组）使得***nums[low … i - 1]中的元素都等于1，nums[i … high]中的元素还未确定大小***。
+使用[《算法》](<https://book.douban.com/subject/10432347/>)P188 中的“三向切分的快速排序”，从左到右遍历数组，维护一个指针`low`使得`nums[0 … low - 1]`中的元素都小于 1，一个指针`high`使得`nums[high … nums.size() - 1]`中的元素都大于1，一个指针`i`（用于遍历数组）使得`nums[low … i - 1]`中的元素都等于 1，`nums[i … high]`中的元素还未确定大小。
 
-- nums[i]小于1，则交换位置num[slow]和nums[i]，++low，++i；
-- nums[i]大于1，则交换位置num[high]和nums[i]，--high；
-- nums[i]等于1，++i。
+- `nums[i]`小于 1，则交换位置`num[low]`和`nums[i]`，`++low`，`++i`；
+- `nums[i]`大于 1，则交换位置`num[high]`和`nums[i]`，`--high`；
+- `nums[i]`等于 1，`++i`。
 
-该方法的时间复杂度为***O(n)***。
+该方法的时间复杂度为**O(n)**。
 
 ```c++
 class Solution {
 public:
     void sortColors(vector<int> &nums) {
-        int length = nums.size();
         int low = 0;
-        int high = length - 1;
+        int high = static_cast<int>(nums.size()) - 1;
         int i = 0;
         /**
          * [0...low - 1]为小于 1 的数，即0

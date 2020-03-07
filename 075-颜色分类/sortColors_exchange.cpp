@@ -5,9 +5,8 @@ using namespace std;
 class Solution {
 public:
     void sortColors(vector<int> &nums) {
-        int length = nums.size();
         int low = 0;
-        int high = length - 1;
+        int high = static_cast<int>(nums.size()) - 1;
         int i = 0;
         /**
          * [0...low - 1]为小于 1 的数，即0
