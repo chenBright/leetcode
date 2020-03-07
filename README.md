@@ -80,7 +80,7 @@ LeetCode Problems' Solutions
 | [072-编辑距离](https://leetcode-cn.com/problems/edit-distance/)* | [C++](./072-编辑距离/README.md) |
 | [073-矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/) | [C++](./073-矩阵置零/README.md) |
 | [074-搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)* | [C++](./074-搜索二维矩阵/README.md) |
-| [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)* | [C++](./075-颜色分类/README.md) |
+| [075-颜色分类](https://leetcode-cn.com/problems/sort-colors/)** | [C++](./075-颜色分类/README.md) |
 | [076-最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)* | [C++](./076-最小覆盖子串/README.md) |
 | [077-组合](https://leetcode-cn.com/problems/combinations/)* | [C++](./077-组合/README.md) |
 | [078-子集](https://leetcode-cn.com/problems/subsets/)**（迭代、位运算） | [C++](./078-子集/README.md) |
