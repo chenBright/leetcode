@@ -4,38 +4,37 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int> > merge(vector<vector<int> > &intervals) {
-        vector<vector<int> > res;
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        vector<vector<int>> result;
         if (intervals.empty()) {
-            return res;
+            return result;
         }
 
-        sort(intervals.begin(), intervals.end(), compare);
+        sort(intervals.begin(), intervals.end(), Compare());
 
-        int i = 0;
-        int left = intervals[i][0];
-        int right = intervals[i][1];
-        vector<int> temp(2, -1);
-        while (++i < intervals.size()) {
-            if (right < intervals[i][0]) {
-                temp[0] = left;
-                temp[1] = right;
-                res.push_back(temp);
+        int left = intervals[0][0];
+        int right = intervals[0][1];
+        int length = intervals.size();
+        for (int i = 1; i < length; ++i) {
+            if (right >= intervals[i][0]) {
+                if (right < intervals[i][1]) {
+                    right = intervals[i][1];
+                }
+            } else {
+                result.push_back({left, right});
                 left = intervals[i][0];
-                right = intervals[i][1];
-
-            } else if (right < intervals[i][1]) {
                 right = intervals[i][1];
             }
         }
-        temp[0] = left;
-        temp[1] = right;
-        res.push_back(temp);
+        result.push_back({left, right});
 
-        return res;
-    }
 
-    static bool compare(vector<int> a, vector<int> b) {
-        return a[0] < b[0];
+        return result;
     }
+private:
+    struct Compare {
+        bool operator()(vector<int>& a, vector<int>& b) {
+            return a[0] < b[0];
+        }
+    };
 };
