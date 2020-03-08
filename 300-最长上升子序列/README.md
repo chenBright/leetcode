@@ -214,13 +214,8 @@ public:
 class Solution {
 public:
     int lengthOfLIS(vector<int> &nums) {
-        if (nums.empty()) {
-            return 0;
-        }
-
-        int len = nums.size();
         vector<int> dp;
-        for (int i = 0; i < len; ++i) {
+        for (int i = 0; i < nums.size(); ++i) {
             // 查找第一个不小于 nums[i] 的值
             int low = 0;
             int high = dp.size();
@@ -254,10 +249,6 @@ public:
 class Solution {
 public:
     int lengthOfLIS(vector<int> &nums) {
-        if (nums.empty()) {
-            return 0;
-        }
-
         int len = nums.size();
         vector<int> dp;
         for (const auto& num : nums) {

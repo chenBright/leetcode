@@ -5,10 +5,6 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLIS(vector<int> &nums) {
-        if (nums.empty()) {
-            return 0;
-        }
-
         int len = nums.size();
         vector<int> dp;
         for (const auto& num : nums) {

@@ -5,13 +5,8 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLIS(vector<int> &nums) {
-        if (nums.empty()) {
-            return 0;
-        }
-
-        int len = nums.size();
         vector<int> dp;
-        for (int i = 0; i < len; ++i) {
+        for (int i = 0; i < nums.size(); ++i) {
             // 查找第一个不小于 nums[i] 的值
             int low = 0;
             int high = dp.size();
@@ -32,7 +27,7 @@ public:
                 dp[high] = nums[i];;
             }
         }
-        
+
         // 最后，dp 的长度等于上升序列的长度
         return dp.size();
     }
