@@ -6,8 +6,6 @@ leetcode：[695-岛屿的最大面积](https://leetcode-cn.com/problems/max-area
 
 ## DFS
 
-### 递归实现
-
 ```c++
 class Solution {
 public:
@@ -45,7 +43,7 @@ private:
 };
 ```
 
-### 迭代实现
+## BFS
 
 ```c++
 class Solution {
