@@ -35,8 +35,8 @@ leetcode：[146-LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 ```c++
 class LRUCache {
 public:
-    typedef list<int> ListType; // list<key>
-    typedef unordered_map<int, int> MapType; // <key, value>
+    using ListType = list<int>; // list<key>
+    using MapType = unordered_map<int, int>; // <key, value>
 
     LRUCache(int capacity) : capacity_(capacity) {
 
@@ -87,8 +87,8 @@ private:
 ```c++
 class LRUCache {
 public:
-    typedef list<pair<int, int> > ListType; // pair<key, value>
-    typedef unordered_map<int, ListType::iterator> MapType; // <key, ListType::iterator>
+    using ListType = list<pair<int, int> >; // pair<key, value>
+    using MapType = unordered_map<int, ListType::iterator>; // <key, ListType::iterator>
 
     LRUCache(int capacity) : capacity_(capacity) {
 

@@ -5,8 +5,8 @@ using namespace std;
 
 class LRUCache {
 public:
-    typedef list<pair<int, int> > ListType; // pair<key, value>
-    typedef unordered_map<int, ListType::iterator> MapType; // <key, ListType::iterator>
+    using ListType = list<pair<int, int> >; // pair<key, value>
+    using MapType = unordered_map<int, ListType::iterator>; // <key, ListType::iterator>
 
     LRUCache(int capacity) : capacity_(capacity) {
 
