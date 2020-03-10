@@ -147,7 +147,7 @@ LeetCode Problems' Solutions
 | [143-重排链表](https://leetcode-cn.com/problems/reorder-list/)* | [C++](./143-重排链表/README.md) |
 | [144-二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | [C++](./144-二叉树的前序遍历/README.md) |
 | [145-二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)* | [C++](./145-二叉树的后序遍历/README.md) |
-| [146-LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)* | [C++](./146-LRU缓存机制/README.md) |
+| [146-LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/) | [C++](./146-LRU缓存机制/README.md) |
 | [147-对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | [C++](./147-对链表进行插入排序/README.md) |
 | [148-排序链表](https://leetcode-cn.com/problems/sort-list/) | [C++](./148-排序链表/README.md) |
 | [149-直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line/)* | [C++](./149-直线上最多的点数/README.md) |

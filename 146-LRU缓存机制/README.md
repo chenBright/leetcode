@@ -30,18 +30,18 @@ leetcode：[146-LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 
 
 
-哈希表插入、读取和查找操作的时间复杂度都为***O(1)***，双向链表的查找操作的时间复杂度为***O(n)***，所以该实现的时间复杂度为***O(n)***。
+哈希表插入、读取和查找操作的时间复杂度都为**O(1)**，双向链表的查找操作的时间复杂度为**O(n)**，所以该实现的时间复杂度为**O(n)**。
 
 ```c++
 class LRUCache {
 public:
-    typedef list<int> ListType; // list<key>
-    typedef unordered_map<int, int> MapType; // <key, value>
+    using ListType = list<int>; // list<key>
+    using MapType = unordered_map<int, int>; // <key, value>
 
     LRUCache(int capacity) : capacity_(capacity) {
-        
+
     }
-    
+
     int get(int key) {
         if (m.find(key) == m.end()) {
             return -1;
@@ -51,7 +51,7 @@ public:
         l.splice(l.begin(), l, find(l.begin(), l.end(), key));
         return m[key];
     }
-    
+
     void put(int key, int value) {
         if (m.find(key) != m.end()) {
             l.splice(l.begin(), l, find(l.begin(), l.end(), key)); // 将结点移动到双向链表的头部
@@ -80,42 +80,42 @@ private:
 
 要想在 **O(1)** 时间复杂度内完成这两种操作，必须使得查找的时间复杂度变为***O(1)***。
 
-修改双向链表保存的类型为`pair<int, int>（<key, value>）`，即使用双向链表来保存`key`和·`value`。修改哈希表的`value`，使其保存`list<pair<int, int>>::iterator`，指向对应`key`在双向链表的迭代器，即在链表中的位置。查找的时候，先使用哈希表找到`key`对应的迭代器，根据迭代器找到对应的`value`，这一系列查找操作的时间复杂度为***O(1)***，所以最后该实现的时间复杂度为***O(1)***。
+修改双向链表保存的类型为`pair<int, int>（<key, value>）`，即使用双向链表来保存`key`和·`value`。修改哈希表的`value`，使其保存`list<pair<int, int>>::iterator`，指向对应`key`在双向链表的迭代器，即在链表中的位置。查找的时候，先使用哈希表找到`key`对应的迭代器，根据迭代器找到对应的`value`，这一系列查找操作的时间复杂度为**O(1)**，所以最后该实现的时间复杂度为**O(1)**。
 
-注意：如果使用的不是双向链表，而是单向链表，则移动结点的操作的时间复杂度为***O(n)***。因为单向链表的结点不知道自己的前置结点，必须通过遍历链表才能找到前置结点。
+注意：如果使用的不是双向链表，而是单向链表，则移动结点的操作的时间复杂度为**O(n)**。因为单向链表的结点不知道自己的前置结点，必须通过遍历链表才能找到前置结点。
 
 ```c++
 class LRUCache {
 public:
-    typedef list<pair<int, int> > ListType; // pair<key, value>
-    typedef unordered_map<int, ListType::iterator> MapType; // <key, ListType::iterator>
+    using ListType = list<pair<int, int> >; // pair<key, value>
+    using MapType = unordered_map<int, ListType::iterator>; // <key, ListType::iterator>
 
     LRUCache(int capacity) : capacity_(capacity) {
-        
+
     }
-    
+
     int get(int key) {
         auto it = m.find(key);
         if (it == m.end()) {
             return -1;
         }
 
-        // 将要读取的元素放到列表头部
+        // 将要读取的元素放到列表头部。
         l.splice(l.begin(), l, it->second);
         return it->second->second;
     }
-    
+
     void put(int key, int value) {
         auto it = m.find(key);
-        // 当存在该 key 时，更新 value，并将结点移动到双向链表头部
+        // 当存在该 key 时，更新 value，并将结点移动到双向链表头部。
         if (it != m.end()) {
             it->second->second = value;
             l.splice(l.begin(), l, it->second);
             return;
         }
 
-        // 先插入新元素
-        // 如果插入新元素之后，元素个数大于缓冲器容量，则需要删除最近最少使用的元素
+        // 先插入新元素。
+        // 如果插入新元素之后，元素个数大于缓冲器容量，则需要删除最近最少使用的元素。
         l.push_front(make_pair(key, value));
         m[key] = l.begin();
         if (m.size() > capacity_) {

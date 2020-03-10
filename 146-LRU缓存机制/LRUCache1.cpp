@@ -5,13 +5,13 @@ using namespace std;
 
 class LRUCache {
 public:
-    typedef list<int> ListType; // list<key>
-    typedef unordered_map<int, int> MapType; // <key, value>
+    using ListType = list<int>; // list<key>
+    using MapType = unordered_map<int, int>; // <key, value>
 
     LRUCache(int capacity) : capacity_(capacity) {
-        
+
     }
-    
+
     int get(int key) {
         if (m.find(key) == m.end()) {
             return -1;
@@ -21,7 +21,7 @@ public:
         l.splice(l.begin(), l, find(l.begin(), l.end(), key));
         return m[key];
     }
-    
+
     void put(int key, int value) {
         if (m.find(key) != m.end()) {
             l.splice(l.begin(), l, find(l.begin(), l.end(), key)); // 将结点移动到双向链表的头部
