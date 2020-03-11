@@ -122,7 +122,7 @@ LeetCode Problems' Solutions
 | [117-填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)* | [C++](./117-填充每个节点的下一个右侧节点指针%20II/README.md) |
 | [118-杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/) | [C++](./118-杨辉三角/README.md) |
 | [119-杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/) | [C++](./119-杨辉三角%20II/README.md) |
-| [120-三角形最小路径和](https://leetcode-cn.com/problems/triangle/)* | [C++](./120-三角形最小路径和/README.md) |
+| [120-三角形最小路径和](https://leetcode-cn.com/problems/triangle/)** | [C++](./120-三角形最小路径和/README.md) |
 | [121-买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)**（动态规划） | [C++](./121-买卖股票的最佳时机/README.md) |
 | [122-买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)*（贪心算法） | [C++](./122-买卖股票的最佳时机%20II/README.md) |
 | [123-买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)* | [C++](./123-买卖股票的最佳时机%20III/README.md) |
@@ -256,6 +256,7 @@ LeetCode Problems' Solutions
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [406-根据身高重建队列](https://leetcode-cn.com/problems/queue-reconstruction-by-height/)* | [C++](./406-根据身高重建队列/README.md) |
 | [416-分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)* | [C++](./416-分割等和子集/README.md) |
+| [432-全O(1)的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure/submissions/) | [C++](./432-全O(1)的数据结构/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
 | [438-找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)* | [C++](./438-找到字符串中所有字母异位词/README.md) |
 | [442-数组中重复的数据](https://leetcode-cn.com/problems/longest-consecutive-sequence/) | [C++](./442-数组中重复的数据/README.md) |
