@@ -4,11 +4,11 @@ using namespace std;
 class Solution {
 public:
     int minimumTotal(vector<vector<int> > &triangle) {
-        int row = triangle.size();
-        if (row == 0) {
+        if (triangle.empty()) {
             return 0;
         }
 
+        int row = triangle.size();
         // dp[i][j] 表示从顶点到达[i][j]结点的最小路径和
         vector<vector<int> > dp(triangle);
         for (int i = 1; i < row; ++i) {
@@ -25,13 +25,11 @@ public:
         }
 
         // 找出数组dp最后一行的最小值，即为最小路径和
-        int min = dp[row - 1][0];
-        for (int k = 1; k < dp[row - 1].size(); ++k) {
-            if (dp[row - 1][k] < min) {
-                min = dp[row - 1][k];
-            }
+        int minTotal = INT_MAX;
+        for (int k = 0; k < row; ++k) {
+            minTotal = min(minTotal, dp[row - 1][k]);
         }
 
-        return min;
+        return minTotal;
     }
 };
