@@ -13,6 +13,10 @@ public:
         int left = 1;
         int right = length - 2;
         for (int i = 0; i < length - 1; ++i) {
+            // height [ left - 1] 是可能成为 maxLeft 的变量，
+            // 同理，height [ right + 1 ] 是可能成为 maxRight 的变量。
+            // 只要保证 height [ left - 1 ] < height [ right + 1 ]，
+            // 那么 maxLeft 就一定小于 maxRight。
             if (height[left - 1] < height[right + 1]) { // 从左到右更
                 maxLeft = max(maxLeft, height[left - 1]);
                 if (maxLeft > height[left]) {

@@ -47,7 +47,7 @@ LeetCode Problems' Solutions
 | [039-组合总和](https://leetcode-cn.com/problems/combination-sum/) | [C++](./039-组合总和/README.md) |
 | [040-组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)* | [C++](./040-组合总和%20II/README.md) |
 | [041-缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)** | [C++](./041-缺失的第一个正数/README.md) |
-| [042-接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)* | [C++](./042-接雨水/README.md) |
+| [042-接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)** | [C++](./042-接雨水/README.md) |
 | [043-字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)* | [C++](./043-字符串相乘/README.md) |
 | [044-通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)*（不懂） | [C++](./044-通配符匹配/README.md) |
 | [045-跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)* | [C++](./045-跳跃游戏%20II/README.md) |
