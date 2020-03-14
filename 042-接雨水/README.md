@@ -185,7 +185,7 @@ public:
         int maxRight = 0;
         int left = 1;
         int right = length - 2;
-        for (int i = 0; i < length - 1; ++i) {
+        while (right - left >= 0) {
             // height [ left - 1] 是可能成为 maxLeft 的变量，
             // 同理，height [ right + 1 ] 是可能成为 maxRight 的变量。
             // 只要保证 height [ left - 1 ] < height [ right + 1 ]，
