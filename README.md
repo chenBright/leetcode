@@ -195,7 +195,7 @@ LeetCode Problems' Solutions
 | [216-组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)* | [C++](./216-组合总和%20III/README.md) |
 | [217-存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/) | [C++](./217-存在重复元素/README.md) |
 | [219-存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/) | [C++](./219-存在重复元素%20II/README.md) |
-| [221-最大正方形](https://leetcode-cn.com/problems/maximal-square/)* | [C++](./221-最大正方形/README.md) |
+| [221-最大正方形](https://leetcode-cn.com/problems/maximal-square/)** | [C++](./221-最大正方形/README.md) |
 | [222-完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/comments/)* | [C++](./222-完全二叉树的节点个数/README.md) |
 | [223-矩形面积](https://leetcode-cn.com/problems/rectangle-area/)* | [C++](./223-矩形面积/README.md) |
 | [224-基本计算器](https://leetcode-cn.com/problems/basic-calculator/)* | [C++](./224-基本计算器/README.md) |
