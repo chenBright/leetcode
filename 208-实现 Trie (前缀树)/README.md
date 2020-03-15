@@ -19,7 +19,7 @@ public:
     Trie() : root(new TrieNode()) {
 
     }
-    
+
     /** Inserts a word into the trie. */
     void insert(string word) {
         TrieNode *node = root;
@@ -31,7 +31,7 @@ public:
         }
         node->isWord = true;
     }
-    
+
     /** Returns if the word is in the trie. */
     bool search(string word) {
         TrieNode *node = root;
@@ -44,7 +44,7 @@ public:
 
         return node->isWord;
     }
-    
+
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
         TrieNode *node = root;
@@ -82,7 +82,7 @@ public:
     Trie() : root(new TrieNode()) {
 
     }
-    
+
     /** Inserts a word into the trie. */
     void insert(string word) {
         TrieNode *node = root;
@@ -94,7 +94,7 @@ public:
         }
         node->isWord = true;
     }
-    
+
     /** Returns if the word is in the trie. */
     bool search(string word) {
         TrieNode *node = root;
@@ -107,7 +107,7 @@ public:
 
         return node->isWord;
     }
-    
+
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
         TrieNode *node = root;
@@ -147,40 +147,40 @@ public:
     Trie() : root(new TrieNode()) {
 
     }
-    
+
     /** Inserts a word into the trie. */
     void insert(string word) {
         TrieNode *node = root;
         for (const auto &c : word) {
-            if (node->children[c - 'a'] == nullptr) {
-                node->children[c - 'a'] = new TrieNode();
+            if (node->children.find(c) == node->children.end()) {
+                node->children[c] = new TrieNode();
             }
-            node = node->children[c - 'a'];
+            node = node->children[c];
         }
         node->isWord = true;
     }
-    
+
     /** Returns if the word is in the trie. */
     bool search(string word) {
         TrieNode *node = root;
         for (const auto &c : word) {
-            if (node->children[c - 'a'] == nullptr) {
+            if (node->children.find(c) == node->children.end()) {
                 return false;
             }
-            node = node->children[c - 'a'];
+            node = node->children[c];
         }
 
         return node->isWord;
     }
-    
+
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
         TrieNode *node = root;
         for (const auto &c : prefix) {
-            if (node->children[c - 'a'] == nullptr) {
+            if (node->children.find(c) == node->children.end()) {
                 return false;
             }
-            node = node->children[c - 'a'];
+            node = node->children[c];
         }
 
         return true;
@@ -191,8 +191,8 @@ private:
 
     struct TrieNode {
         bool isWord;
-        vector<TrieNode*> children;
-        TrieNode() : isWord(false), children(MAX_CHILDREN) {}
+        unordered_map<char, TrieNode*> children;
+        TrieNode() : isWord(false) {}
     };
 
     TrieNode *root;
