@@ -15,10 +15,8 @@ public:
             return 0;
         }
 
-        /** 
-         * dp[i][j]表示从[0][0]到[i][j]存在多少条路径
-         */
-        vector<vector<long long> > dp(n, vector<long long>(m, 0));
+        // dp[i][j]表示从[0][0]到[i][j]存在多少条路径
+        vector<vector<long> > dp(n, vector<long>(m, 0));
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < m; ++j) {
                 if (obstacleGrid[i][j] == 1) { // 有障碍物
