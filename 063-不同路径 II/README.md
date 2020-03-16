@@ -50,10 +50,11 @@ private:
 
 判断当前网格中是否有障碍物。
 
-- 如果有，则***dp\[i\]\[j\] = 0***。
-- 如果没有，则***dp\[i\]\[j\] = dp\[i - 1\]\[j\] + dp\[i\]\[j - 1\]***。
+- 如果有，则`dp[i][j] = 0`。
+- 如果没有，则`dp[i][j] = dp[i - 1][j] + dp[i][j - 1]`。
 
-动态规划的时间复杂度为***O(mn)***。
+时间复杂度：**O(mn)**。
+空间复杂度：**O(mn)**。
 
 ```c++
 class Solution {
@@ -70,10 +71,8 @@ public:
             return 0;
         }
 
-        /** 
-         * dp[i][j]表示从[0][0]到[i][j]存在多少条路径
-         */
-        vector<vector<long long> > dp(n, vector<long long>(m, 0));
+        // dp[i][j]表示从[0][0]到[i][j]存在多少条路径
+        vector<vector<long> > dp(n, vector<long>(m, 0));
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < m; ++j) {
                 if (obstacleGrid[i][j] == 1) { // 有障碍物
