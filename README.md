@@ -69,7 +69,7 @@ LeetCode Problems' Solutions
 | [061-旋转链表](https://leetcode-cn.com/problems/two-sum/) | [C++](./061-旋转链表/README.md) |
 | [062-不同路径](https://leetcode-cn.com/problems/unique-paths/)* | [C++](./062-不同路径/README.md) |
 | [063-不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)* | [C++](./063-不同路径%20II/README.md) |
-| [064-最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)*（最短路径算法） | [C++](./064-最小路径和/README.md) |
+| [064-最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)**（最短路径算法） | [C++](./064-最小路径和/README.md) |
 | [065-有效数字](https://leetcode-cn.com/problems/valid-number/)*（不懂） | [C++](./065-有效数字/README.md) |
 | [066-加一](https://leetcode-cn.com/problems/plus-one/) | [C++](./066-加一/README.md) |
 | [067-二进制求和](https://leetcode-cn.com/problems/add-binary/)* | [C++](./067-二进制求和/README.md) |
