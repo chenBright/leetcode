@@ -7,7 +7,10 @@ leetcode：[072-编辑距离](https://leetcode-cn.com/problems/edit-distance/)
 
 ## 动态规划
 
-参考[ivan_allen的思路](https://leetcode-cn.com/problems/edit-distance/comments/65607)和[官方题解](https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-by-leetcode/)。
+参考：
+- [ivan_allen的思路](https://leetcode-cn.com/problems/edit-distance/comments/65607)
+- [编辑距离面试题详解](https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-mian-shi-ti-xiang-jie-by-labuladong/)
+- [官方题解](https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-by-leetcode/)。
 
 ```c++
 class Solution {
