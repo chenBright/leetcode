@@ -14,32 +14,33 @@ leetcode：[179-最大数](https://leetcode-cn.com/problems/largest-number/)
 ```c++
 class Solution {
 public:
-    string largestNumber(vector<int> &nums) {
-        string res = "";
+    string largestNumber(vector<int>& nums) {
         if (nums.empty()) {
-            return res;
+            return 0;
         }
 
-        sort(nums.begin(), nums.end(), compare); // 从大到小排序
+        int length = nums.size();
+        vector<string> strs(length);
+        for (int i = 0; i < length; ++i) {
+            strs[i] = to_string(nums[i]);
+        }
 
-        if (nums[0] == 0) { // 后面的数字一定是0
+         // 从大到小排序
+        sort(strs.begin(), strs.end(), [](const string& a, const string& b) {
+            return a + b > b + a;
+        });
+
+         // 后面的数字一定是 0
+        if (strs[0] == "0") {
             return "0";
         }
 
-        for (const auto &num : nums) {
-            res += to_string(num);
+        string str;
+        for (const auto& s : strs) {
+            str.append(s);
         }
 
-        return res;
-    }
-
-    static bool compare(const int &a, const int &b) {
-        string aStr = to_string(a);
-        string bStr = to_string(b);
-        long long ab = stoll(aStr + bStr);
-        long long ba = stoll(bStr + aStr);
-
-        return ab > ba;
+        return str;
     }
 };
 ```
