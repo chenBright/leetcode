@@ -246,6 +246,7 @@ LeetCode Problems' Solutions
 | [347-前K个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)* | [C++](./347-前K个高频元素/README.md) |
 | [349-两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)* | [C++](./349-两个数组的交集/README.md) |
 | [350-两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/)* | [C++](./350-两个数组的交集%20II/README.md) |
+| [354-俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)* | [C++](./354-俄罗斯套娃信封问题/README.md) |
 | [367-有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-gpe3dbjds1/)* | [C++](./367-有效的完全平方数/README.md) |
 | [371-两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/)* | [C++](./371-两整数之和/README.md) |
 | [374-猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)* | [C++](./374-猜数字大小/README.md) |
