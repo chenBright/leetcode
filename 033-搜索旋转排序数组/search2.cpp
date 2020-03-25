@@ -22,7 +22,7 @@ public:
                     // target 在[low ... mid - 1]之间
                     high = mid - 1;
                 }
-            } else { // 左半边有序
+            } else { // 左半边有序，此处包含了 low == mid 的情况。
                 if (target >= lowNum && target < midNum) {
                     // target 在[low ... mid - 1]之间
                     high = mid - 1;
