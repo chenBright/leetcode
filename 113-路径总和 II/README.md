@@ -9,35 +9,34 @@ leetcode：[113-路径总和 II](https://leetcode-cn.com/problems/path-sum-ii/)
 ```c++
 class Solution {
 public:
-    vector<vector<int> > pathSum(TreeNode *root, int sum) {
-        pathSumRecursion(root, sum);
-        return res;
+    vector<vector<int> > pathSum(TreeNode* root, int sum) {
+        vector<vector<int> > result;
+        if (root == NULL) {
+            return result;
+        }
+
+        vector<int> tmp;
+        helper(root, sum, result, tmp);
+
+        return result;
     }
-
 private:
-    vector<int> temp;
-    vector<vector<int> > res;
-
-    void pathSumRecursion(TreeNode *root, int sum) {
+    void helper(TreeNode* root, int sum, vector<vector<int> >& result, vector<int>& tmp) {
         if (root == NULL) {
             return;
         }
 
-        
-
-        temp.push_back(root->val);
-
-        int nextSum = sum - root->val;
-        // 叶子结点且刚好总和等于 sum
-        if (nextSum == 0 && root->left == NULL && root->right == NULL) {
-            res.push_back(temp);
+        tmp.push_back(root->val);
+        sum -= root->val;
+        if (root->left == NULL && root->right == NULL && sum == 0) {
+            result.push_back(tmp);
         }
 
-        pathSumRecursion(root->left, nextSum);
-        pathSumRecursion(root->right, nextSum);
-        temp.pop_back(); // 弹出，将数组恢复到上一级调用时的状态
+        helper(root->left, sum, result, tmp);
+        helper(root->right, sum, result, tmp);
+
+        tmp.pop_back(); // 弹出，将数组恢复到上一级调用时的状态
     }
 };
-
 ```
 
