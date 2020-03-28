@@ -20,7 +20,7 @@ public:
             }
 
             end = start;
-            // 遍历单词的字母知道遇到空格
+            // 遍历单词的字母直到遇到空格
             while (end != s.end() && *end != ' ') {
                 ++end;
             }
