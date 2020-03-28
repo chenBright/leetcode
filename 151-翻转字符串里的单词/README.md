@@ -27,7 +27,7 @@ public:
             }
 
             end = start;
-            // 遍历单词的字母知道遇到空格
+            // 遍历单词的字母直到遇到空格
             while (end != s.end() && *end != ' ') {
                 ++end;
             }
@@ -72,7 +72,7 @@ public:
             }
 
             start = end;
-            // 遍历单词的字母知道遇到空格
+            // 遍历单词的字母直到遇到空格
             while (start != s.rend() && *start != ' ') {
                 ++start;
             }
@@ -130,7 +130,7 @@ private:
             ++right;
         }
 
-        // 检查左后一个字符是否为空格。
+        // 检查最后一个字符是否为空格。
         // 如果是，则删除。
         if (s[left - 1] == ' ') {
             --left;

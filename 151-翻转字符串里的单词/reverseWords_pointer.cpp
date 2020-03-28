@@ -19,7 +19,7 @@ public:
             }
 
             start = end;
-            // 遍历单词的字母知道遇到空格
+            // 遍历单词的字母直到遇到空格
             while (start != s.rend() && *start != ' ') {
                 ++start;
             }
