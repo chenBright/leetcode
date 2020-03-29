@@ -14,43 +14,32 @@ leetcode：[020-有效的括号](https://leetcode-cn.com/problems/valid-parenthe
 class Solution {
 public:
     bool isValid(string s) {
-        if (s.size() % 2 != 0) {
-            return false;
+        if (s.empty()) {
+            return true;
         }
 
-        stack<char> st;
+        stack<int> sStack;
         for (int i = 0; i < s.size(); ++i) {
-            char ch = s[i];
-            if (ch == '(' || ch == '[' || ch == '{') {
-                st.push(ch);
+            if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
+                sStack.push(s[i]);
             } else {
-                if (st.empty()) { // 栈内没有左括号与右括号匹配
+                if (sStack.empty()) {
                     return false;
-                } else {
-                    if (ch == ')') {
-                        if (st.top() == '(') {
-                            st.pop();
-                        } else {
-                            return false;
-                        }
-                    } else if (ch == ']') {
-                        if (st.top() == '[') {
-                            st.pop();
-                        } else {
-                            return false;
-                        }
-                    } else if (ch == '}') {
-                        if (st.top() == '{') {
-                            st.pop();
-                        } else {
-                            return false;
-                        }
-                    }
+                }
+
+                char c = sStack.top();
+                sStack.pop();
+                if (s[i] == ')' && c != '(') {
+                    return false;
+                } else if (s[i] == ']' && c != '[') {
+                    return false;
+                } else if (s[i] == '}' && c != '{') {
+                    return false;
                 }
             }
         }
 
-        return st.empty() ? true : false;
+        return sStack.empty();
     }
 };
 ```
