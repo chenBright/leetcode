@@ -1,4 +1,4 @@
-#include <limits>
+#include <climits>
 #include <stack>
 using namespace std;
 
@@ -8,12 +8,12 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
- 
+
 class Solution {
 public:
     int kthSmallest(TreeNode *root, int k) {
         if (root == NULL) {
-            return numeric_limits<int>::min();
+            return INT_MIN;
         }
 
         stack<TreeNode*> s;
@@ -25,7 +25,7 @@ public:
             } else {
                 --k;
                 // 当前结点是第k小的结点
-                if (k == 0) { 
+                if (k == 0) {
                     return s.top()->val;
                 }
                 node = s.top()->right;
@@ -33,6 +33,6 @@ public:
             }
         }
 
-        return numeric_limits<int>::min();
+        return INT_MIN;
     }
 };
