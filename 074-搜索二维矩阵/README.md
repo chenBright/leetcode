@@ -15,7 +15,7 @@ row = index / colLength;
 col = index - row * colLength;
 ```
 
-二分查找的时间复杂度为***O(log(mn))，即O(logm + logn)***。
+二分查找的时间复杂度为**O(log(mn))，即O(logm + logn)**。
 
 ```c++
 class Solution {
@@ -34,7 +34,7 @@ public:
         while (low <= high) {
             int midRow, midCol;
             int mid = (low + high) / 2;
-            toIndex(mid, colLength, &midRow, &midCol);
+            toIndex(mid, colLength, midRow, midCol);
             int midNum = matrix[midRow][midCol];
             if (midNum == target) {
                 return true;
@@ -50,9 +50,9 @@ public:
 
 private:
     // 将一维索引转换成二维索引
-    void toIndex(int n, int rowLength, int *row, int *col) {
-        *row = n / rowLength;
-        *col = n - *row * rowLength;
+    void toIndex(int n, int rowLength, int& row, int& col) {
+        row = n / rowLength;
+        col = n - row * rowLength;
     }
 };
 ```
@@ -61,13 +61,13 @@ private:
 
 从右上角向左下角查找：
 
-1. 如果***matrix\[row\]\[col\] == target***，则查找成功。
-2. 如果***matrix\[row\]\[col\] < target***，则继续向下查找，即行下移，***++row***。
-3. 如果***matrix\[row\]\[col\] > target***，则继续向左查找，即列左移，***--col***。
+1. 如果`matrix[row][col] == target`，则查找成功。
+2. 如果`matrix[row][col] < target，则继续向下查找，即行下移，`++row`。
+3. 如果`matrix[row][col] > target，则继续向左查找，即列左移，`--col`。
 
 如果结束都没有查找成功，则查找失败。
 
-该方法的时间复杂度为***O(m+n)***。
+该方法的时间复杂度为**O(m+n)**。
 
 也可以从左下角向右上角查找。
 
@@ -82,7 +82,7 @@ public:
         int row = 0;
         int col = matrix[0].size() - 1;
         while (row < matrix.size() && col >= 0) {
-            if (matrix[row][col] == target) { 
+            if (matrix[row][col] == target) {
                 return true;
             } else if (matrix[row][col] < target) { // 向下查找
                 ++row;
