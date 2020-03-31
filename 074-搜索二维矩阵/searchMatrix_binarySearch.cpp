@@ -17,7 +17,7 @@ public:
         while (low <= high) {
             int midRow, midCol;
             int mid = (low + high) / 2;
-            toIndex(mid, colLength, &midRow, &midCol);
+            toIndex(mid, colLength, midRow, midCol);
             int midNum = matrix[midRow][midCol];
             if (midNum == target) {
                 return true;
@@ -33,8 +33,8 @@ public:
 
 private:
     // 将一维索引转换成二维索引
-    void toIndex(int n, int rowLength, int *row, int *col) {
-        *row = n / rowLength;
-        *col = n - *row * rowLength;
+    void toIndex(int n, int rowLength, int& row, int& col) {
+        row = n / rowLength;
+        col = n - row * rowLength;
     }
 };
