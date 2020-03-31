@@ -15,14 +15,14 @@ class Solution {
 public:
     int kthSmallest(TreeNode *root, int &k) {
         if (root == NULL) {
-            return numeric_limits<int>::min();
+            return INT_MIN;
         }
 
         int left = kthSmallest(root->left, k);
         if (k == 0) { // 在左子树找到第k小的结点
             return left;
         }
-        
+
         // 当前结点是第k小的结点
         if (--k == 0) {
             return root->val;
@@ -41,7 +41,7 @@ class Solution {
 public:
     int kthSmallest(TreeNode *root, int k) {
         if (root == NULL) {
-            return numeric_limits<int>::min();
+            return INT_MIN;
         }
 
         stack<TreeNode*> s;
@@ -53,7 +53,7 @@ public:
             } else {
                 --k;
                 // 当前结点是第k小的结点
-                if (k == 0) { 
+                if (k == 0) {
                     return s.top()->val;
                 }
                 node = s.top()->right;
@@ -61,7 +61,7 @@ public:
             }
         }
 
-        return numeric_limits<int>::min();
+        return INT_MIN;
     }
 };
 ```
@@ -78,28 +78,23 @@ public:
 class Solution {
 public:
     int kthSmallest(TreeNode *root, int k) {
-        if (root == NULL) {
-            return numeric_limits<int>::min();
+        int n = count(root->left);
+        if (k <= n) { // 在左子树找到第k小的结点
+            return kthSmallest(root->left, k);
+        } else if (k > n + 1) { // 在右子树找到第k小的结点
+            return kthSmallest(root->right, k - n - 1);
+        } else { // 当前结点是第k小的结点
+            return root->val;
+        }
+    }
+private:
+    // 计算树的结点数
+    int count(TreeNode* node) {
+        if (node == NULL) {
+            return 0;
         }
 
-        stack<TreeNode*> s;
-        TreeNode *node = root;
-        while (!s.empty() || node != NULL) {
-            if (node != NULL) {
-                s.push(node);
-                node = node->left;
-            } else {
-                --k;
-                // 当前结点是第k小的结点
-                if (k == 0) { 
-                    return s.top()->val;
-                }
-                node = s.top()->right;
-                s.pop();
-            }
-        }
-
-        return numeric_limits<int>::min();
+        return 1 + count(node->left) + count(node->right);
     }
 };
 ```
@@ -120,7 +115,7 @@ struct MyTreeNode {
     MyTreeNode *right;
     MyTreeNode(int x) : val(x), count(1), left(NULL), right(NULL) {}
 };
- 
+
 class Solution {
 public:
     int kthSmallest(TreeNode *root, int k) {
@@ -139,7 +134,7 @@ private:
 
         newNode->left = build(node->left);
         newNode->right = build(node->right);
-        
+
         // 左子树不为空，加上左子树的结点数
         if(node->left != NULL) {
             newNode->count += newNode->left->count;

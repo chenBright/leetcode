@@ -7,7 +7,7 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
- 
+
 class Solution {
 public:
     int kthSmallest(TreeNode *root, int k) {
