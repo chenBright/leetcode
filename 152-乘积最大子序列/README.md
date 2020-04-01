@@ -29,36 +29,32 @@ public:
             return nums[0];
         }
 
-        int maxProduct = INT_MIN; // 最大乘积
+        int maxProduction = INT_MIN; // 最大乘积
 
         int product = 1;
         // 从左到右计算
         for (int i = 0; i < len; ++i) {
             product *= nums[i];
             // 如果负数个数为奇数，max 在遍历到最后一个负数及以后的数字，就不再更新
-            if (maxProduct < product) {
-                maxProduct = product;
-            }
-            // 遇到0，停止连乘，初始化乘积为1
+            maxProduction = max(maxProduction, product);
+            // 遇到 0，停止连乘，初始化乘积为 1
             if (nums[i] == 0) {
                 product = 1;
             }
         }
 
         product = 1;
-        // 从左到右计算
+        // 从右向左计算
         for (int j = len - 1; j >= 0; --j) {
             product *= nums[j];
             // 同上
-            if (maxProduct < product) {
-                maxProduct = product;
-            }
+            maxProduction = max(maxProduction, product);
             if (nums[j] == 0) {
                 product = 1;
             }
         }
 
-        return maxProduct;
+        return maxProduction;
     }
 };
 ```
@@ -86,13 +82,13 @@ public:
             rightDp[i] *= rightDp[i - 1] == 0 ? 1 : rightDp[i - 1]; // 从右到左计算
         }
 
-        int maxProduct = INT_MIN;
+        int maxProduction = INT_MIN;
         for (int j = 0; j < len; ++j) {
-            maxProduct = max(leftDp[j], maxProduct);
-            maxProduct = max(rightDp[j], maxProduct);
+            maxProduction = max(leftDp[j], maxProduction);
+            maxProduction = max(rightDp[j], maxProduction);
         }
 
-        return maxProduct;
+        return maxProduction;
     }
 };
 ```
@@ -128,7 +124,7 @@ public:
              *  iMax或iMin为0时，即前一个数为0，
              * iMax * nums[i]不一定是最大值，
              * iMin * nums[i]不一定是最小值。
-             */ 
+             */
             iMax = max(iMax * nums[i], nums[i]);
             iMin = min(iMin * nums[i], nums[i]);
 
