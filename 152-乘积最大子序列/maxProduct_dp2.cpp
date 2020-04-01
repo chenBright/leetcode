@@ -21,12 +21,12 @@ public:
             rightDp[i] *= rightDp[i - 1] == 0 ? 1 : rightDp[i - 1]; // 从右到左计算
         }
 
-        int maxProduct = INT_MIN;
+        int maxProduction = INT_MIN;
         for (int j = 0; j < len; ++j) {
-            maxProduct = max(leftDp[j], maxProduct);
-            maxProduct = max(rightDp[j], maxProduct);
+            maxProduction = max(leftDp[j], maxProduction);
+            maxProduction = max(rightDp[j], maxProduction);
         }
 
-        return maxProduct;
+        return maxProduction;
     }
 };
