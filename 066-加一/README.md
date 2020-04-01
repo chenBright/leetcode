@@ -11,26 +11,19 @@ leetcode：[066-加一](https://leetcode-cn.com/problems/plus-one/)
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        if (digits.empty()) {
-            digits.push_back(1);
-            return digits;
-        }
-
-        int binary = 1; // 进位，0或1
-        vector<int>::reverse_iterator it = digits.rbegin();
-        while (it != digits.rend()) {
-            int temp = *it + binary;
-            if (temp == 10) {
-                *it = 0;
-                binary = 1;
+        int carry = 1; // 进位：0 或 1
+        for (int i = static_cast<int>(digits.size()) - 1; i >= 0; --i) {
+            digits[i] += carry;
+            if (digits[i] == 10) {
+                digits[i] = 0;
+                carry = 1;
             } else {
-                *it = temp;
-                binary = 0;
+                carry = 0;
+                break;
             }
-            ++it;
         }
 
-        if (binary == 1) {
+        if (carry == 1) {
             digits.insert(digits.begin(), 1);
         }
 
