@@ -8,7 +8,7 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
- 
+
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
@@ -22,11 +22,10 @@ public:
             } else {
                 node = nodeStack.top();
                 nodeStack.pop();
-                if (node->val > lastValue) {
-                    lastValue = node->val;
-                } else {
+                if (node->val <= lastValue) {
                     return false;
                 }
+                lastValue = node->val;
                 node = node->right;
             }
         }
