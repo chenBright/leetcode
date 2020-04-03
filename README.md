@@ -27,7 +27,7 @@ LeetCode Problems' Solutions
 | [019-删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) | [C++](./019-删除链表的倒数第N个节点/README.md) |
 | [020-有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) | [C++](./020-有效的括号/README.md) |
 | [021-合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [C++](./021-合并两个有序链表/README.md) |
-| [022-括号生成](https://leetcode-cn.com/problems/generate-parentheses/)*（没思路） | [C++](./022-括号生成/README.md) |
+| [022-括号生成](https://leetcode-cn.com/problems/generate-parentheses/)**（没思路） | [C++](./022-括号生成/README.md) |
 | [023-合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)** | [C++](./023-合并K个排序链表/README.md) |
 | [024-两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/) | [C++](./024-两两交换链表中的节点/README.md) |
 | [025-K个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)** | [C++](./025-K个一组翻转链表/README.md) |
