@@ -14,9 +14,9 @@ public:
         // memory[i][j] 记录 从 dungeon[i][j] 到终点至少需要多少健康值。
         vector<vector<int> > memory(row, vector<int>(col, INT_MIN));
 
-        // 健康值不能降为 0，所以还要 - 1
+        // 健康值不能降为 0，所以还要 + 1
         return -dfs(dungeon, 0, 0, memory) + 1;
-        
+
     }
 private:
     int dfs(vector<vector<int> >& dungeon, int rowIndex, int colIndex, vector<vector<int> >& memory) {

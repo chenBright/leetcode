@@ -28,9 +28,9 @@ public:
         // memory[i][j] 记录 从 dungeon[i][j] 到终点至少需要多少健康值
         vector<vector<int> > memory(row, vector<int>(col, INT_MIN));
 
-        // 健康值不能降为 0，所以还要 - 1
+        // 健康值不能降为 0，所以还要 + 1
         return -dfs(dungeon, 0, 0, memory) + 1;
-        
+
     }
 private:
     int dfs(vector<vector<int> >& dungeon, int rowIndex, int colIndex, vector<vector<int> >& memory) {
@@ -85,9 +85,9 @@ private:
 
 使用二维数组`dp`记录消耗的健康值，`dp[i][j]`表示从`dungeon[i][j]`到终点至少需要多少健康值。
 
-时间复杂度：***O(n\*m)***。
+时间复杂度：**O(nm)**。
 
-空间复杂度：***O(n\*m)***。
+空间复杂度：**O(nm)**。
 
 其中，`n`为行数，`m`为列数。
 
@@ -113,7 +113,7 @@ public:
             }
         }
 
-        // 健康值不能降为 0，所以还要 - 1
+        // 健康值不能降为 0，所以还要 + 1
         return -dp[0][0] + 1;
     }
 };
@@ -123,9 +123,9 @@ public:
 
 根据前面的方法，对空间进行优化，将二维数组压缩为一维数组。
 
-时间复杂度：***O(n\*m)***。
+时间复杂度：**O(nm)**。
 
-空间复杂度：***O(m)***。
+空间复杂度：**O(m)**。
 
 其中，`n`为行数，`m`为列数。
 
