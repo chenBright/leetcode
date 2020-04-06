@@ -186,7 +186,7 @@ LeetCode Problems' Solutions
 | [206-反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)* | [C++](./206-反转链表/README.md) |
 | [207-课程表](https://leetcode-cn.com/problems/course-schedule/)* | [C++](./207-课程表/README.md) |
 | [208-实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)* | [C++](./208-实现%20Trie%20(前缀树)/README.md) |
-| [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)* | [C++](./209-长度最小的子数组/README.md) |
+| [209-长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)** | [C++](./209-长度最小的子数组/README.md) |
 | [210-课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)* | [C++](./210-课程表%20II/README.md) |
 | [220-存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/)* | [C++](./220-存在重复元素%20III/README.md) |
 | [211-添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/) | [C++](./211-添加与搜索单词%20-%20数据结构设计/README.md) |
