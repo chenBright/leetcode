@@ -9,18 +9,17 @@ public:
         if (length == 0 || s <= 0) {
             return 0;
         }
-        
+
         int minWindow = 0; // 最小窗口宽度
         int left = 0;
-        int right = length - 1;
-        int mid;
+        int right = length;
         while (left <= right) {
-            mid = (left + right) / 2; // 滑动窗口大小
-            if (isSub(mid, s, nums)) { // mid 大的滑动窗口符合条件，则缩小继续搜索
+            int mid = (left + right) / 2; // 滑动窗口大小
+            if (isSub(mid, s, nums)) { // mid 大的滑动窗口符合条件，则缩小窗口大小，继续搜索
                 minWindow = mid;
-                left = mid + 1;
-            } else { // mid 大的滑动窗口不符合条件，则缩小继续搜索
                 right = mid - 1;
+            } else { // mid 大的滑动窗口不符合条件，则扩大窗口大小，继续搜索
+                left = mid + 1;
             }
         }
 
