@@ -10,7 +10,7 @@ leetcode：[240-搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a
 
 找出短的边，然后对长边逐行（列）进行二分查找。
 
-时间复杂度：***O(alon(b))***，其中`a = min(n, m), b = max(n, m)`。
+时间复杂度：**O(alon(b))**，其中`a = min(n, m), b = max(n, m)`。
 
 ```c++
 class Solution {
@@ -72,7 +72,7 @@ private:
 
 参考[LeetCode 官方题解解法二](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/solution/sou-suo-er-wei-ju-zhen-ii-by-leetcode-2)。
 
-时间复杂度：***O(log(n!))***。
+时间复杂度：**O(log(n!))**。
 
 ```c++
 class Solution {
@@ -131,7 +131,7 @@ private:
 
 参考[LeetCode 官方题解解法三](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/solution/sou-suo-er-wei-ju-zhen-ii-by-leetcode-2)。
 
-时间复杂度：***O(nlogn)***。
+时间复杂度：**O(nlogn)**。
 
 ```c++
 class Solution {
@@ -167,7 +167,7 @@ private:
             row++;
         }
 
-        return search(matrix, target, row, highRow, lowCol, midCol - 1) 
+        return search(matrix, target, row, highRow, lowCol, midCol - 1)
             || search(matrix, target, lowRow, row - 1, midCol + 1, highCol);
     }
 };
@@ -177,7 +177,7 @@ private:
 
 参考[LeetCode 官方题解解法四](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/solution/sou-suo-er-wei-ju-zhen-ii-by-leetcode-2)。
 
-时间复杂度：***O(n + m)***。
+时间复杂度：**O(n + m)**。
 
 ### 从左下角开始搜索
 
