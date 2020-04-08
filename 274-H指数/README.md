@@ -15,9 +15,9 @@ leetcode：[274-H指数](https://leetcode-cn.com/problems/h-index/)
 
 ## 基于比较的排序
 
-时间复杂度：***O(nlogn)***。
+时间复杂度：**O(nlogn)**。
 
-空间复杂度：***O(1)***。
+空间复杂度：**O(1)**。
 
 ```c++
 class Solution {
@@ -41,9 +41,9 @@ public:
 
 参考[LeetCode官方题解](https://leetcode-cn.com/problems/h-index/solution/hzhi-shu-by-leetcode)。
 
-时间复杂度：***O(nlogn)***。
+时间复杂度：**O(nlogn)**。
 
-空间复杂度：***O(n)***。
+空间复杂度：**O(n)**。
 
 ```c++
 class Solution {
