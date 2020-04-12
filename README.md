@@ -242,6 +242,7 @@ LeetCode Problems' Solutions
 | [337-打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)* | [C++](./337-打家劫舍%20III/README.md) |
 | [338-比特位计数](https://leetcode-cn.com/problems/counting-bits/)** | [C++](./338-比特位计数/README.md) |
 | [342-4的幂](https://leetcode-cn.com/problems/power-of-four/)** | [C++](./342-4的幂/README.md) |
+| [343-整数拆分](https://leetcode-cn.com/problems/integer-break/)* | [C++](./343-整数拆分/README.md) |
 | [344-反转字符串](https://leetcode-cn.com/problems/reverse-string/) | [C++](./344-反转字符串/README.md) |
 | [345-反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | [C++](./345-反转字符串中的元音字母/README.md) |
 | [347-前K个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)* | [C++](./347-前K个高频元素/README.md) |
