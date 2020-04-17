@@ -286,6 +286,7 @@ LeetCode Problems' Solutions
 | [714-买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)* | [C++](./714-买卖股票的最佳时机含手续费/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
 | [852-山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/) | [C++](./852-山脉数组的峰顶索引/README.md) |
+| [860-柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/) | [C++](./860-柠檬水找零/README.md) |
 | [876-链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) | [C++](./876-链表的中间结点/README.md) |
 | [912-排序数组](https://leetcode-cn.com/problems/sort-an-array/)* | [C++](./912-排序数组/README.md) |
 | [1114-按序打印](https://leetcode-cn.com/problems/print-in-order/)* | [C++](./1114-按序打印/README.md) |
