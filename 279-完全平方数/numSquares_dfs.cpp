@@ -7,28 +7,26 @@ class Solution {
 public:
     int numSquares(int n) {
         if (n == 0) {
-            return -1;
+            return 0;
         }
 
-        minCount = INT_MAX;
+        int minCount = INT_MAX;
+        int sq = sqrt(n);
+        helper(n, sq, minCount, 0);
 
-        int nums = static_cast<int>(sqrt(n));
-
-        numSquaresRecursion(n, nums, 0); 
-
-        return minCount;       
+        return minCount;
     }
 
 private:
-    int minCount;
-    void numSquaresRecursion(int n, int sq, int count) {
-        int a = n / (sq * sq);
-        if (n % (sq * sq) == 0) { // 当整除，肯定是当前这种分配方式的最小值
-            minCount = min(minCount, count + a);
+    void helper(int n, int sq, int& minCount, int count) {
+        int c = n / (sq * sq);
+        if (n % (sq * sq) == 0) {
+            // 如果整除，肯定是当前这种分配方式的最小值。
+            minCount = min(minCount, count + c);
         } else {
-            // 如果当前数字尽量多取，总个数已经超过 minCount，则少取该数字，总个数也会超过 minCount（剪枝？）
-            for (int i = a; i >= 0 && count + i < minCount; --i) {
-                numSquaresRecursion(n - i * sq * sq, sq - 1, count + i);
+            // 如果当前数字尽量多取，总个数已经超过 minCount，则即使少取该数字，总个数也会超过 minCount（剪枝）。
+            for (int i = c; i >= 0 && count + i < minCount; --i) {
+                helper(n - i * sq * sq, sq - 1, minCount, count + i);
             }
         }
     }
