@@ -8,12 +8,12 @@ class Solution {
 public:
     int numSquares(int n) {
         if (n == 0) {
-            return -1;
+            return 0;
         }
 
         // <总数, 个数>
         queue<pair<int, int> > q;
-        q.push(make_pair(n, 0));     
+        q.push(make_pair(n, 0));
 
         // 层序遍历减枝，图可能会反复遍历相同的节点。这里之前遍历过的，后面就不用遍历计算了。
         vector<bool> visited(n + 1, false);
@@ -35,7 +35,7 @@ public:
                     if (!visited[sub]) {
                         q.push(make_pair(sub, count + i));
                         visited[sub] = true;
-                    } 
+                    }
                 }
             }
         }

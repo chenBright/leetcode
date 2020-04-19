@@ -224,7 +224,7 @@ LeetCode Problems' Solutions
 | [274-H指数](https://leetcode-cn.com/problems/h-index/)* | [C++](./274-H指数/README.md) |
 | [275-H指数 II](https://leetcode-cn.com/problems/h-index-ii/)* | [C++](./275-H指数%20II/README.md) |
 | [278-第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/) | [C++](./278-第一个错误的版本/README.md) |
-| [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)*（不会做） | [C++](./279-完全平方数/README.md) |
+| [279-完全平方数](https://leetcode-cn.com/problems/perfect-squares/)**（不会做） | [C++](./279-完全平方数/README.md) |
 | [284-顶端迭代器](https://leetcode-cn.com/problems/peeking-iterator/)* | [C++](./284-顶端迭代器/README.md) |
 | [283-移动零](https://leetcode-cn.com/problems/move-zeroes/)* | [C++](./283-移动零/README.md) |
 | [287-寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)* | [C++](./287-寻找重复数/README.md) |
