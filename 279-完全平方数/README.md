@@ -101,10 +101,6 @@ public:
 class Solution {
 public:
     int numSquares(int n) {
-        if (n == 0) {
-            return 0;
-        }
-
         /**
          * dp[i]表示凑成 i 需要的最少平方和
          * dp(n) = 1 + min{ dp(n-1^2), dp(n-2^2), dp(n-3^2), dp(n-4^2), ... , dp(n-k^2) }，
