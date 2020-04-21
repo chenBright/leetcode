@@ -5,8 +5,6 @@ class Solution {
 public:
     vector<int> countBits(int num) {
         vector<int> result(num + 1, 0);
-        int i = 0;
-        int b = 1;
         for (int i = 1; i <= num; ++i) {
             //  i >> 1 后比原来 i “在最右边少了一位”，
             // 如果原来 i 的最低位是 1，则 result[i] = result[i >> 1] + 1；
