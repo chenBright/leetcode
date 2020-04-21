@@ -8,7 +8,7 @@ leetcode：[338-比特位计数](https://leetcode-cn.com/problems/counting-bits/
 
 遍历`[0, num]`，计算每个数字的`bit 1`。计算`bit 1`的方法参考[191-位1的个数](./191-位1的个数/README.md)。
 
-时间复杂度：***O(n \* sizeof(integer))***。
+时间复杂度：**O(n \* sizeof(integer))**。
 
 ```c++
 class Solution {
@@ -39,9 +39,9 @@ private:
 
 使用`bitset`计算每个数字的`bit 1`。
 
-时间复杂度：***O(n \* sizeof(integer))***。
+时间复杂度：**O(n \* sizeof(integer))**。
 
-空间复杂度：***O(n \* sizeof(integer))***。
+空间复杂度：**O(n \* sizeof(integer))**。
 
 ```c++
 class Solution {
@@ -61,7 +61,7 @@ public:
 
 参考[LeetCode官方题解](https://leetcode-cn.com/problems/counting-bits/solution/bi-te-wei-ji-shu-by-leetcode/)。
 
-时间复杂度：***O(n)***。
+时间复杂度：**O(n)**。
 
 ### 高位有效
 
@@ -96,8 +96,6 @@ class Solution {
 public:
     vector<int> countBits(int num) {
         vector<int> result(num + 1, 0);
-        int i = 0;
-        int b = 1;
         for (int i = 1; i <= num; ++i) {
             //  i >> 1 后比原来 i “在最右边少了一位”，
             // 如果原来 i 的最低位是 1，则 result[i] = result[i >> 1] + 1；
@@ -114,7 +112,7 @@ public:
 
 ### 最后设置位
 
-因为***i & (i - 1) 可以快速移除最右边的 bit 1***，所以***i 比 i & (i - 1) 多一位 1***。
+因为`i & (i - 1)`可以快速移除最右边的 bit 1，所以`i`比`i & (i - 1)`多一位 1。
 
 ```c++
 class Solution {
