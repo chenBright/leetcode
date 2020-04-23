@@ -289,6 +289,7 @@ LeetCode Problems' Solutions
 | [860-柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/) | [C++](./860-柠檬水找零/README.md) |
 | [876-链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) | [C++](./876-链表的中间结点/README.md) |
 | [912-排序数组](https://leetcode-cn.com/problems/sort-an-array/)* | [C++](./912-排序数组/README.md) |
+| [946-验证栈序列](https://leetcode-cn.com/problems/validate-stack-sequences/) | [C++](./946-验证栈序列/README.md) |
 | [1114-按序打印](https://leetcode-cn.com/problems/print-in-order/)* | [C++](./1114-按序打印/README.md) |
 | [1115-交替打印FooBar](https://leetcode-cn.com/problems/print-foobar-alternately/)* | [C++](./1115-交替打印FooBar/README.md) |
 | [1116-打印零与奇偶数](https://leetcode-cn.com/problems/print-zero-even-odd/)* | [C++](./1116-打印零与奇偶数/README.md) |
