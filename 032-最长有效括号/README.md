@@ -45,9 +45,10 @@ class Solution {
 public:
     int longestValidParentheses(string s) {
         int result = 0;
-        vector<int> dp(s.size(), 0);
-    
-        for (int i = 1; i < s.size(); ++i) {
+        int length = s.size();
+        vector<int> dp(length, 0);
+
+        for (int i = 1; i < length; ++i) {
             if (s[i] == ')') {
                 if (s[i - 1] == '(') {
                     dp[i] = (i >= 2 ? dp[i - 2] : 0) + 2;
@@ -66,6 +67,8 @@ public:
 ## 不需要额外的空间
 
 参考[LeetCode官方题解方法4](https://leetcode-cn.com/problems/longest-valid-parentheses/solution/zui-chang-you-xiao-gua-hao-by-leetcode/)。
+
+在`(()`这种情况下，从左到右遍历完了，`left > right`，不会更新`result`，所以需要从右到左遍历一遍。
 
 ```c++
 class Solution {
@@ -105,4 +108,3 @@ public:
     }
 };
 ```
-
