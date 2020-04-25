@@ -37,7 +37,7 @@ LeetCode Problems' Solutions
 | [029-两数相除](https://leetcode-cn.com/problems/divide-two-integers/)*（不懂） | [C++](./029-两数相除/README.md) |
 | [030-串联所有单词的子串](https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/)* | [C++](./030-串联所有单词的子串/README.md) |
 | [031-下一个排列](https://leetcode-cn.com/problems/next-permutation/)** | [C++](./031-下一个排列/README.md) |
-| [032-最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)*| [C++](./032-最长有效括号/README.md) |
+| [032-最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)**| [C++](./032-最长有效括号/README.md) |
 | [033-搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)** | [C++](./033-搜索旋转排序数组/README.md) |
 | [034-在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [C++](./034-在排序数组中查找元素的第一个和最后一个位置/README.md) |
 | [035-搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [C++](./035-搜索插入位置/README.md) |
