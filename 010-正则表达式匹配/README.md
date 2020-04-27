@@ -80,7 +80,7 @@ private:
         if (pIndex == pLen) {
             return sIndex == sLen;
         }
-        
+
         if (pIndex + 1 == pLen) {
             return sIndex + 1 == sLen && (s[sIndex] == p[pIndex] || p[pIndex] == '.');
         }
@@ -112,8 +112,8 @@ private:
   - 如果`s`为空，则返回true；
   - 否则，返回false。
 - 如果`p`至少有两个字符，且第二个字符为`*`，则
-  - ***匹配0个字符***：删除`p`的请两个字符，继续递归匹配；
-  - 或者***匹配1个或以上字符***：前提是它能够匹配模式串当前位置字符，然后删除`s`的第一个字符，继续递归匹配。
+  - **匹配0个字符**：删除`p`的请两个字符，继续递归匹配；
+  - 或者**匹配1个或以上字符**：前提是它能够匹配模式串当前位置字符，然后删除`s`的第一个字符，继续递归匹配。
 - 否则，
   - 如果匹配模式串当前位置字符，则删除`s`和`p`的第一个字符，继续递归匹配；
   - 否咋，返回false。
@@ -167,7 +167,7 @@ private:
 
 ## 动态规划
 
-时间复杂度：***O(mn)***。其中，`m`为`s`的长度，`n`为`p`的长度。
+时间复杂度：**O(mn)**。其中，`m`为`s`的长度，`n`为`p`的长度。
 
 ### 实现1
 
@@ -177,8 +177,8 @@ private:
 
 - 如果`p[j - 1] != '*' && (s[i - 1] == p[j - 1] || p[j - 1] == '.')`，则`p[i][j] = p[i - 1][j - 1]`；
 - 如果`p[j - 1] == '*'`，
-  - ***匹配0个字符***：`p[i][j] =p[i][j - 2]`；
-  - 或者***匹配1个或以上字符***：`p[i][j] = (s[i - 1] == p[j - 2] || p[j - 2] == '.') && dp[i - 1][j]`。其中，`dp[i - 1][j]` 表示匹配 1 个字符，当循环`i = i + 1, j = j` 时，继续匹配下一个字符。
+  - **匹配0个字符**：`p[i][j] =p[i][j - 2]`；
+  - 或者**匹配1个或以上字符**：`p[i][j] = (s[i - 1] == p[j - 2] || p[j - 2] == '.') && dp[i - 1][j]`。其中，`dp[i - 1][j]` 表示匹配 1 个字符，当循环`i = i + 1, j = j` 时，继续匹配下一个字符。
 
 下图是一个该实现的状态转移表格（图来自[LeetCode题解](https://leetcode-cn.com/problems/regular-expression-matching/solution/dong-tai-gui-hua-ji-hui-su-by-song-19)，侵删）：
 
@@ -227,8 +227,8 @@ class Solution {
 public:
     bool isMatch(string s, string p) {
         int sLen = s.size();
-        int pLen = p.size();     
-        // dp[i][j] 表示 s[i :] 和 p[j - 1 :] 是否匹配   
+        int pLen = p.size();
+        // dp[i][j] 表示 s[i :] 和 p[j - 1 :] 是否匹配
         vector<vector<bool> > dp(sLen + 1, vector<bool>(sLen + 1, false));
         dp[sLen][pLen] = true;
 
@@ -259,7 +259,7 @@ public:
 class Solution {
 public:
     bool isMatch(string s, string p) {
-        // dp[i][j] 表示 s[i :] 和 p[j - 1 :] 是否匹配 
+        // dp[i][j] 表示 s[i :] 和 p[j - 1 :] 是否匹配
         vector<vector<int> > dp(s.size() + 1, vector<int>(p.size() + 1, -1));
         return isMatch(s, 0, p, 0, dp);
     }
@@ -269,7 +269,7 @@ private:
         if (dp[sIndex][pIndex] >= 0) {
             return dp[sIndex][pIndex];
         }
-        
+
         int sLen = s.size();
         int pLen = p.size();
 
