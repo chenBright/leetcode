@@ -90,7 +90,7 @@ LeetCode Problems' Solutions
 | [082-删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) | [C++](./082-删除排序链表中的重复元素%20II/README.md) |
 | [083-删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) | [C++](./083-删除排序链表中的重复元素/README.md) |
 | [084-柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/)* | [C++](./084-柱状图中最大的矩形/README.md) |
-| [085-最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/)* | [C++](./085-最大矩形/README.md) |
+| [085-最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/)** | [C++](./085-最大矩形/README.md) |
 | [086-分隔链表](https://leetcode-cn.com/problems/partition-list/) | [C++](./086-分隔链表/README.md) |
 | [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/) | [C++](./088-合并两个有序数组/README.md) |
 | [089-格雷编码](https://leetcode-cn.com/problems/gray-code/)* | [C++](./089-格雷编码/README.md) |
