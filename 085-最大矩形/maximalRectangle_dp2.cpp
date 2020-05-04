@@ -33,7 +33,9 @@ private:
             while (s.top() != -1 && heights[s.top()] >= heights[i]) {
                 int peek = s.top();
                 s.pop();
-                // 中间空出来的索引，表示两边都高（i 和 s.top()）
+                // 中间空出来的索引，表示两边都高。
+                // 计算 （s.top(), i) 的面积，高为 heights[peek]，
+                // 因为栈顶到栈底，高度递减。
                 maxArea = max(maxArea, heights[peek] * (i - s.top() - 1));
             }
             s.push(i);
@@ -47,6 +49,6 @@ private:
         }
 
         return maxArea;
-        
+
     }
 };

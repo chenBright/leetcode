@@ -22,7 +22,7 @@ public:
         int row = matrix.size();
         int col = matrix[0].size();
         // dp[i][j] 表示第 i 行 从左到右，包含 1 的连续序列的宽度（x ~ j）。
-        vector<vector<int> > dp(row, vector<int>(col, 0)); 
+        vector<vector<int> > dp(row, vector<int>(col, 0));
 
         for (int i = 0; i < row; ++i) {
             for (int j = 0; j <col; ++j) {
@@ -76,7 +76,9 @@ private:
             while (s.top() != -1 && heights[s.top()] >= heights[i]) {
                 int peek = s.top();
                 s.pop();
-                // 中间空出来的索引，表示两边都高（i 和 s.top()）
+                // 中间空出来的索引，表示两边都高。
+                // 计算 （s.top(), i) 的面积，高为 heights[peek]，
+                // 因为栈顶到栈底，高度递减。
                 maxArea = max(maxArea, heights[peek] * (i - s.top() - 1));
             }
             s.push(i);
@@ -90,7 +92,7 @@ private:
         }
 
         return maxArea;
-        
+
     }
 };
 ```
@@ -103,7 +105,7 @@ public:
     int maximalRectangle(vector<vector<char> >& matrix) {
         if (matrix.empty()) {
             return 0;
-        }      
+        }
 
         int row = matrix.size();
         int col = matrix.size();
