@@ -56,14 +56,68 @@ private:
 };
 ```
 
-## 思路2
+## 动态规划
 
-[LeetCode评论区 气和 的Java实现](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/comments/51519)。暂时还看不懂，mark一下。
+## 思路1
 
-思路： 
+参考[LeetCode题解](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-2-7/)，思路跟递归的思路一样，但是使用了迭代的方式实现。
+
+```c++
+class Solution {
+public:
+    vector<TreeNode*> generateTrees(int n) {
+        vector<vector<TreeNode*> > dp(n + 1);
+        if (n == 0) {
+            return dp[n];
+        }
+        dp[0].push_back(NULL);
+
+
+        // 长度为 1 到 n
+        for (int len = 1; len <= n; ++len) {
+            for (int root = 1; root <= len; ++root) {
+                int left = root - 1; // 左子树结点数
+                int right = len - root; // 右子树结点数
+                for (auto leftTree : dp[left]) {
+                    for (auto rightTree : dp[right]) {
+                        TreeNode* rootNode = new TreeNode(root);
+                        rootNode->left = leftTree;
+                        // 克隆右子树并且加上偏移
+                        rootNode->right = clone(rightTree, root);
+                        dp[len].push_back(rootNode);
+                    }
+                }
+            }
+        }
+
+        return dp[n];
+    }
+
+private:
+    // 克隆树，并更新结点的值为原值加上偏移
+    TreeNode* clone(TreeNode* root, int offset) {
+        if (root == NULL) {
+            return NULL;
+        }
+
+        TreeNode* newRoot  = new TreeNode(root->val + offset);
+        newRoot->left = clone(root->left, offset);
+        newRoot->right = clone(root->right, offset);
+
+        return newRoot;
+    }
+};
+```
+
+
+### 思路2
+
+参考[LeetCode评论区 气和 的Java实现](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/comments/51519)。暂时还看不懂，mark一下。
+
+思路：
 
 - 从小往大生成，新来一数，肯定比现有的节点都大 ，那么n可以成为现在所有树的父节点，并且他们都是n的左子树。
--  第二步就是沿着现有子树的右侧尝试不断插入。 如果插入以后，n还有子树，那么这些子树都是n的左子树。
+- 第二步就是沿着现有子树的右侧尝试不断插入。 如果插入以后，n还有子树，那么这些子树都是n的左子树。
 
 ```java
 class Solution {
@@ -113,10 +167,10 @@ class Solution {
             //复制下一层节点
             TreeNode newNode=new TreeNode(tmpNode.val);
             newNode.left=tmpNode.left;
-            workNode.right=newNode;  
+            workNode.right=newNode;
             workNode=workNode.right;
         }
-        
+
         //生成要插入的节点
         TreeNode nNode=new TreeNode(n);
         nNode.left=tmpNode.right;
