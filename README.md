@@ -100,7 +100,7 @@ LeetCode Problems' Solutions
 | [093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)** | [C++](./093-复原IP地址/README.md) |
 | [094-二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) | [C++](./094-二叉树的中序遍历/README.md) |
 | [095不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)** | [C++](./095不同的二叉搜索树%20II/README.md) |
-| [096-不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)* | [C++](./096-不同的二叉搜索树/README.md) |
+| [096-不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)** | [C++](./096-不同的二叉搜索树/README.md) |
 | [098-验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/) | [C++](./098-验证二叉搜索树/README.md) |
 | [100-相同的树](https://leetcode-cn.com/problems/same-tree/) | [C++](./100-相同的树/README.md) |
 | [101-对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)*（迭代） | [C++](./101-对称二叉树/README.md) |

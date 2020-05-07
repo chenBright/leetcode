@@ -1,34 +1,29 @@
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
-    Solution() {
-        m[0] = 1;
-    }
-
     int numTrees(int n) {
-        // 如果已经保存结果，直接返回
+        unordered_map<int, int> m;
+        m[0] = 1;
+        return numTrees(n, m);
+    }
+private:
+    int numTrees(int n, unordered_map<int, int>& m) {
         if (m.count(n)) {
             return m[n];
         }
 
-        int res = 0;
+        int result = 0;
         for (int i = 1; i <= n; ++i) {
-            // 结点i为根结点时，二叉搜索树的个数
-            int left = numTrees(i - 1);
-            m[i - 1] = left;
+            m[i - 1] = numTrees(i - 1, m);
+            m[n - i] = numTrees(n - i, m);
 
-            int right = numTrees(n - i);
-            m[n - i] = right;
-            
-            res +=  left * right;
+            result += m[i - 1] * m[n - i];
         }
-        m[n] = res;
 
-        return res;
+        m[n] = result;
+
+        return result;
     }
-
-private:
-    map<int, int> m; // 保存计算结果
 };
