@@ -95,7 +95,7 @@ LeetCode Problems' Solutions
 | [088-合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/comments/) | [C++](./088-合并两个有序数组/README.md) |
 | [089-格雷编码](https://leetcode-cn.com/problems/gray-code/)* | [C++](./089-格雷编码/README.md) |
 | [090-子集 II](https://leetcode-cn.com/problems/subsets-ii/) | [C++](./090-子集%20II/README.md) |
-| [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)* | [C++](./091-解码方法/README.md) |
+| [091-解码方法](https://leetcode-cn.com/problems/decode-ways/)** | [C++](./091-解码方法/README.md) |
 | [092-反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/) | [C++](./092-反转链表%20II/README.md) |
 | [093-复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)** | [C++](./093-复原IP地址/README.md) |
 | [094-二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) | [C++](./094-二叉树的中序遍历/README.md) |
