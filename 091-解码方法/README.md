@@ -32,6 +32,7 @@ private:
             return 0;
         }
 
+
         if (i + 1 == length) {
             return 1;
         }
