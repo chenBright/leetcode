@@ -6,9 +6,9 @@ class Solution {
 public:
     bool isMatch(string s, string p) {
         int sLen = s.size();
-        int pLen = p.size();     
-        // dp[i][j] 表示 s[i :] 和 p[j - 1 :] 是否匹配   
-        vector<vector<bool> > dp(sLen + 1, vector<bool>(sLen + 1, false));
+        int pLen = p.size();
+        // dp[i][j] 表示 s[i :] 和 p[j - 1 :] 是否匹配
+        vector<vector<bool> > dp(sLen + 1, vector<bool>(pLen + 1, false));
         dp[sLen][pLen] = true;
 
         // 从 sLen 开始，因为匹配是到这一步才结束

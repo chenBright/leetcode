@@ -52,7 +52,7 @@ public:
         }
 
         string subP = p.substr(2);
-        while (!s.empty() || (s[0] == p[0] || p[0] == '.')) {
+        while (!s.empty() && (s[0] == p[0] || p[0] == '.')) {
             if (isMatch(s, subP)) {
                 return true;
             }
@@ -69,6 +69,7 @@ public:
 实现1存在大量的字符串拷贝，效率不高。实现2在实现1的基础上，使用引用和索引来避免拷贝。
 
 ```c++
+class Solution {
 public:
     bool isMatch(string s, string p) {
         return isMatch(s, 0, p, 0);
@@ -93,12 +94,14 @@ private:
             return (s[sIndex] == p[pIndex] || p[pIndex] == '.') && isMatch(s, sIndex + 1, p, pIndex + 1);
         }
 
-        for (int i = sIndex; i < sLen && (s[i] == p[pIndex] || p[pIndex] == '.'); ++i) {
-            if (isMatch(s, i + 1, p, pIndex + 2)) {
+        while (sIndex < sLen && (s[sIndex] == p[pIndex] || p[pIndex] == '.')) {
+            if (isMatch(s, sIndex, p, pIndex + 2)) {
                 return true;
             }
+            ++sIndex;
         }
 
+        // 不匹配，则跳过 p[pIndex] 和 p[pIndex](*)
         return isMatch(s, sIndex, p, pIndex + 2);
     }
 };
@@ -191,7 +194,7 @@ public:
         int sLen = s.size();
         int pLen = p.size();
         // dp[i][j] 表示 s[0 ... i - 1] 和 p[0 ... j - 1] 是否匹配
-        vector<vector<bool> > dp(sLen + 1, vector<bool>(sLen + 1, false));
+        vector<vector<bool> > dp(sLen + 1, vector<bool>(pLen + 1, false));
         dp[0][0] = true;
 
         for (int i = 0; i <= sLen; ++i) {
