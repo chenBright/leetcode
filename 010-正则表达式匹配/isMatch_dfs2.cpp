@@ -21,7 +21,7 @@ public:
         }
 
         string subP = p.substr(2);
-        while (!s.empty() || (s[0] == p[0] || p[0] == '.')) {
+        while (!s.empty() && (s[0] == p[0] || p[0] == '.')) {
             if (isMatch(s, subP)) {
                 return true;
             }

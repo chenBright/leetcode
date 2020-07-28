@@ -13,7 +13,7 @@ private:
         if (pIndex == pLen) {
             return sIndex == sLen;
         }
-        
+
         if (pIndex + 1 == pLen) {
             return sIndex + 1 == sLen && (s[sIndex] == p[pIndex] || p[pIndex] == '.');
         }
@@ -26,12 +26,14 @@ private:
             return (s[sIndex] == p[pIndex] || p[pIndex] == '.') && isMatch(s, sIndex + 1, p, pIndex + 1);
         }
 
-        for (int i = sIndex; i < sLen && (s[i] == p[pIndex] || p[pIndex] == '.'); ++i) {
-            if (isMatch(s, i + 1, p, pIndex + 2)) {
+        while (sIndex < sLen && (s[sIndex] == p[pIndex] || p[pIndex] == '.')) {
+            if (isMatch(s, sIndex, p, pIndex + 2)) {
                 return true;
             }
+            ++sIndex;
         }
 
+        // 不匹配，则跳过 p[pIndex] 和 p[pIndex](*)
         return isMatch(s, sIndex, p, pIndex + 2);
     }
 };
