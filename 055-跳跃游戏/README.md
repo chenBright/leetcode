@@ -6,7 +6,7 @@ leetcode：[055-跳跃游戏](https://leetcode-cn.com/problems/jump-game/)
 
 ## 贪心算法1
 
- 在当前位置分别跳出***1 ~ nums[i]***个长度到达`next`，再看在一步最大能达到的位置，找出最大值，此最大值所对应的`next`值即为应该跳到的位置。
+ 在当前位置分别跳出`1 ~ nums[i]`个长度到达`next`，再看在一步最大能达到的位置，找出最大值，此最大值所对应的`next`值即为应该跳到的位置。
 
 ```c++
 class Solution {
@@ -32,7 +32,7 @@ public:
                 if (next > maxNext) {
                     maxNext = next;
                     next = i + j;
-                }  
+                }
             }
             i = next;
         }
@@ -46,17 +46,13 @@ public:
 
 `dist`表示能跳到最大的位置。
 
-除了判断数组是否遍历完，即***i < length***，还要***dist >= i***表示至少跳出本个位置，即 ***num[i] != 0***。
+除了判断数组是否遍历完，即`i < length`，还要`dist >= i`表示至少跳出本个位置，即`num[i] != 0`。
 
 ```c++
 class Solution {
 public:
     bool canJump(vector<int> &nums) {
         int length = nums.size();
-        if (length == 0) {
-            return false;
-        }
-
         int dist = 0;
         // dist 表示能跳到最大的位置
         // dist >= i，表示至少跳出本个位置，即 num[i] != 0
