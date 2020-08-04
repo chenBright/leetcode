@@ -185,7 +185,7 @@ public:
 
 private:
     // 检查number的个数是否超过数组个数的一半
-    bool checkMoerThanHalf(vector<int> nums, int number) {
+    bool checkMoreThanHalf(vector<int> nums, int number) {
         int count = 0;
         for (vector<int>::iterator it = nums.begin(); it != nums.end(); ++it) {
             if (*it == number) {

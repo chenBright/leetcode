@@ -136,7 +136,7 @@ public:
         // 滑动窗口
         for (int j = 9; j < len; ++j) {
             // 将当前字符的 位 添加到后面
-            // 用 mask = 0x3ffffff 取出后 18 位，在向左移动 2 位，
+            // 用 mask = 0x3fffff 取出后 18 位，在向左移动 2 位，
             // 最后拼接下一个字母的 位
             current = ((current & 0x3ffff) << 2) | (m[s[j]]);
             if (bitSet.count(current)) {

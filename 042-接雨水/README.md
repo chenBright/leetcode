@@ -90,7 +90,7 @@ public:
 
 参考[LeetCode题解”动态规划“的思路](https://leetcode-cn.com/problems/trapping-rain-water/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-8/)和[LeetCode官方题解”动态编程“的代码](https://leetcode-cn.com/problems/trapping-rain-water/solution/jie-yu-shui-by-leetcode/)。
 
-时间复杂度：**O(n^2)**。
+时间复杂度：**O(n)**。
 
 空间复杂度：**O(n)**。
 
