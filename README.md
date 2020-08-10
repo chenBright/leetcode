@@ -258,6 +258,7 @@ LeetCode Problems' Solutions
 | [394-字符串解码](https://leetcode-cn.com/problems/decode-string/)* | [C++](./394-字符串解码/README.md) |
 | [402-移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/)* | [C++](./402-移掉K位数字/README.md) |
 | [406-根据身高重建队列](https://leetcode-cn.com/problems/queue-reconstruction-by-height/)* | [C++](./406-根据身高重建队列/README.md) |
+| [410-分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/)* | [C++](./410-分割数组的最大值/README.md) |
 | [416-分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)* | [C++](./416-分割等和子集/README.md) |
 | [432-全O(1)的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure/submissions/) | [C++](./432-全O(1)的数据结构/README.md) |
 | [437-路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)*（递归形式） | [C++](./437-路径总和%20III/README.md) |
