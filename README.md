@@ -284,7 +284,7 @@ LeetCode Problems' Solutions
 | [647-回文子串](https://leetcode-cn.com/problems/palindromic-substrings/)* | [C++](./647-回文子串/README.md) |
 | [674-最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/) | [C++](./674-最长连续递增序列/README.md) |
 | [695-岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/) | [C++](./695-岛屿的最大面积/README.md) |
-| [729-每日温度](https://leetcode-cn.com/problems/daily-temperatures/)* | [C++](./729-每日温度/README.md) |
+| [739-每日温度](https://leetcode-cn.com/problems/daily-temperatures/)* | [C++](./739-每日温度/README.md) |
 | [714-买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)* | [C++](./714-买卖股票的最佳时机含手续费/README.md) |
 | [764-使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)* | [C++](./764-使用最小花费爬楼梯/README.md) |
 | [852-山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/) | [C++](./852-山脉数组的峰顶索引/README.md) |
